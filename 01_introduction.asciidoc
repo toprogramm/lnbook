@@ -1,21 +1,21 @@
 [role="pagenumrestart"]
 [[intro_what_is_the_lightning_network]]
-== Introduction
+== Введение
 
-Welcome to _Mastering the Lightning Network_!
+Добро пожаловать в _Разработку Lightning Network_!
 
-((("Lightning Network (generally)", seealso="innovations in Lightning", id="ix_01_introduction-asciidoc0", range="startofrange")))The Lightning Network (often abbreviated as LN), is changing the way people exchange value online, and it's one of the most exciting advancements to happen in Bitcoin's history.
-Today, in 2021, the Lightning Network is still in its infancy. The Lightning Network is a protocol for using Bitcoin in a smart and nonobvious way. It is a second layer technology on top of Bitcoin.
+((("Lightning Network (generally)", seealso="innovations in Lightning", id="ix_01_introduction-asciidoc0", range="startofrange")))Lightning Network (обычно именующаяся как LN), меняет способ обмена ценностями в Интернете, и это одно из самых захватывающих достижений в истории Биткойна.
+Сегодня, в 2021 году, сеть Lightning Network все еще находится в зачаточном состоянии. Lightning Network — это протокол для использования Bitcoin разумным и неочевидным путем. Это технология второго уровня поверх Bitcoin.
 
-The concept of the Lightning Network was proposed in 2015, and the first implementation was launched in 2018. As of 2021, we're only beginning to see the opportunities the Lightning Network provides to Bitcoin, including improved privacy, speed, and scale.
-With core knowledge of the Lightning Network, you can help shape the future of the network while also building opportunities for yourself.
+Концепция Lightning Network была предложена в 2015, а первая реализация была запущена в 2018. По состоянию на 2021 год мы только начинаем видеть возможности, которые Lightning Network предоставляет Биткойну, включая улучшенную конфиденциальность, скорость и масштабирование.
+Обладая базовыми знаниями о Lightning Network, вы можете помочь сформировать будущее сети, а также создать возможности для себя.
 
 We assume you already have some basic knowledge about Bitcoin, but if not, don't worry—we will explain the most important Bitcoin concepts, those you must know to understand the Lightning Network, in <<bitcoin_fundamentals_review>>. If you want to learn more about Bitcoin, you can read _Mastering Bitcoin_, 2nd edition, by Andreas M. Antonopoulos (O'Reilly), available https://github.com/bitcoinbook/bitcoinbook[for free online].
 
 While the bulk of this book is written for programmers, the first few chapters are written to be approachable by anyone regardless of technical experience. In this chapter, we'll start with some terminology, then move to look at trust and its application in these systems, and finally we'll discuss the history and future of the Lightning Network. Let's get started.
 
 
-=== Lightning Network Basic Concepts
+=== Основные Концепты Lightning Network
 
 ((("Lightning Network (generally)","basic concepts", id="ix_01_introduction-asciidoc1", range="startofrange")))As we explore how the Lightning Network actually works, we will encounter some technical terminology that might, at first, be a bit confusing. While all of these concepts and terms will be explained in detail as we progress through the book and are defined in the glossary, some basic definitions now will make it easier to understand the concepts in the next two chapters. If you don't understand all of the words in these definitions yet, that's OK. You'll understand more as you move through the text.
 
