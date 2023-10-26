@@ -2,7 +2,7 @@
 [[intro_what_is_the_lightning_network]]
 == Введение
 
-Добро пожаловать в _Разработку Lightning Network_!
+Добро пожаловать в _Освоение Lightning Network_!
 
 ((("Lightning Network (generally)", seealso="innovations in Lightning", id="ix_01_introduction-asciidoc0", range="startofrange")))Lightning Network (обычно именующаяся как LN), меняет способ обмена ценностями в Интернете, и это одно из самых захватывающих достижений в истории Биткойна.
 Сегодня, в 2021 году, сеть Lightning Network все еще находится в зачаточном состоянии. Lightning Network — это протокол для использования Bitcoin разумным и неочевидным путем. Это технология второго уровня поверх Bitcoin.
@@ -10,42 +10,41 @@
 Концепция Lightning Network была предложена в 2015, а первая реализация была запущена в 2018. По состоянию на 2021 год мы только начинаем видеть возможности, которые Lightning Network предоставляет Биткойну, включая улучшенную конфиденциальность, скорость и масштабирование.
 Обладая базовыми знаниями о Lightning Network, вы можете помочь сформировать будущее сети, а также создать возможности для себя.
 
-We assume you already have some basic knowledge about Bitcoin, but if not, don't worry—we will explain the most important Bitcoin concepts, those you must know to understand the Lightning Network, in <<bitcoin_fundamentals_review>>. If you want to learn more about Bitcoin, you can read _Mastering Bitcoin_, 2nd edition, by Andreas M. Antonopoulos (O'Reilly), available https://github.com/bitcoinbook/bitcoinbook[for free online].
+Мы предполагаем, что вы уже обладаете некоторыми базовыми знаниями о Биткойне, но если это не так, не волнуйтесь - мы объясним наиболее важные концепции Биткойна, которые вы должны знать, чтобы понимать работу Lightning Network, в <<bitcoin_fundamentals_review>>. Если вы хотите узнать больше о Биткойне, вы можете прочитать _Освоение Bitcoin_, 2-е издание,  Андреас М. Антонопулос (O'Reilly), которая доступна https://github.com/bitcoinbook/bitcoinbook[бесплатно онлайн].
 
-While the bulk of this book is written for programmers, the first few chapters are written to be approachable by anyone regardless of technical experience. In this chapter, we'll start with some terminology, then move to look at trust and its application in these systems, and finally we'll discuss the history and future of the Lightning Network. Let's get started.
+Хотя основная часть этой книги написана для программистов, первые несколько глав написаны так, чтобы быть доступными для любого человека, независимо от его технического уровня. В этой главе мы начнем с терминологии, затем перейдем к рассмотрению доверия и его применения в этих системах, и, наконец, обсудим историю и будущее Lightning Network. Итак начинаем.
 
 
 === Основные Концепты Lightning Network
 
-((("Lightning Network (generally)","basic concepts", id="ix_01_introduction-asciidoc1", range="startofrange")))As we explore how the Lightning Network actually works, we will encounter some technical terminology that might, at first, be a bit confusing. While all of these concepts and terms will be explained in detail as we progress through the book and are defined in the glossary, some basic definitions now will make it easier to understand the concepts in the next two chapters. If you don't understand all of the words in these definitions yet, that's OK. You'll understand more as you move through the text.
+((("Lightning Network (generally)","basic concepts", id="ix_01_introduction-asciidoc1", range="startofrange")))Изучая принцип работы сети Lightning Network, мы столкнемся с технической терминологией, которая поначалу может вызвать некоторое недоумение. Хотя все эти понятия и термины будут подробно объясняться по ходу работы над книгой и определяться в глоссарии, некоторые базовые определения, данные сейчас, облегчат понимание концепций в следующих двух главах. Если вы пока не понимаете всех слов из этих определений, это не страшно. Вы поймете больше по мере продвижения по тексту.
 
-Blockchain:: ((("blockchain","defined")))A distributed transaction ledger, produced by a network of computers. Bitcoin, for example, is a system that produces a blockchain. The Lightning Network is not itself a blockchain, nor does it produce a blockchain. It is a network that relies on an existing external blockchain for its security.
+Блокчейн:: ((("blockchain","defined")))Распределенный журнал транзакций, создаваемый сетью компьютеров. Например, Bitcoin - это система, которая создает блокчейн. Сеть Lightning Network сама по себе не является блокчейном и не производит блокчейн. Это сеть, которая в опирается на существующий блокчейн для собственной безопасности.
 
-Digital signature:: ((("digital signatures")))A digital signature is a mathematical scheme for verifying the authenticity of digital messages or documents. A valid digital signature gives a recipient reason to believe that the message was created by a known sender, that the sender cannot deny having sent the message, and that the message was not altered in transit.
+Цифровая подпись:: ((("digital signatures")))Цифровая подпись - это математическая схема для проверки подлинности цифровых сообщений или документов. Валидная цифровая подпись дает получателю основания доверять, что сообщение было создано известным отправителем, что отправитель не может отрицать отправку сообщения и что сообщение не было изменено при передаче.
 
-Hash function:: ((("hash function, defined")))A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash) and is designed to be a one-way function, that is, a function which is infeasible to invert.
+Хэш функция:: ((("hash function, defined")))Криптографическая хеш-функция это математический алгоритм, который преобразует данные произвольного размера в битовую строку фиксированного размера (хеш) и спроектирован как однонаправленная функция, то есть функция, которую невозможно инвертировать (вычислить обратным способом).
 
-Node:: ((("node, defined")))A computer that participates in a network. A Lightning node is a computer that participates in the Lightning Network. A Bitcoin node is a computer that participates in the Bitcoin network. Typically an LN user will run a Lightning node _and_ a Bitcoin node.
+Узел:: ((("node, defined")))Компьютер, который участвует в сети. Узел Lightning - это компьютер, который участвует в сети Lightning Network. Узел Bitcoin - это компьютер, который участвует в сети Bitcoin. Обычно пользователь LN запускает узел Lightning _и_ узел Bitcoin.
 
-On-chain versus off-chain:: ((("on-chain payment","defined")))A payment is _on-chain_ if it is recorded as a transaction on the Bitcoin (or other underlying) blockchain. ((("off-chain payment")))Payments sent via payment channels between Lightning nodes, and which are not visible in the underlying blockchain, are called _off-chain_ payments. Usually in the Lightning Network, the only on-chain transactions are those used to open and close a Lightning payment channel. A third type of channel modifying transaction exists, called splicing, which can be used to add/remove the amount of funds committed in a channel.
+On-chain против off-chain:: ((("on-chain payment","defined")))Платеж считается _on-chain_(в цепи), если он записан как транзакция в блокчейне Bitcoin (или другого основного) блокчейна. ((("off-chain payment")))Платежи, отправленные через платежные каналы между узлами Lightning и которые не отображаются в основном блокчейне, называются _off-chain_ платежи (вне цепи). Обычно в Lightning Network единственные on-chain транзакции - это те, которые используются для открытия и закрытия платежного канала Lightning. Сущестсвует третий тип каналов модифицирующий транзакцию, именуемый splicing (сращивание) который может быть использован для добавления/удаления всех средств зафиксированных в канале.
 
-Payment:: ((("payment","defined")))When value is exchanged on the Lightning Network, we call this a "payment" as compared to a "transaction" on the Bitcoin blockchain.
+Оплата:: ((("payment","defined")))Когда обмен ценностями происходит в Lightning Network, мы называем это "оплатой", а не "транзакцией" как в блокчейне Bitcoin.
 
-Payment channel:: ((("payment channel", seealso="channel entries")))A _financial relationship_ between two nodes on the Lightning Network, typically implemented by multisignature Bitcoin transactions that share control over bitcoin between the two Lightning nodes.
+Канал оплаты:: ((("payment channel", seealso="channel entries")))_Финансовые отношения_ между двумя узлами сети Lightning Network, обычно реализуемые с помощью мульти подписанных Bitcoin транзакций, которые передают контроль над биткоином между двумя узлами Lightning.
 
-Routing versus sending:: ((("routing","sending versus")))((("sending, routing versus")))Unlike Bitcoin where transactions are "sent" by broadcasting them to everyone, Lightning is a routed network where payments are "routed" across one or more payment channels following a _path_ from sender to recipient.
+Маршрутизация против отправки:: ((("routing","sending versus")))((("sending, routing versus")))В отличие от Биткойна, где транзакции «отправляются» путем трансляции их всем, Lightning это маршрутизируемая сеть, в которой платежи «маршрутизируются» через один или несколько платежных каналам, следуя _пути_ от отправителя к получателю.
 
-Transaction:: ((("transaction, defined")))A data structure that records the transfer of control over some funds (e.g., some bitcoin). The Lightning Network relies on Bitcoin transactions (or those of another blockchain) to track control of funds.
+Транзакция:: ((("transaction, defined")))Структура данных, которая фиксирует передачу контроля над некоторыми средствами (например, немного биткойнов). Сеть Lightning полагается на транзакции Bitcoin (или транзакций другого блокчейна) для отслеживания контроля над средствами.
 
-More detailed definitions of these and many other terms can be found in the <<glossary>>. Throughout this book, we will explain what these concepts mean and how these technologies actually work.
+Более подробные определения этих и многих других терминов можно найти в <<glossary>>. В этой книге мы объясним, что означают эти концепции и как на самом деле работают эти технологии
 
 [TIP]
 ====
-Throughout this book, you will see "Bitcoin" with the first letter capitalized, which refers to the _Bitcoin system_ and is a proper noun. You will also see "bitcoin," with a lowercase _b_, which refers to the currency unit. Each bitcoin is further subdivided into 100 million units each called a "satoshi" (singular) or "satoshis" (plural).(((range="endofrange", startref="ix_01_introduction-asciidoc1")))
+На протяжении всей этой книги вы будете встречать слово «Биткойн» с заглавной буквы, которое относится к «системе Биткойн» и является именем собственным. Вы также увидите слово «биткойн» со строчной буквой _б_, обозначающей денежную единицу. Каждый биткойн подразделяется на 100 миллионов единиц, каждая из которых называется «сатоши»(во множественном и единственном числе), на английском же "satoshi" (единственное) or "satoshis" (множественное).(((range="endofrange", startref="ix_01_introduction-asciidoc1")))
 ====
 
-Now that you're familiar with these basic terms, let's move to a concept you are already comfortable with: trust.
-
+Теперь, когда вы знакомы с этими основными терминами, давайте перейдем к понятию, которое вам уже знакомо: доверие.
 
 === Trust in Decentralized Networks
 
