@@ -1,4 +1,4 @@
-# Mastering the Lightning Network
+# Освоение Lightning Network
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
@@ -6,31 +6,31 @@ STATUS: First Edition published on Dec 21, 2021
 
 <img src="images/cover_thumb.png" width=200 alt="Mastering Lightning Cover">
 
-## About
-Mastering the Lightning Network is an O'Reilly Media book, by authors Andreas M. Antonopoulos ([@aantonop](https://twitter.com/aantonop)), Olaoluwa Osuntokun ([@roasbeef](https://twitter.com/roasbeef)), Rene Pickhardt ([@renepickhardt](https://twitter.com/renepickhardt)). It was published on Dec 21, 2021, in paperback and e-book, by O'Reilly Media. It is available everywhere that books are sold. This repository contains the manuscript of the book as published by O'Reilly Media, tagged as [firstedition_firstprint](https://github.com/lnbook/lnbook/releases/tag/firstedition_firstprint).
+## О книге
+«Освоение Lightning Network» — это книга O'Reilly Media авторов Андреас М. Антонопулос ([@aantonop](https://twitter.com/aantonop)), Олаолува Осунтокун ([@roasbeef](https://twitter.com/roasbeef)), Рене Пикхардт ([@renepickhardt](https://twitter.com/renepickhardt)). Она была опубликована 21 декабря 2021 года в мягкой обложке и в электронном варанте (e-book) компанией O'Reilly Media. Ее можно найти везде, где продаются книги (в английском варианте, в США). В этом репозитории содержится копия книги, опубликованная O'Reilly Media, под тегом [firstedition_firstprint](https://github.com/lnbook/lnbook/releases/tag/firstedition_firstprint).
 
-The book describes the Lightning Network (LN), a Peer-to-Peer protocol running on top of Bitcoin and other blockchains, which provides near-instant, secure, micro-payments.
+В книге описывается Lightning Network (LN), Peer-to-Peer (Равный-с-Равным) протокол, работающий поверх Биткойна и других блокчейнов, который обеспечивает скорость, безопасность, микроплатежи.
 
-The book is suitable for technical readers with an understanding of the fundamentals of Bitcoin and other open blockchains.
+Книга подходит техническим читателям, понимающим основы Биткойна и других открытых блокчейнов.
 
-## Contents
+## Содержание
 
-### Preface
+### Предисловие
 
-*  [Cover](cover.html)
-*  [Titlepage](titlepage.html)
-*  [Copyright](copyright.html)
-*  [Table of Contents](toc.html)
-*  [Preface](preface.asciidoc)
+*  [Обложка](cover.html) 
+*  [Титульная страница](titlepage.html)
+*  [Авторские права](copyright.html)
+*  [Оглавление](toc.html)
+*  [Предисловие](preface.asciidoc)
 
-### Part 1
+### Часть 1
 
-*  [Part 1 - Intro](part_1_divider.asciidoc)
-*  [Introduction](01_introduction.asciidoc)
-*  [Getting Started](02_getting_started.asciidoc)
-*  [How the Lightning Network Works](03_how_ln_works.asciidoc)
-*  [Lightning Node Software](04_node_client.asciidoc)
-*  [Operating a Lightning Network Node](05_node_operations.asciidoc)
+*  [Часть 1 - Intro](part_1_divider.asciidoc)  
+*  [Введение](01_introduction.asciidoc)
+*  [Начало Работы](02_getting_started.asciidoc)
+*  [Как Работает Lightning Network](03_how_ln_works.asciidoc)
+*  [Программное Обеспечение Узлов Lightning](04_node_client.asciidoc)
+*  [Управление Узлом Сети Lightning](05_node_operations.asciidoc)
 
 ### Part 2
 
@@ -63,23 +63,23 @@ The book is suitable for technical readers with an understanding of the fundamen
 *  [Author Bios](author_bio.html)
 *  [Colophon](colo.html)
 
-## Creative Commons Attribution Sharealike License
+## Лицензия Creative Commons с указанием авторства Sharealike
 
-Mastering the Lightning Network is released under the Creative Commons CC-BY-SA 4.0 license. The full terms of the license can be found here:
+Mastering the Lightning Network выпускается под лицензией Creative Commons CC-BY-SA 4.0. Полные условия лицензии можно найти здесь:
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering the Lightning Network</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Andreas M. Antonopoulos, Olaoluwa Osuntokun, Rene Pickhardt</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/lnbook/lnbook" rel="dct:source">https://github.com/lnbook/lnbook</a>.
 
-This "Free Culture" compliant license was approved by our publisher O'Reilly Media (http://oreilly.com), who understands the value of open source. O'Reilly Media is not just the world's best publisher of technical books, but is also a strong supporter of this open culture and the sharing of knowledge.
+Эта лицензия, соответствующая «Свободной культуре», была одобрена нашим издателем O'Reilly Media (http://oreilly.com), который понимает ценность открытого исходного кода. O'Reilly Media — не только лучший в мире издатель технической литературы, но и активный сторонник открытой культуры и обмена знаниями.
 
-Thank you O'Reilly Media!
+Спасибо О'Рейли Медиа!
 
-## Translations and Derivatives (eg. PDF, HTML, EPUB ebooks)
+## Переводы и производные версии (например, электронные книги в формате PDF, HTML, EPUB)
 
-The current license permits derivative work, such as independent translations and the production and circulation of PDF, HTML or other derivative renderings of the source ASCIIDOC. *The license does not extend to O'Reilly Media intellectual property, such as the cover page.*
+Текущая лицензия разрешает производную работу, такую как независимые переводы, а также производство и распространение PDF, HTML или других производных изображений исходного ASCIIDOC. *Лицензия не распространяется на интеллектуальную собственность O'Reilly Media, такую как титульная страница.*
 
-If you are interested in translating this book please see [TRANSLATING.md](TRANSLATING.md)
+Если вы заинтересованы в переводе этой книги, см. [TRANSLATING.md](TRANSLATING.md)
 
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
