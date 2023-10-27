@@ -2,7 +2,7 @@
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-STATUS: First Edition published on Dec 21, 2021
+СТАТУС: Первое издание опубликованное 21 Декабря, 2021
 
 <img src="images/cover_thumb.png" width=200 alt="Mastering Lightning Cover">
 
@@ -32,36 +32,36 @@ STATUS: First Edition published on Dec 21, 2021
 *  [Программное Обеспечение Узлов Lightning](04_node_client.asciidoc)
 *  [Управление Узлом Сети Lightning](05_node_operations.asciidoc)
 
-### Part 2
+### Часть 2
 
-*  [Part 2 - Intro](part_2_divider.asciidoc)
-*  [Lightning Network Architecture](06_lightning_architecture.asciidoc)
-*  [Payment Channels](07_payment_channels.asciidoc)
-*  [Routing on a Network of Payment Channels](08_routing_htlcs.asciidoc)
-*  [Channel Operation and Payment Forwarding](09_channel_operation.asciidoc)
-*  [Onion Routing](10_onion_routing.asciidoc)
+*  [Часть 2 - Intro](part_2_divider.asciidoc)
+*  [Архитектура Lightning Network](06_lightning_architecture.asciidoc)
+*  [Каналы Оплаты](07_payment_channels.asciidoc)
+*  [Маршрутизация Платежных Каналов в Сети ](08_routing_htlcs.asciidoc)
+*  [Работа Канала и  Пересылка Платежей](09_channel_operation.asciidoc)
+*  [Луковая Маршрутизация](10_onion_routing.asciidoc)
 *  [Gossip and the Channel Graph](11_gossip_channel_graph.asciidoc)
-*  [Pathfinding and Payment Delivery](12_path_finding.asciidoc)
-*  [Wire Protocol: Framing and Extensibility](13_wire_protocol.asciidoc)
-*  [Lightning's Encrypted Message Transport](14_encrypted_transport.asciidoc)
-*  [Lightning Payment Requests](15_payment_requests.asciidoc)
-*  [Security and Privacy of the Lightning Network](16_security_privacy_ln.asciidoc)
-*  [Conclusion](17_conclusion.asciidoc)
+*  [Поиск Пути и Доставка Платежей](12_path_finding.asciidoc)
+*  [Проводной протокол(Wire Protocol): Кадрирование и Расширяемость](13_wire_protocol.asciidoc)
+*  [Траспортировка зашифрованных Lightning сообщений ](14_encrypted_transport.asciidoc)
+*  [Lightning Запросы на Оплату](15_payment_requests.asciidoc)
+*  [Безопасность и конфиденциальность Lightning Network](16_security_privacy_ln.asciidoc)
+*  [Заключение ](17_conclusion.asciidoc)
 
-### Appendices
+### Приложения 
 
-*  [Bitcoin Fundamentals Review](appendix_bitcoin_fundamentals_review.asciidoc)
-*  [Docker Basics](appendix_docker_basics.asciidoc)
-*  [Protocol Messages](appendix_protocol_messages.asciidoc)
+*  [Обзор основ Bitcoin](appendix_bitcoin_fundamentals_review.asciidoc)
+*  [Основы Docker](appendix_docker_basics.asciidoc)
+*  [Сообщения Протокола](appendix_protocol_messages.asciidoc)
 
-### Glossary
+### Глоссарий
 
-*  [Glossary](glossary.asciidoc)
+*  [Глоссарий](glossary.asciidoc)
 
-### Author Bios and Colophon
+### Биография Автора и Колофон
 
-*  [Author Bios](author_bio.html)
-*  [Colophon](colo.html)
+*  [Биография Автора](author_bio.html)
+*  [Колофон](colo.html)
 
 ## Лицензия Creative Commons с указанием авторства Sharealike
 
@@ -69,7 +69,7 @@ Mastering the Lightning Network выпускается под лицензией
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering the Lightning Network</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Andreas M. Antonopoulos, Olaoluwa Osuntokun, Rene Pickhardt</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/lnbook/lnbook" rel="dct:source">https://github.com/lnbook/lnbook</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering the Lightning Network</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Andreas M. Antonopoulos, Olaoluwa Osuntokun, Rene Pickhardt</span> лицензия выдана на основании  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Базирована на Работе <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/lnbook/lnbook" rel="dct:source">https://github.com/lnbook/lnbook</a>.
 
 Эта лицензия, соответствующая «Свободной культуре», была одобрена нашим издателем O'Reilly Media (http://oreilly.com), который понимает ценность открытого исходного кода. O'Reilly Media — не только лучший в мире издатель технической литературы, но и активный сторонник открытой культуры и обмена знаниями.
 
