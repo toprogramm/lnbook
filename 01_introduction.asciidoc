@@ -153,22 +153,31 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 (((While the infamous chip battles of the 1980s neatly illustrate the point, any similarity between the preceding scenario and any of the authors' actual childhood experiences with their cousins is entirely coincidental...or is it?)))
 ====
 
-==== Security Primitives as Building Blocks
+==== Примитивы Безопасности как Строительные Блоки
 (((Security Primitives as Building Blocks)))
 
-((("fairness protocol","security primitives as building blocks")))((("security primitives")))In order for a fairness protocol like this to work, there need to be certain guarantees, or _security primitives_, that can be combined to ensure enforcement. The first security primitive is _strict time ordering/sequencing_: the "splitting" action must happen before the "choosing" action. It's not immediately obvious, but unless you can guarantee that action A happens before action B, then the protocol falls apart. The second security primitive is _commitment with nonrepudiation_. Each sibling must commit to their choice of role: either splitter or chooser. Also, once the splitting has been completed, the splitter is committed to the split they created—they cannot repudiate that choice and go try again.
+((("fairness protocol","security primitives as building blocks")))((("security primitives")))
+Чтобы протокол справедливости, подобный этому, работал, необходимы определенные гарантии или _примитивы безопасности_, которые можно комбинировать для обеспечения исполнения протокола. Первый примитив безопасности — это _строгий временной порядок/последовательность_: действие "разделения" должно произойти до действия "выбора". Это не сразу очевидно, но если вы не можете гарантировать, что действие А произойдет раньше действия Б, протокол развалится(будет иметь уязвимость). Второй примитив безопасности — это "обязательство без возможности отказа". Каждый ребенок должен выбрать свою роль: либо разделитель, либо выборщик. Кроме того, как только разделение завершено, разделитель сохраняет свое решение о разделении — он не может отказаться от этого выбора и попытаться еще раз.
+(((In order for a fairness protocol like this to work, there need to be certain guarantees, or _security primitives_, that can be combined to ensure enforcement. The first security primitive is _strict time ordering/sequencing_: the "splitting" action must happen before the "choosing" action. It's not immediately obvious, but unless you can guarantee that action A happens before action B, then the protocol falls apart. The second security primitive is _commitment with nonrepudiation_. Each sibling must commit to their choice of role: either splitter or chooser. Also, once the splitting has been completed, the splitter is committed to the split they created—they cannot repudiate that choice and go try again.)))
 
-Cryptographic systems offer a number of security primitives that can be combined in different ways to construct a fairness protocol. In addition to sequencing and commitment, we can also use many other tools:
+Криптографические системы предлагают ряд примитивов безопасности, которые можно комбинировать различными способами для создания протокола справедливости. Помимо *_последовательности действий_* и *_неотказных обязательств_*, мы также можем использовать множество других инструментов:
+(((Cryptographic systems offer a number of security primitives that can be combined in different ways to construct a fairness protocol. In addition to sequencing and commitment, we can also use many other tools:)))
 
-- Hash functions to fingerprint data, as a form of commitment, or as the basis for a digital signature
-- Digital signatures for authentication, nonrepudiation, and proof of ownership of a secret
-- Encryption/decryption to restrict access to information to authorized participants only
+- Хэш-функции для подписи данных в качестве формы обязательства или в качестве основы для цифровой подписи.
+(((- Hash functions to fingerprint data, as a form of commitment, or as the basis for a digital signature)))
+- Цифровые подписи для аутентификации, неотказных обязательств и доказательства владения секретом.
+(((- Digital signatures for authentication, nonrepudiation, and proof of ownership of a secret)))
+- Шифрование/дешифрование для предоставления доступа к информации *_только авторизованным_* участникам.
+(((- Encryption/decryption to restrict access to information to authorized participants only)))
 
-This is only a small list of a whole "menagerie" of security and cryptographic primitives that are in use. More basic primitives and combinations are invented all the time.
+Это лишь небольшой список из целого «зоопарка» защитных и криптографических примитивов, которые используются. Постоянно изобретаются более интересные(((базовые))) примитивы и комбинации взаимодействия.
+(((This is only a small list of a whole "menagerie" of security and cryptographic primitives that are in use. More basic primitives and combinations are invented all the time.)))
 
-In our real-life example, we saw one form of fairness protocol called "split and choose." This is just one of a myriad different fairness protocols that can be built by combining the building blocks of security primitives in different ways. But the basic pattern is always the same: two or more participants interact without trusting each other by engaging in a series of steps that are part of an agreed protocol. The protocol's steps arrange incentives and disincentives to ensure that if the participants are rational, cheating is counterproductive and fairness is the automatic outcome. Enforcement is not necessary to get fair outcomes—it is only necessary to keep the participants from breaking out of the agreed protocol.
+В нашем примере из реальной жизни мы видели одну из форм протокола справедливости, называемую «раздели и выбери». Это лишь один из множества различных протоколов справедливости, которые можно создать, комбинируя различными способами строительные блоки примитивов безопасности. Но основная схема всегда одна и та же: два или более участников взаимодействуют, не доверяя друг другу, выполняя ряд шагов, которые являются частью согласованного протокола. Шаги протокола предусматривают стимулы и наказания, гарантирующие, что, если участники рациональны, мошенничество будет контрпродуктивным, а справедливость станет автоматическим результатом. Принужение не требуется для достижения справедливых результатов — оно необходимо лишь для удержания участников от нарушения согласованного протокола.
+(((In our real-life example, we saw one form of fairness protocol called "split and choose." This is just one of a myriad different fairness protocols that can be built by combining the building blocks of security primitives in different ways. But the basic pattern is always the same: two or more participants interact without trusting each other by engaging in a series of steps that are part of an agreed protocol. The protocol's steps arrange incentives and disincentives to ensure that if the participants are rational, cheating is counterproductive and fairness is the automatic outcome. Enforcement is not necessary to get fair outcomes—it is only necessary to keep the participants from breaking out of the agreed protocol.)))
 
-Now that you understand this basic pattern, you will start seeing it everywhere in Bitcoin, the Lightning Network, and many other systems. Let's look at some specific examples next.
+Теперь, когда вы понимаете эту базовую закономерность, вы начнете видеть ее повсюду в Bitcoin, Lightning Network и во многих других системах. Далее рассмотрим некоторые конкретные примеры.
+(((Now that you understand this basic pattern, you will start seeing it everywhere in Bitcoin, the Lightning Network, and many other systems. Let's look at some specific examples next.)))
 
 ==== Example of the Fairness Protocol
 
