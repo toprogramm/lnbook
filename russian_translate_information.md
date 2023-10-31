@@ -1,6 +1,6 @@
 Due to inaccurate translation and the absence of words in Russian grammar or cryptography slang (or lack of knowledge of them), I will use this file to record any notes about terms, their English and Russian translation and how I will translate them in this book. After that Russain language only. 
 
-Вследствие не точного перевода и отсутсвия слов в русской грамматике или криптографии(либо их не знания), я буду использовать этот файл для записи каких либо заметок о терминах, их английский и русский перевод и так как я буду переводить в этой книге.
+Вследствие не точного перевода и отсутствия слов в русской грамматике или криптографии(либо их не знания), я буду использовать этот файл для записи каких либо заметок о терминах, их английский и русский перевод и так как я буду переводить их в этой книге.
 
 Информация для переводчков (Заметки)
 
