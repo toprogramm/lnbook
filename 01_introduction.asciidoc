@@ -204,18 +204,34 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Биткойн и Lightning Network являются реализациями протоколов справедливости. Так зачем же нам нужна Lightning Network? Разве Bitcoin недостаточно?(((range="endofrange", startref="ix_01_introduction-asciidoc2")))
 (((Bitcoin and the Lightning Network are both implementations of fairness protocols. So why do we need the Lightning Network? Isn't Bitcoin enough?)))
 
-=== Motivation for the Lightning Network
+=== Мотивация для Lightning Network
+(((Motivation for the Lightning Network)))
 
-((("Lightning Network (generally)","motivation for", id="ix_01_introduction-asciidoc3", range="startofrange")))Bitcoin is a system that records transactions on a globally replicated public ledger. Every transaction is seen, validated, and stored by every participating computer. As you can imagine, this generates a lot of data and is difficult to scale.
+((("Lightning Network (generally)","motivation for", id="ix_01_introduction-asciidoc3", range="startofrange")))
+Биткойн — это система, которая записывает транзакции в глобально реплицируемый публичный реестр (его можно повторить и на своем компьютере). Каждая транзакция просматривается, проверяется и сохраняется на каждом участвующем компьютере. Как вы можете себе представить, это создает много данных, и такую систему трудно масштабировать.
+(((Bitcoin is a system that records transactions on a globally replicated public ledger. Every transaction is seen, validated, and stored by every participating computer. As you can imagine, this generates a lot of data and is difficult to scale.)))
 
-As Bitcoin and the demand for transactions grew, the number of transactions in each block increased until it eventually reached the block size limit.
-Once blocks are "full," excess transactions are left to wait in a queue. Many users will increase the fees they're willing to pay to buy space for their transactions in the next block.
+По мере роста Биткойна и спроса на транзакции количество транзакций в каждом блоке увеличивалось, пока в конечном итоге не достигло размера блока.
+Как только блоки "заполняются", оставшиеся транзакции ждут в очереди. Многие пользователи увеличивают комиссию, которую они готовы заплатить, чтобы купить место для своих транзакций в следующем блоке.
+(((As Bitcoin and the demand for transactions grew, the number of transactions in each block increased until it eventually reached the block size limit.
+Once blocks are "full," excess transactions are left to wait in a queue. Many users will increase the fees they're willing to pay to buy space for their transactions in the next block.)))
 
-If demand continues to outpace the capacity of the network, an increasing number of users' transactions are left waiting unconfirmed. Competition for fees also increases the cost of each transaction, making many smaller-value transactions (e.g., microtransactions) completely uneconomical during periods of particularly high demand.
+Если спрос продолжит превышать пропускную способность сети, все большее число транзакций пользователей будут оставаться в статусе ожидании - не подтверждено. Конкуренция за комиссионные также увеличивает стоимость каждой транзакции, делая многие транзакции с маленькой суммой (например, микротранзакции) совершенно неэкономичными в периоды особенно высокого спроса.
 
-To solve this problem, we could increase the block size limit to create space for more transactions. An increase in the "supply" of block space will lead to a lower price equilibrium for transaction fees.
+[NOTE]
+====
+Средняя цена транзакции в Bitcoin на 3 Ноября 2023 $1.5-2.
+В моменты перегруженности сети вы можете платить бóльшую комиссию. Воображаемая ситуация, при нагруженности сети. 
+Например чтобы послать эквивалент $7 в биткоин вам нужно будет заплатить еще $7.2 комиссии, Итого $14,2. 
+====
 
-However, increasing block size shifts the cost to node operators and requires them to expend more resources to validate and store the blockchain. Because blockchains are gossip protocols, each node is required to know and validate every single transaction that occurs on the network. Furthermore, once validated, each transaction and block must be propagated to the node's "neighbors," multiplying the bandwidth requirements. As such, the greater the block size, the greater the bandwidth, processing, and storage requirements for each individual node. Increasing transaction capacity in this way has the undesirable effect of centralizing the system by reducing the number of nodes and node operators. Since node operators are not compensated for running nodes, if nodes are very expensive to run, only a few well-funded node operators will continue to run nodes.
+(((If demand continues to outpace the capacity of the network, an increasing number of users' transactions are left waiting unconfirmed. Competition for fees also increases the cost of each transaction, making many smaller-value transactions (e.g., microtransactions) completely uneconomical during periods of particularly high demand.)))
+
+Чтобы решить эту проблему, мы могли бы увеличить лимит размера блока, чтобы освободить место для большего количества транзакций. Увеличение "предложения" блочного пространства приведет к снижению цены комиссии за транзакции.
+(((To solve this problem, we could increase the block size limit to create space for more transactions. An increase in the "supply" of block space will lead to a lower price equilibrium for transaction fees.)))
+
+Однако увеличение размера блока переносит затраты на операторов узлов(node operators) и требует от них расходовать больше ресурсов на проверку и хранение блокчейна. Поскольку блокчейны — это протоколы сообщения, каждый узел должен знать и проверять каждую транзакцию, происходящую в сети. Более того, после проверки каждая транзакция и блок должны распространиться среди "соседей" узла (node neighbors), что увеличивает требования к пропускной способности. Таким образом, чем больше размер блока, тем выше требования к пропускной способности, обработке и хранению для каждого отдельного узла. Увеличение пропускной способности транзакций таким образом имеет нежелательный эффект централизации системы за счет уменьшения количества узлов и операторов узлов. Если эксплуатация узлов очень дорогая, операторы узлов не получат вознаграждения за работу узлов, и только несколько хорошо финансируемых операторов узлов продолжат эксплуатировать узлы.
+(((However, increasing block size shifts the cost to node operators and requires them to expend more resources to validate and store the blockchain. Because blockchains are gossip protocols, each node is required to know and validate every single transaction that occurs on the network. Furthermore, once validated, each transaction and block must be propagated to the node's "neighbors," multiplying the bandwidth requirements. As such, the greater the block size, the greater the bandwidth, processing, and storage requirements for each individual node. Increasing transaction capacity in this way has the undesirable effect of centralizing the system by reducing the number of nodes and node operators. Since node operators are not compensated for running nodes, if nodes are very expensive to run, only a few well-funded node operators will continue to run nodes.)))
 
 ==== Scaling Blockchains
 
