@@ -1,10 +1,8 @@
 [role="pagenumrestart"]
 [[intro_what_is_the_lightning_network]]
-== Введение
+== Введение(((Introduction)))
 
-Добро пожаловать в _Освоение Lightning Network_!
-(((Welcome to _Mastering the Lightning Network_!)))
-
+Добро пожаловать в _Освоение Lightning Network_!(((Welcome to _Mastering the Lightning Network_!)))
 
 ((("Lightning Network (generally)", seealso="innovations in Lightning", id="ix_01_introduction-asciidoc0", range="startofrange")))Lightning Network (обычно именующаяся как LN), меняет способ обмена ценностями в Интернете, и это одно из самых захватывающих достижений в истории Биткойна.
 Сегодня, в 2021 году, сеть Lightning Network все еще находится в зачаточном состоянии. Lightning Network — это протокол для использования Bitcoin разумным и неочевидным путем. Это технология второго уровня поверх Bitcoin.
@@ -22,9 +20,7 @@ With core knowledge of the Lightning Network, you can help shape the future of t
 Хотя основная часть этой книги написана для программистов, первые несколько глав написаны так, чтобы быть доступными для любого человека, независимо от его технического уровня. В этой главе мы начнем с терминологии, затем перейдем к рассмотрению доверия и его применения в этих системах, и, наконец, обсудим историю и будущее Lightning Network. Итак начинаем.
 (((While the bulk of this book is written for programmers, the first few chapters are written to be approachable by anyone regardless of technical experience. In this chapter, we'll start with some terminology, then move to look at trust and its application in these systems, and finally we'll discuss the history and future of the Lightning Network. Let's get started.)))
 
-
-=== Основные Концепты Lightning Network
-(((Lightning Network Basic Concepts)))
+=== Основные Концепты Lightning Network(((Lightning Network Basic Concepts)))
 
 ((("Lightning Network (generally)","basic concepts", id="ix_01_introduction-asciidoc1", range="startofrange")))Изучая принцип работы сети Lightning Network, мы столкнемся с технической терминологией, которая поначалу может вызвать некоторое недоумение. Хотя все эти понятия и термины будут подробно объясняться по ходу работы над книгой и определяться в глоссарии, некоторые базовые определения, данные сейчас, облегчат понимание концепций в следующих двух главах. Если вы пока не понимаете всех слов из этих определений, это не страшно. Вы поймете больше по мере продвижения по тексту.
 (((As we explore how the Lightning Network actually works, we will encounter some technical terminology that might, at first, be a bit confusing. While all of these concepts and terms will be explained in detail as we progress through the book and are defined in the glossary, some basic definitions now will make it easier to understand the concepts in the next two chapters. If you don't understand all of the words in these definitions yet, that's OK. You'll understand more as you move through the text.)))
@@ -67,8 +63,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Теперь, когда вы знакомы с этими основными терминами, давайте перейдем к понятию, которое вам уже знакомо: доверие.
 (((Now that you're familiar with these basic terms, let's move to a concept you are already comfortable with: trust.)))
 
-=== Доверие в Децентрализованных Сетях
-(((Trust in Decentralized Networks)))
+=== Доверие в Децентрализованных Сетях(((Trust in Decentralized Networks)))
 
 ((("Lightning Network (generally)","trust in decentralized networks")))((("trustless systems","trust in decentralized networks")))
 Часто можно услышать, как люди называют Биткойн и Lightning Network "не требующими доверия". На первый взгляд это вызывает недоумение. В конце концов, хорошая ли вещь отсутствие доверия? Банки даже используют это в своих названиях! Является ли "не требующая доверия" система, система, лишенная доверия - плохой вещью?
@@ -87,8 +82,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 (((Before we get into how the Lightning Network works, it's important to understand one basic concept that underlies Bitcoin, the Lightning Network, and many other such systems: something we call a _fairness protocol_. A fairness protocol is a way to achieve fair outcomes between participants, who do not need to trust each other, without the need for a central authority, and it is the backbone of decentralized systems like Bitcoin.)))
 
 
-=== Справедливость Без Центрального Управления
-(((Fairness Without Central Authority)))
+=== Справедливость Без Центрального Управления(((Fairness Without Central Authority)))
 
 ((("fairness, ensuring")))((("Lightning Network (generally)","fairness without central authority")))Когда у людей есть конкурирующие интересы, как они могут установить достаточное доверие, чтобы участвовать в каком-либо сотрудничестве или транзакционном поведении? Ответ на этот вопрос лежит в основе нескольких научных и гуманитарных дисциплин, таких как экономика, социология, поведенческая психология и математика. Некоторые из этих дисциплин дают нам «мягкие-социальные» ответы, которые зависят от таких понятий, как репутация, справедливость, мораль и даже религия. Другие дисциплины дают нам конкретные ответы, которые зависят только от предположения, что участники этих взаимодействий будут действовать рационально, руководствуясь своими личными интересами в качестве главной цели.(((When people have competing interests, how can they establish enough trust to engage in some cooperative or transactional behavior? The answer to this question lies at the core of several scientific and humanistic disciplines, such as economics, sociology, behavioral psychology, and mathematics. Some of those disciplines give us "soft" answers that depend on concepts such as reputation, fairness, morality, and even religion. Other disciplines give us concrete answers that depend only on the assumption that the participants in these interactions will act rationally, with their self-interest as the main objective.)))
 
@@ -107,8 +101,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Теоретико-игровые протоколы честности (справедливости):: Эта последняя категория возникает из сочетания Интернета и криптографии и является предметом данного раздела. Давайте посмотрим, как работает этот способ и в чем его преимущества и недостатки.
 (((Game theoretical fairness protocols: This last category emerges from the combination of the internet and cryptography and is the subject of this section. Let's see how it works and what its advantages and disadvantages are.)))
 
-==== Доверенные Протоколы Без Посредников
-(((Trusted Protocols Without Intermediaries)))
+==== Доверенные Протоколы Без Посредников(((Trusted Protocols Without Intermediaries)))
 
 ((("fairness protocol","trusted protocols without intermediaries")))Криптографические системы, такие как Bitcoin и Lightning Network, — это системы, которые позволяют вам совершать транзакции с людьми (и компьютерами), которым вы не доверяете. Эту операцию часто называют «не требующей доверия» операцией, хотя на самом деле она не является таковой. Вы должны доверять программному обеспечению, которое используете, и доверять что протокол, реализованный этим программным обеспечением, приведет к справедливым результатам.
 (((Cryptographic systems like Bitcoin and the Lightning Network are systems that allow you to transact with people (and computers) that you don't trust. This is often referred to as "trustless" operation, even though it is not actually trustless. You have to trust in the software that you run, and you have to trust that the protocol implemented by that software will result in fair outcomes.)))
@@ -116,10 +109,10 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Большое различие между такой криптографической системой и традиционной финансовой системой в том, что в традиционных финансах у вас есть _доверенная третья сторона_, например банк, которая гарантирует справедливость результатов. Серьезной проблемой таких систем является то, что они предоставляют слишком много полномочий третьей стороне, а также уязвимы к _единственной точке отказа_. Если доверенная третья сторона сама нарушает доверие или пытается обмануть, разрушается основа доверия.
 (((The big distinction between a cryptographic system like this and a traditional financial system is that in traditional finance you have a _trusted third party_, for example a bank, to ensure that outcomes are fair. A significant problem with such systems is that they give too much power to the third party, and they are also vulnerable to a _single point of failure_. If the trusted third party itself violates trust or attempts to cheat, the basis of trust breaks.)))
 
-Изучая криптографические системы, вы заметите определенную закономерность: вместо того, чтобы полагаться на доверенную третью сторону, эти системы пытаются предотвратить несправедливые результаты, используя систему стимулов и сдерживающих факторов. В криптографических системах вы предоставляете доверие ((("protocol, defined")))_протоколу_, который является эффективной системой с набором правил, которая, если спроектирована правильно, будет правильно применять нужные стимулы и сдерживающие факторы. Преимущество этого подхода двоякое: вы не только избегаете доверия третьей стороне, но и уменьшаете необходимость принуждения к справедливым результатам. Пока участники следуют согласованному протоколу и остаются в системе, механизм стимулирования в этом протоколе обеспечивает справедливые результаты без принуждения.
+Изучая криптографические системы, вы заметите определенную закономерность: вместо того, чтобы полагаться на доверенную третью сторону, эти системы пытаются предотвратить несправедливые результаты, используя систему стимулов и сдерживающих факторов. В криптографических системах вы предоставляете доверие _протоколу_((("protocol, defined"))), который является эффективной системой с набором правил, которая, если спроектирована правильно, будет правильно применять нужные стимулы и сдерживающие факторы. Преимущество этого подхода двоякое: вы не только избегаете доверия третьей стороне, но и уменьшаете необходимость принуждения к справедливым результатам. Пока участники следуют согласованному протоколу и остаются в системе, механизм стимулирования в этом протоколе обеспечивает справедливые результаты без принуждения.
 (((As you study cryptographic systems, you will notice a certain pattern: instead of relying on a trusted third party, these systems attempt to prevent unfair outcomes by using a system of incentives and disincentives. In cryptographic systems you place trust in the ("protocol, defined")_protocol_, which is effectively a system with a set of rules that, if properly designed, will correctly apply the desired incentives and disincentives. The advantage of this approach is twofold: not only do you avoid trusting a third party, you also reduce the need to enforce fair outcomes. So long as the participants follow the agreed protocol and stay within the system, the incentive mechanism in that protocol achieves fair outcomes without enforcement.)))
 
-((("game theory")))Использование стимулов и ограничений для достижения справедливых результатов является одним из аспектов раздела математики, называемого _теорией игр_, который изучает "модели стратегического взаимодействия между рационально мыслящими людьми". "footnote:[The Wikipedia https://en.wikipedia.org/wiki/Game_theory[entry on game theory] provides more information.] Криптографические системы, которые контролируют финансовые взаимодействия между участниками, такие как Bitcoin и Lightning Network, в значительной степени полагаются на теорию игр, чтобы препятствовать мошенничеству участников и позволить участникам, которые не доверяют друг другу достигать справедливых результатов.
+((("game theory")))Использование стимулов и ограничений для достижения справедливых результатов является одним из аспектов раздела математики, называемого _теорией игр_, который изучает "модели стратегического взаимодействия между рационально мыслящими людьми". footnote:[Википедия (на английском) https://en.wikipedia.org/wiki/Game_theory[статья по теории игр] предоставляет дополнительную информацию.] footnote:[Википедия (на русском) https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B8%D0%B3%D1%80[статья по теории игр] предоставляет дополнительную информацию.] Криптографические системы, которые контролируют финансовые взаимодействия между участниками, такие как Bitcoin и Lightning Network, в значительной степени полагаются на теорию игр, чтобы препятствовать мошенничеству участников и позволить участникам, которые не доверяют друг другу достигать справедливых результатов.
 (((The use of incentives and disincentives to achieve fair outcomes is one aspect of a branch of mathematics called _game theory_, which studies "models of strategic interaction among rational decision makers."footnote:[The Wikipedia https://en.wikipedia.org/wiki/Game_theory[entry on game theory] provides more information.] Cryptographic systems that control financial interactions between participants, such as Bitcoin and the Lightning Network, rely heavily on game theory to prevent participants from cheating and allow participants who don't trust each other to achieve fair outcomes.)))
 
 Хотя теория игр и ее использование в криптографических системах на первый взгляд могут показаться запутанными и незнакомыми, есть вероятность, что вы уже знакомы с этими системами в своей повседневной жизни; вы просто их еще не распознаете. В следующем разделе мы воспользуемся простым примером из детства, который поможет нам определить основную закономерность. Как только вы поймете базовый шаблон, вы увидите его повсюду в пространстве блокчейна и начнете распознавать его быстро и интуитивно.
@@ -128,8 +121,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 ((("fairness protocol", id="ix_01_introduction-asciidoc2", range="startofrange")))В этой книге мы называем эту модель((("fairness protocol","defined"))) _протоколом справедливости_, определяемым как процесс, который использует систему стимулов и/или сдерживающих факторов для обеспечения справедливых результатов для участников, которые не доверяют друг другу. Принуждение соблюдения протокола справедливости необходимо только для того, чтобы гарантировать, что участники не смогут избежать стимулов или сдерживающих факторов.
 (((In this book, we call this pattern a ("fairness protocol","defined")_fairness protocol_, defined as a process that uses a system of incentives and/or disincentives to ensure fair outcomes for participants who don't trust each other. Enforcement of a fairness protocol is only necessary to ensure that the participants can't escape the incentives or disincentives.)))
 
-==== Протокол Справедливости в Действии
-(((A Fairness Protocol in Action)))
+==== Протокол Справедливости в Действии(((A Fairness Protocol in Action)))
 
 ((("fairness protocol","real-world example")))Давайте рассмотрим пример протокола справедливости, с которым вы, возможно, уже знакомы.
 (((Let's look at an example of a fairness protocol that you may already be familiar with.)))
@@ -153,8 +145,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 (((While the infamous chip battles of the 1980s neatly illustrate the point, any similarity between the preceding scenario and any of the authors' actual childhood experiences with their cousins is entirely coincidental...or is it?)))
 ====
 
-==== Примитивы Безопасности как Строительные Блоки
-(((Security Primitives as Building Blocks)))
+==== Примитивы Безопасности как Строительные Блоки(((Security Primitives as Building Blocks)))
 
 ((("fairness protocol","security primitives as building blocks")))((("security primitives")))
 Чтобы протокол справедливости, подобный этому, работал, необходимы определенные гарантии или _примитивы безопасности_, которые можно комбинировать для обеспечения исполнения протокола. Первый примитив безопасности — это _строгий временной порядок/последовательность_: действие "разделения" должно произойти до действия "выбора". Это не сразу очевидно, но если вы не можете гарантировать, что действие А произойдет раньше действия Б, протокол развалится(будет иметь уязвимость). Второй примитив безопасности — это "обязательство без возможности отказа". Каждый ребенок должен выбрать свою роль: либо разделитель, либо выборщик. Кроме того, как только разделение завершено, разделитель сохраняет свое решение о разделении — он не может отказаться от этого выбора и попытаться еще раз.
@@ -179,8 +170,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Теперь, когда вы понимаете эту базовую закономерность, вы начнете видеть ее повсюду в Bitcoin, Lightning Network и во многих других системах. Далее рассмотрим некоторые конкретные примеры.
 (((Now that you understand this basic pattern, you will start seeing it everywhere in Bitcoin, the Lightning Network, and many other systems. Let's look at some specific examples next.)))
 
-==== Пример Протокола Справедливости
-(((Example of the Fairness Protocol)))
+==== Пример Протокола Справедливости(((Example of the Fairness Protocol)))
 
 ((("fairness protocol","Proof of Work example")))((("PoW (Proof of Work) algorithm")))((("Proof of Work (PoW) algorithm")))
 Наиболее ярким примером протокола справедливости является консенсусный алгоритм Bitcoin «Доказательство работы» (PoW - Proof of Work). В Bitcoin майнеры конкурируют за проверку транзакций и объединение их в блоки. Чтобы гарантировать, что майнеры не обманывают, не давая им полномочий, Bitcoin использует систему стимулов и сдерживаний. Майнерам нужно использовать электричество и выделять оборудование для выполнения "работы", которая заложена в качестве "доказательства" внутри каждого блока. Это достигается благодаря свойству хеш-функций, при котором выходное значение случайным образом распределяется по всему диапазону возможных выходных данных. Если майнерам удается достаточно быстро создать действительный блок, они получают вознаграждение(block reward) за этот блок. Стумуляция майнеров использовать много электроэнергии до того, как сеть рассмотрит их блок, означает, что у них есть стимул правильно проверять транзакции в блоке. Если они обманывают или допускают какую-либо ошибку, их блок отклоняется, а электричество, которое они использовали, чтобы «доказать» его, тратится впустую. Никому не нужно заставлять майнеров производить действительные блоки; награда и наказание стимулируют их к этому. Все, что нужно протоколу, — это гарантировать, что принимаются только действительные блоки с Доказательством Работы (only valid blocks with Proof of Work).
@@ -204,8 +194,7 @@ On-chain против off-chain:: ((("on-chain payment","defined")))Платеж
 Биткойн и Lightning Network являются реализациями протоколов справедливости. Так зачем же нам нужна Lightning Network? Разве Bitcoin недостаточно?(((range="endofrange", startref="ix_01_introduction-asciidoc2")))
 (((Bitcoin and the Lightning Network are both implementations of fairness protocols. So why do we need the Lightning Network? Isn't Bitcoin enough?)))
 
-=== Мотивация для Lightning Network
-(((Motivation for the Lightning Network)))
+=== Мотивация для Lightning Network(((Motivation for the Lightning Network)))
 
 ((("Lightning Network (generally)","motivation for", id="ix_01_introduction-asciidoc3", range="startofrange")))
 Биткойн — это система, которая записывает транзакции в глобально реплицируемый публичный реестр (его можно повторить и на своем компьютере). Каждая транзакция просматривается, проверяется и сохраняется на каждом участвующем компьютере. Как вы можете себе представить, это создает много данных, и такую систему трудно масштабировать.
@@ -221,8 +210,8 @@ Once blocks are "full," excess transactions are left to wait in a queue. Many us
 [NOTE]
 ====
 Средняя цена транзакции в Bitcoin на 3 Ноября 2023 $1.5-2.
-В моменты перегруженности сети вы можете платить бóльшую комиссию. Воображаемая ситуация, при нагруженности сети. 
-Например чтобы послать эквивалент $7 в биткоин вам нужно будет заплатить еще $7.2 комиссии, Итого $14,2. 
+В моменты перегруженности сети вы можете платить бóльшую комиссию. Воображаемая ситуация, при нагруженности сети.
+Например чтобы послать эквивалент $7 в биткоин вам нужно будет заплатить еще $7.2 комиссии, Итого $14,2.
 ====
 
 (((If demand continues to outpace the capacity of the network, an increasing number of users' transactions are left waiting unconfirmed. Competition for fees also increases the cost of each transaction, making many smaller-value transactions (e.g., microtransactions) completely uneconomical during periods of particularly high demand.)))
@@ -233,83 +222,122 @@ Once blocks are "full," excess transactions are left to wait in a queue. Many us
 Однако увеличение размера блока переносит затраты на операторов узлов(node operators) и требует от них расходовать больше ресурсов на проверку и хранение блокчейна. Поскольку блокчейны — это протоколы сообщения, каждый узел должен знать и проверять каждую транзакцию, происходящую в сети. Более того, после проверки каждая транзакция и блок должны распространиться среди "соседей" узла (node neighbors), что увеличивает требования к пропускной способности. Таким образом, чем больше размер блока, тем выше требования к пропускной способности, обработке и хранению для каждого отдельного узла. Увеличение пропускной способности транзакций таким образом имеет нежелательный эффект централизации системы за счет уменьшения количества узлов и операторов узлов. Если эксплуатация узлов очень дорогая, операторы узлов не получат вознаграждения за работу узлов, и только несколько хорошо финансируемых операторов узлов продолжат эксплуатировать узлы.
 (((However, increasing block size shifts the cost to node operators and requires them to expend more resources to validate and store the blockchain. Because blockchains are gossip protocols, each node is required to know and validate every single transaction that occurs on the network. Furthermore, once validated, each transaction and block must be propagated to the node's "neighbors," multiplying the bandwidth requirements. As such, the greater the block size, the greater the bandwidth, processing, and storage requirements for each individual node. Increasing transaction capacity in this way has the undesirable effect of centralizing the system by reducing the number of nodes and node operators. Since node operators are not compensated for running nodes, if nodes are very expensive to run, only a few well-funded node operators will continue to run nodes.)))
 
-==== Scaling Blockchains
+==== Масштабирование Блокчейннов(((Scaling Blockchains)))
 
-((("blockchain","scaling", id="ix_01_introduction-asciidoc4", range="startofrange")))((("Lightning Network (generally)","scaling blockchains", id="ix_01_introduction-asciidoc5", range="startofrange")))The side effects of increasing the block size or decreasing the block time with respect to centralization of the network are severe, as a few calculations with the numbers show.
+((("blockchain","scaling", id="ix_01_introduction-asciidoc4", range="startofrange")))((("Lightning Network (generally)","scaling blockchains", id="ix_01_introduction-asciidoc5", range="startofrange")))Побочные эффекты увеличения размера блока или уменьшения времени блока учитывая централизацию сети довольно серьезны, как показывают несколько расчетов с цифрами.
+(((The side effects of increasing the block size or decreasing the block time with respect to centralization of the network are severe, as a few calculations with the numbers show.)))
 
-Let us assume the usage of Bitcoin grows so that the network has to process 40,000 transactions per second, which is the approximate transaction processing level of the Visa network during peak usage.
+Предположим, что использование Bitcoin вырастет настолько, что сети придется обрабатывать 40 000 транзакций в секунду, что является приблизительным уровнем обработки транзакций в сети Visa в пиковые моменты.
+(((Let us assume the usage of Bitcoin grows so that the network has to process 40,000 transactions per second, which is the approximate transaction processing level of the Visa network during peak usage.)))
 
-Assuming 250 bytes on average per transaction, this would result in a data stream of 10 megabytes per second (MBps) or 80 megabits per second (Mbps) just to be able to receive all the transactions.
+Если предположить, что в среднем на одну транзакцию приходится 250 байт, потребуется поток данных 10 мегабайт в секунду (МБ/с) или 80 мегабит в секунду (Мбит/с) только для приема всех транзакций .
+Сюда не входит дополнительнвй трафик на пересылку информации о транзакциях другим участникам сети.
+Хотя скорость 10 Мбайт/с не кажется гигантской в контексте высокоскоростного оптоволокна и мобильных скоростей 5G, она фактически исключает возможность запуска и работы узла для тех, кто не может выполнить это требование, особенно в странах, где высокопроизводительный Интернет не доступен или мало распространен.
+(((Assuming 250 bytes on average per transaction, this would result in a data stream of 10 megabytes per second (MBps) or 80 megabits per second (Mbps) just to be able to receive all the transactions.
 This does not include the traffic overhead of forwarding the transaction information to other peers.
-While 10 MBps does not seem extreme in the context of high-speed fiber optic and 5G mobile speeds, it would effectively exclude anyone who cannot meet this requirement from running a node, especially in countries where high-performance internet is not affordable or widely available.
+While 10 MBps does not seem extreme in the context of high-speed fiber optic and 5G mobile speeds, it would effectively exclude anyone who cannot meet this requirement from running a node, especially in countries where high-performance internet is not affordable or widely available.)))
 
-Users also have many other demands on their bandwidth and cannot be expected to expend this much only to receive transactions.
+У пользователей также есть много других требований к пропускной способности их сети, и не слудует ожидать(((не предполагают тратить на это))), что они будут ее тратить только на получение транзакций.
+(((Users also have many other demands on their bandwidth and cannot be expected to expend this much only to receive transactions.)))
 
-Furthermore, storing this information locally would result in 864 gigabytes per day. This is roughly one terabyte of data, or the size of a hard drive.
+Кроме того, локальное хранение этой информации приведет к расходу 864 гигабайт в день. Это примерно один терабайт данных или емкость домашнего жесткого диска.
+(((Furthermore, storing this information locally would result in 864 gigabytes per day. This is roughly one terabyte of data, or the size of a hard drive.)))
 
+Проверка 40 000 подписей алгоритма цифровой подписи на основе эллиптической кривой (Elliptic Curve Digital Signature Algorithm  - ECDSA) в секунду также едва ли осуществима (см https://bitcoin.stackexchange.com/questions/95339/how-many-bitcoin-transactions-can-be-verified-per-second[эту статью на английском на StackExchange ]), что делает _начальную загрузку блока (IBD)_ блокчейна Bitcoin (синхронизацию и проверку всего, начиная с генезис-блока) практически невозможной без очень дорогого оборудования.
+(((Verifying 40,000 Elliptic Curve Digital Signature Algorithm (ECDSA) signatures per second is also barely feasible (see https://bitcoin.stackexchange.com/questions/95339/how-many-bitcoin-transactions-can-be-verified-per-second[this article on StackExchange]), making the _initial block download (IBD)_ of the Bitcoin blockchain  (synchronizing and verifying everything starting from the genesis block) almost impossible without very expensive hardware.)))
 
-Verifying 40,000 Elliptic Curve Digital Signature Algorithm (ECDSA) signatures per second is also barely feasible (see https://bitcoin.stackexchange.com/questions/95339/how-many-bitcoin-transactions-can-be-verified-per-second[this article on StackExchange]), making the _initial block download (IBD)_ of the Bitcoin blockchain  (synchronizing and verifying everything starting from the genesis block) almost impossible without very expensive hardware.
+Теперь когда 40 000 транзакций в секунду выглядят весомо, и зная что паритет с традиционными финансовыми платежными сетями достигается только в пиковые моменты. Инновации в платежах машина-машина, микротранзакциях и других приложениях, скорее всего подтолкнут спрос на порядки выше чем сейчас.
+(((While 40,000 transactions per second seems like a lot, it only achieves parity with traditional financial payment networks at peak times. Innovations in machine-to-machine payments, microtransactions, and other applications are likely to push demand to many orders higher than that.)))
 
-While 40,000 transactions per second seems like a lot, it only achieves parity with traditional financial payment networks at peak times. Innovations in machine-to-machine payments, microtransactions, and other applications are likely to push demand to many orders higher than that.
+Проще говоря: вы не можете масштабировать блокчейн для проверки транзакций всего мира децентрализованно.
+(((Simply put: you can't scale a blockchain to validate the entire world's transactions in a decentralized way.)))
 
-Simply put: you can't scale a blockchain to validate the entire world's transactions in a decentralized way.
+_Но что, если бы от каждого узла не требовалось знать и проверять каждую транзакцию? Что, если бы существовал способ масштабировать off-chain транзакции без потери безопасности сети Биткойн?_
+(((_But what if each node wasn't required to know and validate every single transaction? What if there was a way to have scalable off-chain transactions, without losing the security of the Bitcoin network?_)))
 
-_But what if each node wasn't required to know and validate every single transaction? What if there was a way to have scalable off-chain transactions, without losing the security of the Bitcoin network?_
+В феврале 2015 Джозеф Пун и Таддеус Дрия предложили возможное решение проблемы масштабируемости Bitcoin, опубликовав статью «Сеть Lightning Bitcoin-а : Масштабируемые Мгновенные Off-Chain Платежи».footnote:[Джозеф Пун и Таддеус Дрия. "Сеть Lightning Bitcoin-а : Масштабируемые Мгновенные Off-Chain Платежи" DRAFT Version 0.5.9.2. 14 Января, 2016. https://lightning.network/lightning-network-paper.pdf[] (на английском).] _("The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments.")_
+(((In February 2015, Joseph Poon and Thaddeus Dryja proposed a possible solution to the Bitcoin scalability problem, with the publication of "The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments.")))
 
-In February 2015, Joseph Poon and Thaddeus Dryja proposed a possible solution to the Bitcoin scalability problem, with the publication of "The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments."footnote:[Joseph Poon and Thaddeus Dryja. "The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments." DRAFT Version 0.5.9.2. January 14, 2016. https://lightning.network/lightning-network-paper.pdf[].]
-
-In the (now outdated) whitepaper, Poon and Dryja estimate that in order for Bitcoin to reach the 47,000 transactions per second processed at peak by Visa, it would require 8 GB blocks.
+В (уже устаревшем) техническом документе Пун и Дрия подсчитали, что для того, чтобы Биткойн мог бы достичь 47 000 транзакций в секунду, обрабатываемых Visa на пике, ему потребуются блоки размером 8 ГБ.
+Это сделает эксплуатацию узла совершенно неприемлемой для кого-либо, кроме крупных предприятий и предприятий промышленного уровня.
+Результатом этого будет сеть, в которой лишь несколько пользователей смогут фактически проверить состояние реестра.
+Биткойн полагается на то, что пользователи сами проверяют реестр, не доверяя третьим лицам, чтобы оставаться децентрализованным.
+Цены на использование работающих узлов вынудит среднестатистического пользователя доверять третьим сторонам возможность узнать состояние реестра, что в конечном итоге нарушит модель доверия Биткойна.
+(((In the (now outdated) whitepaper, Poon and Dryja estimate that in order for Bitcoin to reach the 47,000 transactions per second processed at peak by Visa, it would require 8 GB blocks.
 This would make running a node completely untenable for anyone but large-scale enterprises and industrial-grade operations.
 The result would be a network in which only a few users could actually validate the state of the ledger.
 Bitcoin relies on users validating the ledger for themselves, without explicitly trusting third parties, in order to stay decentralized.
-Pricing users out of running nodes would force the average user to trust third parties to discover the state of the ledger, ultimately breaking the trust model of Bitcoin.
+Pricing users out of running nodes would force the average user to trust third parties to discover the state of the ledger, ultimately breaking the trust model of Bitcoin.)))
 
-The Lightning Network proposes a new network, a second layer, where users can make payments to each other peer-to-peer, without the necessity of publishing a transaction to the Bitcoin blockchain for each payment.
+Сеть Lightning предлагает новую сеть, второй слой, где пользователи могут совершать peer-to-peer (равный - равному, пользователь - пользователю) платежи друг другу без необходимости публикации транзакции в блокчейне Bitcoin для каждого платежа.
+Пользователи могут платить друг другу в сети Lightning столько раз, сколько захотят, не создавая дополнительных биткойн-транзакций и без затрат на on-chain комиссии.
+Они используют блокчейн Bitcoin только для первоначальной загрузки биткойнов в сеть Lightning и для _расчета_ (settle), то есть для удаления биткойнов из сети Lightning.
+В результате гораздо больше платежей в биткойнах могут осуществляться off-chain, нужны только транзакции начальной загрузки и окончательного расчета которые проверяются и сохраняются узлами Bitcoin.
+Помимо снижения нагрузки на узлы, платежи в сети Lightning обходятся дешевле для пользователей, поскольку им не нужно платить комиссию блокчейна, и более конфиденциальны для пользователей, поскольку они не публикуются для всех участников сети и, кроме того, не хранятся на постоянной основе.
+(((The Lightning Network proposes a new network, a second layer, where users can make payments to each other peer-to-peer, without the necessity of publishing a transaction to the Bitcoin blockchain for each payment.
 Users may pay each other on the Lightning Network as many times as they want, without creating additional Bitcoin transactions or incurring on-chain fees.
 They only make use of the Bitcoin blockchain to load bitcoin onto the Lightning Network initially and to _settle_, that is, to remove bitcoin from the Lightning Network.
 The result is that many more Bitcoin payments can take place off-chain, with only the initial loading and final settlement transactions needing to be validated and stored by Bitcoin nodes.
-Aside from reducing the burden on nodes, payments on the Lightning Network are cheaper for users because they do not need to pay blockchain fees, and more private for users because they are not published to all participants of the network and furthermore are not stored permanently.
+Aside from reducing the burden on nodes, payments on the Lightning Network are cheaper for users because they do not need to pay blockchain fees, and more private for users because they are not published to all participants of the network and furthermore are not stored permanently.)))
 
-While the Lightning Network was initially conceived for Bitcoin, it can be implemented on any blockchain that meets some basic technical requirements. Other blockchains, such as Litecoin, already support the Lightning Network. Additionally, several other blockchains are developing similar second layer or "layer 2" solutions to help them scale(((range="endofrange", startref="ix_01_introduction-asciidoc5")))(((range="endofrange", startref="ix_01_introduction-asciidoc4"))).(((range="endofrange", startref="ix_01_introduction-asciidoc3")))
+Хотя сеть Lightning изначально была задумана для Bitcoin, ее можно реализовать на любом блокчейне, который отвечает некоторым базовым техническим требованиям. Другие блокчейны, такие как Litecoin, уже поддерживают Lightning Network. В дополнении к этому, несколько других блокчейнов разрабатывают аналогичные решения второго слоя или «слой 2», чтобы помочь им масштабироваться.(((range="endofrange", startref="ix_01_introduction-asciidoc5")))(((range="endofrange", startref="ix_01_introduction-asciidoc4"))).(((range="endofrange", startref="ix_01_introduction-asciidoc3")))
+(((While the Lightning Network was initially conceived for Bitcoin, it can be implemented on any blockchain that meets some basic technical requirements. Other blockchains, such as Litecoin, already support the Lightning Network. Additionally, several other blockchains are developing similar second layer or "layer 2" solutions to help them scale)))
 
-=== The Lightning Network's Defining Features
+=== Определяющие Особенности сети Lightning(((The Lightning Network's Defining Features)))
 
-((("Lightning Network (generally)","defining features")))The Lightning Network is a network that operates as a second layer protocol on top of Bitcoin and other blockchains. The Lightning Network enables fast, secure, private, trustless, and permissionless payments. Here are some of the features of the Lightning Network:
+((("Lightning Network (generally)","defining features")))Lightning Network — это сеть, которая работает как протокол второго уровня поверх Bitcoin и других блокчейнов. Сеть Lightning обеспечивает быстрые, безопасные, конфиденциальные, не требующие доверия и разрешения платежи. Вот некоторые особенности сети Lightning:
+(((The Lightning Network is a network that operates as a second layer protocol on top of Bitcoin and other blockchains. The Lightning Network enables fast, secure, private, trustless, and permissionless payments. Here are some of the features of the Lightning Network:)))
 
- * Users of the Lightning Network can route payments to each other for low cost and in real time.
- * Users who exchange value over the Lightning Network do not need to wait for block confirmations for payments.
- * Once a payment on the Lightning Network has completed, usually within a few seconds, it is final and cannot be reversed. Like a Bitcoin transaction, a payment on the Lightning Network can only be refunded by the recipient.
- * Whereas on-chain Bitcoin transactions are broadcast and verified by all nodes in the network, payments routed on the Lightning Network are transmitted between pairs of nodes and are not visible to everyone, resulting in much greater privacy.
- * Unlike transactions on the Bitcoin network, payments routed on the Lightning Network do not need to be stored permanently. Lightning thus uses fewer resources and hence is cheaper. This property also has benefits for privacy.
- * The Lightning Network uses onion routing, similar to the protocol used by The Onion Router (Tor) privacy network, so that even the nodes involved in routing a payment are only directly aware of their predecessor and successor in the payment route.
- * When used on top of Bitcoin, the Lightning Network uses real bitcoin, which is always in the possession (custody) and full control of the user. Lightning is not a separate token or coin, it _is_ Bitcoin.
+ * Пользователи сети Lightning могут отправлять платежи друг другу по низкой цене и в режиме реального времени.
+ (((Users of the Lightning Network can route payments to each other for low cost and in real time.)))
+ * Пользователям, которые обмениваются ценностями через сеть Lightning, не нужно ждать подтверждений блока для платежей.
+ (((Users who exchange value over the Lightning Network do not need to wait for block confirmations for payments.)))
+ * После завершения платежа в сети Lightning (обычно в течение нескольких секунд) он является окончательным и не может быть отменен. Как и транзакция Биткойн, платеж в сети Lightning может быть возвращен только получателю.
+ (((Once a payment on the Lightning Network has completed, usually within a few seconds, it is final and cannot be reversed. Like a Bitcoin transaction, a payment on the Lightning Network can only be refunded by the recipient.)))
+ * В то время как on-chain транзакции Биткойн транслируются и проверяются всеми узлами в сети, платежи, маршрутизируемые в сети Lightning, передаются между парами узлов и не видны всем, что приводит к гораздо большей конфиденциальности.
+ ((( Whereas on-chain Bitcoin transactions are broadcast and verified by all nodes in the network, payments routed on the Lightning Network are transmitted between pairs of nodes and are not visible to everyone, resulting in much greater privacy.)))
+ * В отличие от транзакций в сети Bitcoin, платежи, направляемые в сеть Lightning, не требуют постоянного хранения. Таким образом, Lightning использует меньше ресурсов и, следовательно - дешевле. Это свойство также имеет преимущества в плане конфиденциальности.
+ (((Unlike transactions on the Bitcoin network, payments routed on the Lightning Network do not need to be stored permanently. Lightning thus uses fewer resources and hence is cheaper. This property also has benefits for privacy.)))
+ * Сеть Lightning использует луковую маршрутизацию, аналогичную протоколу, используемому в конфиденциальной сети The Onion Router (Tor), так что даже узлы, участвующие в маршрутизации платежа, знают только  о своих предшественниках и преемниках на маршруте платежа.
+ (((The Lightning Network uses onion routing, similar to the protocol used by The Onion Router (Tor) privacy network, so that even the nodes involved in routing a payment are only directly aware of their predecessor and successor in the payment route.)))
+ * При использовании поверх Bitcoin сеть Lightning использует настоящий биткойн, который всегда находится во владении (на хранении) и под полным контролем пользователя. Lightning — это не отдельный токен или монета, _это и есть_ биткойн.
+ (((When used on top of Bitcoin, the Lightning Network uses real bitcoin, which is always in the possession (custody) and full control of the user. Lightning is not a separate token or coin, it _is_ Bitcoin.)))
 
 
 [[user-stories]]
-=== Lightning Network Use Cases, Users, and Their Stories
+=== Варианты Использования Сети Lightning, Пользователи и Их Истории(((Lightning Network Use Cases, Users, and Their Stories)))
 
-((("Lightning Network (generally)","use cases and users")))To better understand how the Lightning Network actually works, and why people use it, we'll be following a number of users and their stories.
+((("Lightning Network (generally)","use cases and users")))Чтобы лучше понять, как действительно работает сеть Lightning и почему люди ее используют, мы будем наблюдать за пользователями и их историями.(((To better understand how the Lightning Network actually works, and why people use it, we'll be following a number of users and their stories.)))
 
-In our examples, some of the people have already used Bitcoin and others are completely new to the Bitcoin network. Each person and their story, as listed here, illustrate one or more specific use cases. We'll be revisiting them throughout this book:
+В наших примерах некоторые люди уже использовали Bitcoin, а другие — совершенно новички в сети Bitcoin. Каждый человек и его история, перечисленные здесь, показывают один или несколько специфичных вариантов использования. Мы будем возвращаться к ним на протяжении всей книги:
+(((In our examples, some of the people have already used Bitcoin and others are completely new to the Bitcoin network. Each person and their story, as listed here, illustrate one or more specific use cases. We'll be revisiting them throughout this book:)))
 
-Consumer::
-Alice is a Bitcoin user who wants to make fast, secure, cheap, and private payments for small retail purchases. She buys coffee with bitcoin, using the Lightning Network.
+Покупатель(((Consumer)))::
+Алиса — пользователь Bitcoin, который хочет совершать быстрые, безопасные, дешевые и конфиденциальные платежи за небольшие розничные покупки. Она покупает кофе за биткойны, используя Сеть Lightning.
+(((Alice is a Bitcoin user who wants to make fast, secure, cheap, and private payments for small retail purchases. She buys coffee with bitcoin, using the Lightning Network.)))
 
-Merchant::
-Bob owns a coffee shop, "Bob's Cafe." On-chain Bitcoin payments don't scale for small amounts like a cup of coffee, so he uses the Lightning Network to accept Bitcoin payments almost instantaneously and for low fees.
+Продавец::
+(((Merchant)))
+Боб - владелец кофейни «Кафе Боба». On-chain Bitcoin платежи не подходят для небольших сумм, таких как чашка кофе, поэтому он использует сеть Lightning для почти мгновенного приема Bitcoin платежей а так же низкой комиссии.
+(((Bob owns a coffee shop, "Bob's Cafe." On-chain Bitcoin payments don't scale for small amounts like a cup of coffee, so he uses the Lightning Network to accept Bitcoin payments almost instantaneously and for low fees.)))
 
-Software service business::
-Chan is a Chinese entrepreneur who sells information services related to the Lightning Network, as well as Bitcoin and other cryptocurrencies. Chan is selling these information services over the internet by implementing micropayments over the Lightning Network. Additionally, Chan has implemented a liquidity provider service that rents inbound channel capacity on the Lightning Network, charging a small bitcoin fee for each rental period.
+Компания по обслуживанию программного обеспечения(((Software service business)))::
+Чен — китайский предприниматель, занимающийся информационными сервисами, связанными с сетью Lightning, а также Bitcoin и другими криптовалютами. Чен продает услуги информационных сервисов через Интернет, осуществляя микроплатежи через сеть Lightning. Кроме того, Чен внедрил сервис по поставке ликвидности, этот сервис арендует емкость входящего канала в сети Lightning, взимая небольшую комиссию в биткойнах за каждый период аренды.
+(((Chan is a Chinese entrepreneur who sells information services related to the Lightning Network, as well as Bitcoin and other cryptocurrencies. Chan is selling these information services over the internet by implementing micropayments over the Lightning Network. Additionally, Chan has implemented a liquidity provider service that rents inbound channel capacity on the Lightning Network, charging a small bitcoin fee for each rental period.)))
 
-Gamer::
-Dina is a teenage gamer from Russia. She plays many different computer games, but her favorite ones are those that have an "in-game economy" based on real money. As she plays games, she also earns money by acquiring and selling virtual in-game items. The Lightning Network allows her to transact in small amounts for in-game items as well as earn small amounts for completing quests.
+Геймер(((Gamer)))::
+Дина — подросток-геймер из России. Она играет во множество разных компьютерных игр, но больше всего ей нравятся те, в которых есть «внутри-игровая экономика», основанная на реальных деньгах. Играя в игры, она также зарабатывает деньги, приобретая и продавая виртуальные внутри-игровые предметы. Сеть Lightning позволяет ей совершать небольшие платежи за внутри-игровые предметы, а также немного зарабатывать в криптовалюте за выполнение квестов в игре.
+(((Dina is a teenage gamer from Russia. She plays many different computer games, but her favorite ones are those that have an "in-game economy" based on real money. As she plays games, she also earns money by acquiring and selling virtual in-game items. The Lightning Network allows her to transact in small amounts for in-game items as well as earn small amounts for completing quests.)))
 
-=== Conclusion
+=== Заключение(((Conclusion)))
 
-In this chapter, we talked about the fundamental concept that underlies both Bitcoin and the Lightning Network: the fairness protocol.
+В этой главе мы говорили о фундаментальной концепции, лежащей в основе как Биткойна так же и сети Lightning: протоколе справедливости.
+(((In this chapter, we talked about the fundamental concept that underlies both Bitcoin and the Lightning Network: the fairness protocol.)))
 
-We looked at the history of the Lightning Network and the motivations behind second layer scaling solutions for Bitcoin and other blockchain-based networks.
+Мы рассмотрели историю сети Lightning и мотивы, лежащие в основе решений использования второго уровня для масштабирования Bitcoin и других сетей на основе блокчейна.
+(((We looked at the history of the Lightning Network and the motivations behind second layer scaling solutions for Bitcoin and other blockchain-based networks.)))
 
-We learned basic terminology including node, payment channel, on-chain transactions, and off-chain payments.
+Мы изучили базовую терминологию, включая узел, платежный канал, on-chain транзакции и off-chain платежи.
+(((We learned basic terminology including node, payment channel, on-chain transactions, and off-chain payments.)))
 
-Finally, we met Alice, Bob, Chan, and Dina, whom we'll be following throughout the rest of the book.(((range="endofrange", startref="ix_01_introduction-asciidoc0"))) In the next chapter, we'll meet Alice and walk through her thought process as she selects a Lightning wallet and prepares to make her first Lightning payment to buy a cup of coffee from Bob's Cafe.((("Bitcoin (system)","Lightning Network compared to", see="Bitcoin–Lightning Network comparisons")))((("channel", see="payment channel")))((("containers", see="Docker containers")))((("delivering payment", see="payment delivery")))((("DoS attacks", see="denial-of-service attacks")))((("encrypted message transport", see="Lightning encrypted transport protocol")))((("future issues", see="innovations in Lightning")))((("HTLCs", see="hash time-locked contracts")))((("invoices", see="Lightning invoices")))((("Lightning Network (generally)","Bitcoin compared to", see="Bitcoin–Lightning Network comparisons")))((("Lightning Network (generally)","invoices", see="Lightning invoices")))((("Lightning Network (generally)","network architecture", see="architecture, Lightning Network")))((("Lightning Network node", see="Lightning node entries")))((("Lightning payment requests", see="Lightning invoices")))((("LN node", see="Lightning node entries")))((("LND node project", see="Lightning Network Daemon node project")))((("message transport", see="Lightning encrypted transport protocol")))((("node", see="Lightning node entries")))((("payment channel","routing on network of", see="routing")))((("payment requests", see="Lightning invoices")))((("payment routing", see="routing")))((("privacy", see="breaches of privacy")))((("privacy", see="security and privacy")))((("private channels", see="unannounced channels")))((("TLV", see="Type-Length-Value")))((("wallet", see="Lightning wallet")))
+Наконец, мы познакомились с Алисой, Бобом, Ченом и Диной, за которыми мы будем следить на протяжении всей книги.(((Finally, we met Alice, Bob, Chan, and Dina, whom we'll be following throughout the rest of the book.)))(((range="endofrange", startref="ix_01_introduction-asciidoc0"))) В следующей главе мы познакомимся с Алисой и пройдемся по ее мыслительному процессу, как она выбирает кошелек Lightning и готовится совершить свой первый Lightning-платеж, чтобы купить чашку кофе в «Кафе Боба».(((In the next chapter, we'll meet Alice and walk through her thought process as she selects a Lightning wallet and prepares to make her first Lightning payment to buy a cup of coffee from Bob's Cafe.)))((("Bitcoin (system)","Lightning Network compared to", see="Bitcoin–Lightning Network comparisons")))((("channel", see="payment channel")))((("containers", see="Docker containers")))((("delivering payment", see="payment delivery")))((("DoS attacks", see="denial-of-service attacks")))((("encrypted message transport", see="Lightning encrypted transport protocol")))((("future issues", see="innovations in Lightning")))((("HTLCs", see="hash time-locked contracts")))((("invoices", see="Lightning invoices")))((("Lightning Network (generally)","Bitcoin compared to", see="Bitcoin–Lightning Network comparisons")))((("Lightning Network (generally)","invoices", see="Lightning invoices")))((("Lightning Network (generally)","network architecture", see="architecture, Lightning Network")))((("Lightning Network node", see="Lightning node entries")))((("Lightning payment requests", see="Lightning invoices")))((("LN node", see="Lightning node entries")))((("LND node project", see="Lightning Network Daemon node project")))((("message transport", see="Lightning encrypted transport protocol")))((("node", see="Lightning node entries")))((("payment channel","routing on network of", see="routing")))((("payment requests", see="Lightning invoices")))((("payment routing", see="routing")))((("privacy", see="breaches of privacy")))((("privacy", see="security and privacy")))((("private channels", see="unannounced channels")))((("TLV", see="Type-Length-Value")))((("wallet", see="Lightning wallet")))
