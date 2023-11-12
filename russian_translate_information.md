@@ -5,6 +5,7 @@ Due to inaccurate translation and the absence of words in Russian grammar or cry
 Информация для переводчков (Заметки)
 
 **Жирным** отмечены как я перевожу их в книге
+! восклицательный знак перед англ словом значит оставить англ слово в оригинале 
 
 * trust - **доверие** 
 * trustless - **не требующий доверия**/но так же может * использоваться как "не довернный"
@@ -18,4 +19,5 @@ Due to inaccurate translation and the absence of words in Russian grammar or cry
 * Enforcement - **принуждение**, возможно иногда могу переводить обеспечение но это не точно. 
 * second layer - второй слой
 * machine-to-machine - машина-машина
-* peer-to-peer - равный - равному (пользователь - пользователю)
+* **!peer-to-peer** - равный - равному (пользователь - пользователю)
+* gossip protocol - протокол сообщающихся
