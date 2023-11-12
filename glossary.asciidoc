@@ -3,96 +3,147 @@
 == Глоссарий(((Glossary)))
 
 Этот краткий глоссарий содержит множество терминов, используемых в отношении Bitcoin и сети Lightning. Эти термины используются на протяжении всей книги, поэтому добавьте их в закладки для быстрого поиска терминов.
+
+* По возможности ищите по английским терминам, они распроложены в алфавитном порядке на английском языке. Переносить и сортировать не вижу ни малейшего смысла.
 (((This quick glossary contains many of the terms used in relation to Bitcoin and the Lightning Network. These terms are used throughout the book, so bookmark this for a quick reference.)))
++
+адрес (address)::
+    Биткойн-адреса компактно кодирующие информацию, необходимую для оплаты получателю. Современный адрес это строка состоящая из букв и цифр, которая начинается с bc1 и выглядит так: +bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4+. Адрес - это подпись для блокировочного скрипта получателя, который может быть использован отправителем для подписания передачи средств получателю. Большинство адресов представляют собой либо публичный ключ получателя, либо некую форму скрипта, который определяет более сложные условия расходов. Предыдущий пример это - адрес bech32, кодирующий программу-свидетель, блокирующую средства на хэш открытого ключа (см. _Pay-to-Witness-Public-Key-Hash_). Существуют также более старые форматы адресов, начинающиеся с 1 или 3, которые используют кодировку адреса Base58Check для представления хэшей публичных ключей или хэшей скриптов.
+    (((Bitcoin addresses compactly encode the information necessary to pay a receiver. A modern address consists of a string of letters and numbers that starts with bc1 and looks like +bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4+. An address is shorthand for a receiver's locking script, which can be used by a sender to sign over funds to the receiver. Most addresses either represent the receiver's public key or some form of script that defines more complex spending conditions. The preceding example is a bech32 address encoding a witness program locking funds to the hash of a public key (See _Pay-to-Witness-Public-Key-Hash_). There are also older address formats that start with 1 or 3 that use the Base58Check address encoding to represent public key hashes or script hashes.)))
 
-address::
-    Bitcoin addresses compactly encode the information necessary to pay a receiver. A modern address consists of a string of letters and numbers that starts with bc1 and looks like +bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4+. An address is shorthand for a receiver's locking script, which can be used by a sender to sign over funds to the receiver. Most addresses either represent the receiver's public key or some form of script that defines more complex spending conditions. The preceding example is a bech32 address encoding a witness program locking funds to the hash of a public key (See _Pay-to-Witness-Public-Key-Hash_). There are also older address formats that start with 1 or 3 that use the Base58Check address encoding to represent public key hashes or script hashes.
-
-
-asymmetric cryptographic system::
-    Asymmetric cryptography, or public-key cryptography, is a cryptographic system that uses pairs of keys: public keys which may be disseminated widely, and private keys which are known only to the owner.
+асимметричная криптографическая система (asymmetric cryptographic system)::
+    Асимметричная криптография, или криптография с публичным ключом, — это криптографическая система, в которой используются пара ключей: публичные ключи (public keys), которые могут свободно распространяться, и приватные ключи private keys, которые известны только владельцу.
+    Генерация таких ключей зависит от криптографических алгоритмов, основанных на математических задачах целью которых является создать функции, которые легко решить одним способом, но очень сложно решить обратным.
+    Эффективная безопасность требует только сохранения приватного ключа в тайне; публичный ключ же может распространяться открыто без ущерба для безопасности.
+    (((Asymmetric cryptography, or public-key cryptography, is a cryptographic system that uses pairs of keys: public keys which may be disseminated widely, and private keys which are known only to the owner.
     The generation of such keys depends on cryptographic algorithms based on mathematical problems to produce functions that are easy to solve one way, but very difficult to solve in reverse.
-    Effective security only requires keeping the private key private; the public key can be openly distributed without compromising security.
+    Effective security only requires keeping the private key private; the public key can be openly distributed without compromising security.)))
 
-autopilot::
-    An autopilot is a recommendation engine for Lightning nodes that uses statistics of the Lightning Network topology to suggest which nodes they should open channels with.
+автопилот (autopilot)::
+    Автопилот — это механизм рекомендаций для узлов Lightning, который использует статистику топологии сети Lightning, чтобы подсказать, с какими узлами им следует открывать каналы.
+    В зависимости от реализации автопилота может быть рекомендована так же пропускная способность канала.
+    Автопилот не является частью LN Протокола  (LN Protocol).
+    (((An autopilot is a recommendation engine for Lightning nodes that uses statistics of the Lightning Network topology to suggest which nodes they should open channels with.
     Depending on the implementation of the autopilot, the channel capacity may also be recommended.
-    An autopilot is not part of the LN Protocol.
+    An autopilot is not part of the LN Protocol.)))
 
-balance::
-    The balance of a payment channel is the amount of bitcoin that belongs to each channel partner.
+баланс (balance)::
+    Баланс платежного канала — это количество биткойнов, принадлежащих каждому партнеру канала.
+    Например, Алиса могла бы открыть канал с Бобом за 1 BTC.
+    Баланс канала тогда составит 1 BTC для Алисы и 0 BTC для Боба.
+    По мере транзакций пользователей баланс канала будет обновляться.
+    Например, если Алиса отправит 0,2 BTC Бобу, то баланс теперь составит 0,8 BTC Алисе и 0,2 BTC Бобу.
+    Когда канал закроется, биткойны в канале будут разделены между двумя партнерами канала в соответствии с последним балансом, закодированным в транзакции обязательства.
+    Смотреть _capacity_.
+    (((The balance of a payment channel is the amount of bitcoin that belongs to each channel partner.
     For example, Alice could open a channel with Bob for the value of 1 BTC.
     The channel balance is then 1 BTC to Alice and 0 BTC to Bob.
     As the users transact, the channel balance will update.
     For example, if Alice sends 0.2 BTC to Bob, then the balance is now 0.8 BTC to Alice and 0.2 to Bob.
     When the channel is closed, the bitcoin in the channel will be divided between the two channel partners according to the latest balance encoded in the commitment transaction.
     In the Lightning Network, the ability to send and receive payments is limited by channel balances.
-    See _capacity_.
+    See _ёмкость_.)))
 
 bech32::
     bech32 refers to a generic check-summed base32-encoded format featuring strong error-detection guarantees. While bech32 was originally developed to be used as the address format for native SegWit outputs (BIP-173), it is also used to encode lightning invoices (BOLT #11). While native SegWit version 0 outputs (P2WPKH and P2WSH) use bech32, higher native SegWit output versions (e.g., Pay-to-Taproot or P2TR) use the improved variant bech32m (BIP-350). bech32m addresses are sometimes referred to as "bc1" addresses,  reflecting the prefix of such addresses. Native SegWit outputs are more blockspace-efficient than older addresses and therefore may reduce transaction fees for the owner of such an address.
 
-Bitcoin Improvement Proposal (BIP)::
-    A proposal that members of the Bitcoin community have submitted to improve Bitcoin. For example, BIP-21 is a proposal to improve the Bitcoin uniform resource identifier (URI) scheme. BIPs can be found at https://github.com/bitcoin/bips[GitHub].
+Предложение по Улучшению Биткойн - BIP(Bitcoin Improvement Proposal)::
+    Предложение, которое было представлено членами сообщества Bitcoin с целью улучшения Bitcoin. Например, BIP-21 - это предложение по улучшению схемы унифицикации идентификаторов ресурсов (URI) Биткойна. BIP можно найти на сайте https://github.com/bitcoin/bips[GitHub].
+    (((A proposal that members of the Bitcoin community have submitted to improve Bitcoin. For example, BIP-21 is a proposal to improve the Bitcoin uniform resource identifier (URI) scheme. BIPs can be found at https://github.com/bitcoin/bips[GitHub].)))
 
-bitcoin, Bitcoin::
-    Depending on the context, could refer to the name of the currency unit (the coin), the network, or the underlying enabling protocol. Written as bitcoin with a lowercase "b" usually refers to the currency unit. Bitcoin with an uppercase "B" usually refers to the protocol or system.
+bitcoin/биткойн, Bitcoin::
+    В зависимости от контекста может означать название денежной единицы (монеты), сети или протокола, лежащего в основе системы. Написание биткойн со строчной русской буквой "б" обычно относится к денежной единице. Bitcoin с прописной английской буквой "B" обычно относится к протоколу или системе. Иногда я буду писать Bitcoin-a/у/е что означает падежи в русском.
+    (((Depending on the context, could refer to the name of the currency unit (the coin), the network, or the underlying enabling protocol. Written as bitcoin with a lowercase "b" usually refers to the currency unit. Bitcoin with an uppercase "B" usually refers to the protocol or system.)))
 
-Bitcoin mining::
-    Bitcoin mining is the process of constructing a block from recent Bitcoin transactions and then solving a computational problem required as proof of work.
+Майнинг/Добыча в Bitcoin (Bitcoin mining)::
+    Майнинг биткоина - это процесс создания блока из последних транзакций биткоина и последующего решения вычислительной задачи, требуемой в качестве доказательства работы(Proof of Work).
+    Это процесс обновления общего реестра биткойна (т. е. блокчейна Bitcoin) и включения в реестр новых транзакций.
+    Это также процесс выпуска новых биткойнов.
+    Каждый раз, когда создается новый блок, узел майнинга будет получать новый биткойн, созданный в рамках сoinbase транзакции этого блока.
+    (((Bitcoin mining is the process of constructing a block from recent Bitcoin transactions and then solving a computational problem required as proof of work.
     It is the process by which the shared bitcoin ledger (i.e., the Bitcoin blockchain) is updated and by which new transactions are included in the ledger.
     It is also the process by which new bitcoin is issued.
-    Every time a new block is created, the mining node will receive new bitcoin created within the coinbase transaction of that block.
+    Every time a new block is created, the mining node will receive new bitcoin created within the coinbase transaction of that block.)))
 
-block::
-    A block is a data structure in the Bitcoin blockchain that consists of a header and a body of Bitcoin transactions.
+блок (block)::
+    Блок — это структура данных в блокчейне Bitcoin, состоящая из заголовка и тела Bitcoin транзакции.
+    Блок помечен меткой времени и привязан к определенному предшественнику (родительскому) блоку.
+    При хешировании заголовок блока обеспечивает доказательство работы, которое делает блокчейн вероятностно неизменным.
+    Блоки должны соответствовать правилам, установленным сетевым консенсусом для расширения блокчейна.
+    Когда блок добавляется в блокчейн, считается, что включенные в него транзакции получили первое подтверждение.
+    (((A block is a data structure in the Bitcoin blockchain that consists of a header and a body of Bitcoin transactions.
     The block is marked with a timestamp and commits to a specific predecessor (parent) block.
     When hashed, the block header provides the proof of work that makes the blockchain probabilistically immutable.
     Blocks must adhere to the rules enforced by network consensus to extend the blockchain.
-    When a block is appended to the blockchain, the included transactions are considered to have their first confirmation.
+    When a block is appended to the blockchain, the included transactions are considered to have their first confirmation.)))
 
-blockchain::
-    The blockchain is a distributed log, or database, of all Bitcoin transactions.
+Блокчейн (blockchain)::
+    Блокчейн — это распределенный журнал или база данных всех Bitcoin транзакций.
+    Транзакции группируются в дискретные обновления, называемые блоками, с ограничением до 4 миллионов единиц веса.
+    Блоки создаются примерно каждые 10 минут посредством стохастического процесса, называемого майнингом.
+    Каждый блок включает в себя вычислительно трудоемкое "доказательство работы".
+    Требование доказательства работы используется для регулирования интервалов блоков и защиты блокчейна от атак с целью перезаписи истории:
+    Злоумышленнику придется превзойти существующее доказательство работы, чтобы заменить уже опубликованные блоки, делая каждый блок вероятностно неизменяемым, поскольку он скрыт под последующими блоками.
+    (((The blockchain is a distributed log, or database, of all Bitcoin transactions.
     Transactions are grouped in discrete updates called blocks, limited up to 4 million weight units.
     Blocks are produced approximately every 10 minutes via a stochastic process called mining.
     Each block includes a computationally intensive "proof of work."
     The proof of work requirement is used to regulate the block intervals and protect the blockchain against attacks to rewrite history:
-    an attacker would need to outdo existing proof of work to replace already published blocks, making each block probabilistically immutable as it is buried under subsequent blocks.
+    an attacker would need to outdo existing proof of work to replace already published blocks, making each block probabilistically immutable as it is buried under subsequent blocks.)))
 
 BOLT::
-    BOLT, or Basis of Lightning Technology, is the formal specification of the Lightning Network. Unlike Bitcoin, which has a reference implementation that also serves as the protocol's specification, the various LN implementations follow BOLT so they can work with one another to form the same network. It is available at https://github.com/lightningnetwork/lightning-rfc[GitHub].
+    BOLT, или "Основы Технологии Lightning" (Basis of Lightning Technology), является официальной спецификацией сети Lightning. В отличие от Bitcoin, у которого есть эталонная реализация, которая также служит спецификацией протокола, различные реализации LN следуют BOLT, поэтому они могут работать друг с другом, образуя одну и ту же сеть. Он доступен по адресу https://github.com/lightningnetwork/lightning-rfc[GitHub]
+    (((BOLT, or Basis of Lightning Technology, is the formal specification of the Lightning Network. Unlike Bitcoin, which has a reference implementation that also serves as the protocol's specification, the various LN implementations follow BOLT so they can work with one another to form the same network. It is available at https://github.com/lightningnetwork/lightning-rfc[GitHub]))).
 
-capacity::
-    The capacity of a payment channel is equivalent to the amount of bitcoin provided by the funding transaction.
+ёмкость (capacity)::
+    Емкость платежного канала - эквивалентна сумме биткойнов, предоставленная транзакцией внесения средств.
+    Поскольку транзакция внесения средств публично видна в блокчейне, а канал объявляется через протокол сообщающихся, ёмкость является общедоступной информацией.
+    Он не раскрывает никакой информации о том, каким количеством биткойнов каждый из партнеров канала владеет в канале, то есть о балансе.
+    Большая ёмкость не гарантирует, что канал можно будет использовать для маршрутизации в обоих pass:[<span class="keep-together">направлениях</span>].
+    (((The capacity of a payment channel is equivalent to the amount of bitcoin provided by the funding transaction.
     Because the funding transaction is publicly visible on the blockchain, and the channel is announced via the gossip protocol, the capacity is public information.
     It does not reveal any information about how much bitcoin each of the channel partners owns in the channel, i.e., the balance.
-    A high capacity does not guarantee that the channel can be used for routing in both pass:[<span class="keep-together">directions</span>].
+    A high capacity does not guarantee that the channel can be used for routing in both pass:[<span class="keep-together">directions</span>].)))
 
 c-lightning::
-    Implementation of the LN Protocol by the Victoria-based company https://blockstream.com[Blockstream]. It is written in C. Source code is at https://github.com/ElementsProject/lightning[GitHub].
+    Реализация LN протокола компанией из Виктории https://blockstream.com[Blockstream]. Он написан на Си(C). Исходный код находится по адресу https://github.com/ElementsProject/lightning[GitHub].
+    (((Implementation of the LN Protocol by the Victoria-based company https://blockstream.com[Blockstream]. It is written in C. Source code is at https://github.com/ElementsProject/lightning[GitHub].)))
 
-closing transaction::
-    If both channel partners agree to close a channel, they will create a settlement transaction that reflects the most recent commitment transaction.
+Закрывающая транзакция(((closing transaction)))::
+    Если оба партнера канала соглашаются закрыть канал, они создают расчетную транзакцию, которая отражает самую последнюю транзакцию обязательства.
+    После обмена подписями для закрывающей транзакции дальнейшие обновления канала производиться не должны.
+    Взаимное закрытие канала с помощью закрывающей транзакции имеет то преимущество, что для востребования всех средств требуется меньше транзакций блокчейна по сравнению с односторонним принудительным закрытием канала путем публикации транзакции обязательства. Кроме того, средства обеих сторон могут быть немедленно потрачены (выведены) при закрытии транзакции.
+    (((If both channel partners agree to close a channel, they will create a settlement transaction that reflects the most recent commitment transaction.
     After exchanging signatures for a closing transaction, no further channel updates should be made.
-    Mutually closing a channel with the help of a closing transaction has the advantage that fewer blockchain transactions are required to claim all funds, in comparison to unilaterally forcing a channel close by publishing a commitment transaction. Additionally, funds for both parties are immediately spendable from a closing transaction.
+    Mutually closing a channel with the help of a closing transaction has the advantage that fewer blockchain transactions are required to claim all funds, in comparison to unilaterally forcing a channel close by publishing a commitment transaction. Additionally, funds for both parties are immediately spendable from a closing transaction.)))
 
 CLTV::
-    CLTV is an acronym/abbreviation for the Bitcoin Script operator OP_CHECKLOCKTIMEVERIFY. This defines an absolute blockheight before an output can be spent. The atomicity of the routing process heavily depends on CLTV values in HTLCs. Routing nodes announce, via the gossip protocol, their expected CLTV expiry deltas that they wish for any incoming and outgoing HTLCs.
+    CLTV — это акроним/аббревиатура оператора Bitcoin-Script OP_CHECKLOCKTIMEVERIFY (ПроверитьЗаболокироватьВремяПодтвердить).Он определяет абсолютную высоту блока, прежде чем вывод может быть потрачен. Атомарность процесса маршрутизации сильно зависит от значений CLTV в HTLC. Узлы маршрутизации объявляют через протокол сообщающихся ожидаемые дельты срока действия CLTV, которые они выбирают для любых входящих и исходящих HTLC.
+    (((CLTV is an acronym/abbreviation for the Bitcoin Script operator OP_CHECKLOCKTIMEVERIFY. This defines an absolute blockheight before an output can be spent. The atomicity of the routing process heavily depends on CLTV values in HTLCs. Routing nodes announce, via the gossip protocol, their expected CLTV expiry deltas that they wish for any incoming and outgoing HTLCs.)))
 
-coinbase::
-    The coinbase is a special field only permitted in the sole input of coinbase transactions.
+база монет (coinbase)::
+    Coinbase — это специальное поле, разрешенное только для ввода coinbase транзакций.
+    Coinbase допускает до 100 байт произвольных данных, но, начиная с BIP-34, она должна сначала указать текущую высоту блока, чтобы гарантировать уникальность coinbase транзакций.
+    Не путать с сoinbase транзакцией.
+    (((The coinbase is a special field only permitted in the sole input of coinbase transactions.
     The coinbase allows up 100 bytes of arbitrary data, but since BIP-34, it must first feature the current block height to ensure that coinbase transactions are unique.
-    Not to be confused with coinbase transaction.
+    Not to be confused with coinbase transaction.)))
 
-coinbase transaction::
-    The first transaction in a block which is always created by a miner and which includes a single coinbase.
+coinbase транзакция (coinbase transaction)::
+    Первая транзакция в блоке, который всегда создается майнером и включает в себя одну coinbase.
+    Coinbase транзакция может потребовать вознаграждение за блок и назначить его одному или нескольким выходам.
+    Награда за блок состоит из субсидии за блок (вновь созданный биткойн) и суммы всех комиссий за транзакции, включенные в блок.
+    Coinbase выходы можно потратить только после достижения 100 блоков.
+    Если блок включает в себя какие-либо транзакции SegWit, coinbase транзакция должна включать подтверждение идентификаторов транзакции-свидетеля в дополнительных выходных данных.
+    (((The first transaction in a block which is always created by a miner and which includes a single coinbase.
     The coinbase transaction may claim the block reward and assign it to one or more outputs.
     The block reward consists of the block subsidy (newly created bitcoin) and the sum of all transaction fees from transactions included in the block.
     Coinbase outputs can only be spent after maturing for 100 blocks.
-    If the block includes any SegWit transactions, the coinbase transaction must include a commitment to the witness transaction identifiers in an additional output.
+    If the block includes any SegWit transactions, the coinbase transaction must include a commitment to the witness transaction identifiers in an additional output.)))
 
-cold storage::
-    Refers to keeping an amount of bitcoin offline. Cold storage is achieved when Bitcoin private keys are created and stored in a secure offline environment. Cold storage is important to protect bitcoin holdings. Online computers are vulnerable to hackers and should not be used to store a significant amount of bitcoin.
+холодное хранение (cold storage)::
+    Относится к хранению большого количества биткойнов в автономном режиме. Мы можем достичь Холодного Хранения, когда приватные ключи Bitcoin создаются и хранятся в безопасной автономной среде. Холодное хранение важно для защиты биткойн-сбережений. Интернет-компьютеры уязвимы для хакеров, и их не следует использовать для хранения значительного количества биткойнов.
+    (((Refers to keeping an amount of bitcoin offline. Cold storage is achieved when Bitcoin private keys are created and stored in a secure offline environment. Cold storage is important to protect bitcoin holdings. Online computers are vulnerable to hackers and should not be used to store a significant amount of bitcoin.)))
 
 commitment transaction::
      A commitment transaction is a Bitcoin transaction, signed by both channel partners, that encodes the latest balance of a channel.
