@@ -168,12 +168,18 @@ coinbase транзакция (coinbase transaction)::
     (((A contract is a set of Bitcoin transactions that together result in a certain desired behavior.
     Examples are RSMCs to create a trustless, bidirectional payment channel, or HTLCs to create a mechanism that allows trustless forwarding of payments through third parties.)))
 
-Diffie–Hellman Key Exchange (DHKE)::
-    On the Lightning Network, the Elliptic Curve Diffie–Hellman (ECDH) method is used.
+Обмен ключами Диффи-Хеллмана (Diffie–Hellman Key Exchange - DHKE)::
+    В сети Lightning используется метод эллиптической кривой Диффи-Хеллмана (ECDH).
+    Это протокол соглашения об анонимном ключе, который позволяет двум сторонам, каждая из которых имеет пару публичный-приватный ключ эллиптической кривой, для создания общего секрета по незащищенному каналу связи.
+    Этот общий секрет можно использовать непосредственно как ключ или для извлечения другого ключа.
+    (((On the Lightning Network, the Elliptic Curve Diffie–Hellman (ECDH) method is used.
     It is an anonymous key agreement protocol that allows two parties, each having an elliptic curve public-private key pair, to establish a shared secret over an insecure communication channel.
-    This shared secret may be directly used as a key, or to derive another key.
-    The key, or the derived key, can then be used to encrypt subsequent communications using a symmetric-key cipher.
-    An example of the derived key would be the shared secret between the ephemeral session key of a sender of an onion with the node's public key of a hop of the onion, as described and used by the SPHINX Mix Format.
+    This shared secret may be directly used as a key, or to derive another key.)))
+    Ключ или производный ключ затем можно использовать для шифрования последующих сообщений используя шифр с симметричным ключом.
+    Примером производного ключа может быть общий секрет между одноразовым ключом сессии  onion-отправителя и публичным ключом onion-hop узла, как описано и используется SPHINX Mix Format.
+    * onion-hop  - прыжок(маршрутизация) в сети onion _см. луковая маршрутризация (onion routing)_. 
+    (((The key, or the derived key, can then be used to encrypt subsequent communications using a symmetric-key cipher.
+    An example of the derived key would be the shared secret between the ephemeral session key of a sender of an onion with the node's public key of a hop of the onion, as described and used by the SPHINX Mix Format.)))
 
 цифровая подпись (digital signature)::
     Цифровая подпись — это математическая схема проверки подлинности и целостности цифровых сообщений или документов.
