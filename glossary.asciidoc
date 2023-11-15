@@ -158,8 +158,9 @@ coinbase транзакция (coinbase transaction)::
     (((At any point, the pass:[<span class="keep-together">channel</span>] can be closed by either Alice or Bob if they submit their commitment transaction to the Bitcoin blockchain.
     Submitting an older (outdated) commitment transaction is considered _cheating_ (i.e., a protocol breach) in the Lightning Network and can be penalized by the other party, claiming all the funds in the channel for themselves, via a penalty transaction.)))
 
-confirmations::
-    Once a transaction is included in a block, it has one confirmation. As soon as _another_ block is mined on the blockchain, the transaction has two confirmations, and so on. Six or more confirmations are considered sufficient proof that a transaction cannot be reversed.
+подтверждения (confirmations)::
+    Как только транзакция включена в блок, она имеет одно подтверждение. Как только в блокчейне будет добыт _другой_ блок, транзакция получит два подтверждения и так далее. Шесть или более подтверждений считаются достаточным доказательством того, что транзакция не может быть отменена.
+    (((Once a transaction is included in a block, it has one confirmation. As soon as _another_ block is mined on the blockchain, the transaction has two confirmations, and so on. Six or more confirmations are considered sufficient proof that a transaction cannot be reversed.)))
 
 contract::
     A contract is a set of Bitcoin transactions that together result in a certain desired behavior.
