@@ -181,9 +181,11 @@ Diffie–Hellman Key Exchange (DHKE)::
     (((A digital signature is a mathematical scheme for verifying the authenticity and integrity of digital messages or documents.
     It can be seen as a cryptographic commitment in which the message is not hidden.)))
 
-double-spending::
-    Double-spending is the result of successfully spending some money more than once.
-    Bitcoin protects against double-spending by verifying that each transaction added to the blockchain adheres to the rules of consensus; this means checking that the inputs for the transaction have not been previously spent.
+двойная трата (double-spending)::
+    Двойная трата — это результат успешной траты денег более одного раза.
+    Биткойн защищает от двойных расходов, проверяя, что каждая транзакция, добавленная в блокчейн, соответствует правилам консенсуса; это означает проверку того, что вводы для транзакции ранее не были потрачены.
+    (((Double-spending is the result of successfully spending some money more than once.
+    Bitcoin protects against double-spending by verifying that each transaction added to the blockchain adheres to the rules of consensus; this means checking that the inputs for the transaction have not been previously spent.)))
 
 Elliptic Curve Digital Signature Algorithm (ECDSA)::
     Elliptic Curve Digital Signature Algorithm or ECDSA is a cryptographic algorithm used by Bitcoin to ensure that funds can only be spent by the holder of the correct private key.
