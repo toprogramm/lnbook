@@ -187,8 +187,9 @@ Diffie–Hellman Key Exchange (DHKE)::
     (((Double-spending is the result of successfully spending some money more than once.
     Bitcoin protects against double-spending by verifying that each transaction added to the blockchain adheres to the rules of consensus; this means checking that the inputs for the transaction have not been previously spent.)))
 
-Elliptic Curve Digital Signature Algorithm (ECDSA)::
-    Elliptic Curve Digital Signature Algorithm or ECDSA is a cryptographic algorithm used by Bitcoin to ensure that funds can only be spent by the holder of the correct private key.
+Алгоритм Цифровой Подписи Эллиптической Кривой (Elliptic Curve Digital Signature Algorithm - ECDSA)::
+    Алгоритм цифровой подписи эллиптической кривой или ECDSA — это криптографический алгоритм, используемый Bitcoin-ом для обеспечения того, чтобы средства могут быть потрачены только владельцем правильного приватного ключа.
+    (((Elliptic Curve Digital Signature Algorithm or ECDSA is a cryptographic algorithm used by Bitcoin to ensure that funds can only be spent by the holder of the correct private key.)))
 
 Eclair::
     Implementation of the LN Protocol by the Paris-based company https://acinq.co[ACINQ]. It is written in Scala. Source code is at https://github.com/ACINQ/eclair[GitHub].
