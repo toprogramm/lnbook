@@ -162,9 +162,11 @@ coinbase транзакция (coinbase transaction)::
     Как только транзакция включена в блок, она имеет одно подтверждение. Как только в блокчейне будет добыт _другой_ блок, транзакция получит два подтверждения и так далее. Шесть или более подтверждений считаются достаточным доказательством того, что транзакция не может быть отменена.
     (((Once a transaction is included in a block, it has one confirmation. As soon as _another_ block is mined on the blockchain, the transaction has two confirmations, and so on. Six or more confirmations are considered sufficient proof that a transaction cannot be reversed.)))
 
-contract::
-    A contract is a set of Bitcoin transactions that together result in a certain desired behavior.
-    Examples are RSMCs to create a trustless, bidirectional payment channel, or HTLCs to create a mechanism that allows trustless forwarding of payments through third parties.
+контракт (contract)::
+    Контракт — это набор биткойн-транзакций, которые вместе приводят к определенному желаемому поведению.
+    Примерами могут служить RSMC для создания не требующего доверия, двунаправленного платежного канала или HTLC для создания механизма, позволяющего пересылку не требующих доверия платежей через третьи стороны.
+    (((A contract is a set of Bitcoin transactions that together result in a certain desired behavior.
+    Examples are RSMCs to create a trustless, bidirectional payment channel, or HTLCs to create a mechanism that allows trustless forwarding of payments through third parties.)))
 
 Diffie–Hellman Key Exchange (DHKE)::
     On the Lightning Network, the Elliptic Curve Diffie–Hellman (ECDH) method is used.
