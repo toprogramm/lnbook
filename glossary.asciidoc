@@ -175,9 +175,11 @@ Diffie–Hellman Key Exchange (DHKE)::
     The key, or the derived key, can then be used to encrypt subsequent communications using a symmetric-key cipher.
     An example of the derived key would be the shared secret between the ephemeral session key of a sender of an onion with the node's public key of a hop of the onion, as described and used by the SPHINX Mix Format.
 
-digital signature::
-    A digital signature is a mathematical scheme for verifying the authenticity and integrity of digital messages or documents.
-    It can be seen as a cryptographic commitment in which the message is not hidden.
+цифровая подпись (digital signature)::
+    Цифровая подпись — это математическая схема проверки подлинности и целостности цифровых сообщений или документов.
+    Его можно рассматривать как криптографическое обязательство, в котором сообщение не скрыто.
+    (((A digital signature is a mathematical scheme for verifying the authenticity and integrity of digital messages or documents.
+    It can be seen as a cryptographic commitment in which the message is not hidden.)))
 
 double-spending::
     Double-spending is the result of successfully spending some money more than once.
