@@ -210,7 +210,7 @@ cервер Electrum(Electrum server)::
     (((An Electrum server is a Bitcoin node with an additional interface (API). It is often required by bitcoin wallets that do not run a full node. For example, these wallets check the status of specific transactions or broadcast transactions to the mempool using Electrum server APIs. Some Lightning wallets also use Electrum servers.)))
 
 эфемерный ключ (ephemeral key)::
-    Эфемерные ключи — это ключи, которые используются только в течение короткого времени и не сохраняются после использования. Они часто извлекаются (вычисляются) для использования в одном сеансе из другого ключа, который хранится в течение длительного времени. Эфемерные ключи в основном используются в SPHINX Mix Format и onion-маршрутизации в сети Lightning.
+    Эфемерные ключи — это ключи, которые используются только в течение короткого времени и не сохраняются после использования. Они часто извлекаются (вычисляются) для использования в одном сеансе из другого ключа, который хранится в течение длительного времени. Эфемерные ключи в основном используются в SPHINX Mix Format и onion-маршрутизации (луковая маршрутизация - далее onion-маршрутизация)  в сети Lightning.
     Это повышает безопасность передаваемых сообщений или платежей.
     Даже в случае утечки эфемерного ключа общедоступной становится информация только об одном сеансе.
     (((Ephemeral keys are keys that are only used for a short time and not retained after use. They are often derived for use in one session from another key that is held long-term. Ephemeral keys are mainly used within the SPHINX Mix Format and onion routing on the Lightning Network.
