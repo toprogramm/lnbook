@@ -110,7 +110,7 @@ c-lightning::
     Реализация LN протокола компанией из Виктории https://blockstream.com[Blockstream]. Он написан на Си(C). Исходный код находится по адресу https://github.com/ElementsProject/lightning[GitHub].
     (((Implementation of the LN Protocol by the Victoria-based company https://blockstream.com[Blockstream]. It is written in C. Source code is at https://github.com/ElementsProject/lightning[GitHub].)))
 
-Закрывающая транзакция(((closing transaction)))::
+закрывающая транзакция(((closing transaction)))::
     Если оба партнера канала соглашаются закрыть канал, они создают расчетную транзакцию, которая отражает самую последнюю транзакцию обязательства.
     После обмена подписями для закрывающей транзакции дальнейшие обновления канала производиться не должны.
     Взаимное закрытие канала с помощью закрывающей транзакции имеет то преимущество, что для востребования всех средств требуется меньше транзакций блокчейна по сравнению с односторонним принудительным закрытием канала путем публикации транзакции обязательства. Кроме того, средства обеих сторон могут быть немедленно потрачены (выведены) при закрытии транзакции.
@@ -237,10 +237,13 @@ cервер Electrum(Electrum server)::
     In the context of Bitcoin, the sender of a transaction pays a transaction fee to miners for including the transaction in a block.
     Bitcoin transaction fees do not include a base fee and depend linearly on the weight of the transaction, but not on the amount.)))
 
-funding transaction::
-    The funding transaction is used to open a payment channel. The value (in bitcoin) of the funding transaction is exactly the capacity of the payment channel.
+транзакция внесения `средств` (funding transaction)::
+    Транзакция внесения используется для открытия платежного канала. Стоимость (в биткойнах) транзакции внесения в точности соответствует емкости платежного канала.
+    Выводом транзакции внесения является скрипт мультиподписи(multisig) 2-из-2, где каждый партнер по каналу контролирует один ключ. Из-за структуры мультиподписи их можно потратить только по взаимному согласию партнеров по каналу.
+    В конечном итоге он будет потрачен одной из двух, транзакцией обязательства или закрывающей транзакцией.
+    (((The funding transaction is used to open a payment channel. The value (in bitcoin) of the funding transaction is exactly the capacity of the payment channel.
     The output of the funding transaction is a 2-of-2 multisignature script (multisig) where each channel partner controls one key. Due to its multisig nature, it can only be spent by mutual agreement between the channel partners.
-    It will eventually be spent by one of the commitment transactions or by the closing transaction.
+    It will eventually be spent by one of the commitment transactions or by the closing transaction.)))
 
 global features (+globalfeatures+ field)::
     Global features of a Lightning node are the features of interest for all other nodes.
