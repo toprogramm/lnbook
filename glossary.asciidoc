@@ -205,8 +205,9 @@ Eclair::
     Кодирование — это процесс преобразования сообщения в другую форму. Например, преобразование числа из десятичного в шестнадцатеричное.
     (((Encoding is the process of converting a message into a different form. For example, converting a number from decimal to a hexadecimal.)))
 
-Electrum server::
-    An Electrum server is a Bitcoin node with an additional interface (API). It is often required by bitcoin wallets that do not run a full node. For example, these wallets check the status of specific transactions or broadcast transactions to the mempool using Electrum server APIs. Some Lightning wallets also use Electrum servers.
+cервер Electrum(Electrum server)::
+    Сервер Electrum — это Bitcoin-узел с дополнительным интерфейсом (API). Это часто требуется для биткойн-кошельков, которые не запускают полноценный узел. Например, эти кошельки проверяют статус определенных транзакций или транслируют транзакции в мемпул(mempool) с помощью API-интерфейсов сервера Electrum. Некоторые Lightning кошельки также используют серверы Electrum.
+    (((An Electrum server is a Bitcoin node with an additional interface (API). It is often required by bitcoin wallets that do not run a full node. For example, these wallets check the status of specific transactions or broadcast transactions to the mempool using Electrum server APIs. Some Lightning wallets also use Electrum servers.)))
 
 ephemeral key::
     Ephemeral keys are keys that are only used for a short time and not retained after use. They are often derived for use in one session from another key that is held long-term. Ephemeral keys are mainly used within the SPHINX Mix Format and onion routing on the Lightning Network.
