@@ -227,11 +227,15 @@ cервер Electrum(Electrum server)::
     They can be decoded using BOLT #9, and will tell nodes which features the node has enabled, and whether these are backward compatible.
     Also known as feature flags.)))
 
-fees::
-    In the context of the Lightning Network, nodes will charge routing fees for forwarding other users' payments.
+комиссии (fees)::
+    В контексте сети Lightning узлы будут взимать маршрутизационный сбор за пересылку платежей других пользователей.
+    Отдельные узлы могут устанавливать свою собственную политику комиссий, которая будет рассчитываться как сумма фиксированной +базовой_комиссии+ (base_fee) и +комиссии_сети+ (fee_rate), и зависит от суммы платежа.
+    В контексте Биткойна отправитель транзакции платит майнерам транзационную комиссию за включение транзакции в блок.
+    Комиссия за транзакцию в Bitcoin не включает базовую комиссию и линейно зависит от веса транзакции, а не от суммы.
+    (((In the context of the Lightning Network, nodes will charge routing fees for forwarding other users' payments.
     Individual nodes can set their own fee policies which will be calculated as the sum of a fixed +base_fee+ and a +fee_rate+ that depends on the payment amount.
     In the context of Bitcoin, the sender of a transaction pays a transaction fee to miners for including the transaction in a block.
-    Bitcoin transaction fees do not include a base fee and depend linearly on the weight of the transaction, but not on the amount.
+    Bitcoin transaction fees do not include a base fee and depend linearly on the weight of the transaction, but not on the amount.)))
 
 funding transaction::
     The funding transaction is used to open a payment channel. The value (in bitcoin) of the funding transaction is exactly the capacity of the payment channel.
