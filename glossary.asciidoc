@@ -217,11 +217,15 @@ cервер Electrum(Electrum server)::
     This increases the security of transported messages or payments.
     Even if an ephemeral key leaks, only information about a single session becomes public.)))
 
-feature bits::
-    A binary string that Lightning nodes use to communicate to each other which features they support.
+биты особенностей (feature bits)::
+    Двоичная (бинарная) строка, которую узлы Lightning используют для передачи друг другу информации о поддерживаемых особенностях.
+    Биты особенностей включены во многие сообщения Lightning, а также в BOLT #11.
+    Их можно декодировать с помощью BOLT #9, и они сообщат узлам, какие функции включены на узле и являются ли они обратно совместимыми.
+    Также известны как флаги особенностей (feature flags).
+    (((A binary string that Lightning nodes use to communicate to each other which features they support.
     Feature bits are included in many Lightning messages as well as BOLT #11.
     They can be decoded using BOLT #9, and will tell nodes which features the node has enabled, and whether these are backward compatible.
-    Also known as feature flags.
+    Also known as feature flags.)))
 
 fees::
     In the context of the Lightning Network, nodes will charge routing fees for forwarding other users' payments.
