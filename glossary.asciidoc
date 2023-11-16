@@ -198,7 +198,8 @@ coinbase транзакция (coinbase transaction)::
     (((Elliptic Curve Digital Signature Algorithm or ECDSA is a cryptographic algorithm used by Bitcoin to ensure that funds can only be spent by the holder of the correct private key.)))
 
 Eclair::
-    Implementation of the LN Protocol by the Paris-based company https://acinq.co[ACINQ]. It is written in Scala. Source code is at https://github.com/ACINQ/eclair[GitHub].
+    Реализация Протокола LN Парижской компанией https://acinq.co[ACINQ]. Он написан на Scala. Исходный код находится по адресу https://github.com/ACINQ/eclair[GitHub].
+    (((Implementation of the LN Protocol by the Paris-based company https://acinq.co[ACINQ]. It is written in Scala. Source code is at https://github.com/ACINQ/eclair[GitHub].)))
 
 encoding::
     Encoding is the process of converting a message into a different form. For example, converting a number from decimal to a hexadecimal.
