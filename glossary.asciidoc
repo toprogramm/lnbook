@@ -176,7 +176,7 @@ coinbase транзакция (coinbase transaction)::
     It is an anonymous key agreement protocol that allows two parties, each having an elliptic curve public-private key pair, to establish a shared secret over an insecure communication channel.
     This shared secret may be directly used as a key, or to derive another key.)))
     Ключ или производный ключ затем можно использовать для шифрования последующих сообщений используя шифр с симметричным ключом.
-    Примером производного ключа может быть общий секрет между одноразовым ключом сессии  onion-отправителя и публичным ключом onion-hop узла, как описано и используется SPHINX Mix Format.
+    Примером производного ключа может быть общий секрет между эфемерным ключом сессии  onion-отправителя и публичным ключом onion-hop узла, как описано и используется SPHINX Mix Format.
     * onion-hop  - прыжок(маршрутизация) в сети onion _см. луковая маршрутризация (onion routing)_. 
     (((The key, or the derived key, can then be used to encrypt subsequent communications using a symmetric-key cipher.
     An example of the derived key would be the shared secret between the ephemeral session key of a sender of an onion with the node's public key of a hop of the onion, as described and used by the SPHINX Mix Format.)))
@@ -209,10 +209,13 @@ cервер Electrum(Electrum server)::
     Сервер Electrum — это Bitcoin-узел с дополнительным интерфейсом (API). Это часто требуется для биткойн-кошельков, которые не запускают полноценный узел. Например, эти кошельки проверяют статус определенных транзакций или транслируют транзакции в мемпул(mempool) с помощью API-интерфейсов сервера Electrum. Некоторые Lightning кошельки также используют серверы Electrum.
     (((An Electrum server is a Bitcoin node with an additional interface (API). It is often required by bitcoin wallets that do not run a full node. For example, these wallets check the status of specific transactions or broadcast transactions to the mempool using Electrum server APIs. Some Lightning wallets also use Electrum servers.)))
 
-ephemeral key::
-    Ephemeral keys are keys that are only used for a short time and not retained after use. They are often derived for use in one session from another key that is held long-term. Ephemeral keys are mainly used within the SPHINX Mix Format and onion routing on the Lightning Network.
+эфемерный ключ (ephemeral key)::
+    Эфемерные ключи — это ключи, которые используются только в течение короткого времени и не сохраняются после использования. Они часто извлекаются (вычисляются) для использования в одном сеансе из другого ключа, который хранится в течение длительного времени. Эфемерные ключи в основном используются в SPHINX Mix Format и onion-маршрутизации в сети Lightning.
+    Это повышает безопасность передаваемых сообщений или платежей.
+    Даже в случае утечки эфемерного ключа общедоступной становится информация только об одном сеансе.
+    (((Ephemeral keys are keys that are only used for a short time and not retained after use. They are often derived for use in one session from another key that is held long-term. Ephemeral keys are mainly used within the SPHINX Mix Format and onion routing on the Lightning Network.
     This increases the security of transported messages or payments.
-    Even if an ephemeral key leaks, only information about a single session becomes public.
+    Even if an ephemeral key leaks, only information about a single session becomes public.)))
 
 feature bits::
     A binary string that Lightning nodes use to communicate to each other which features they support.
