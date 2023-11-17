@@ -245,16 +245,23 @@ cервер Electrum(Electrum server)::
     The output of the funding transaction is a 2-of-2 multisignature script (multisig) where each channel partner controls one key. Due to its multisig nature, it can only be spent by mutual agreement between the channel partners.
     It will eventually be spent by one of the commitment transactions or by the closing transaction.)))
 
-global features (+globalfeatures+ field)::
-    Global features of a Lightning node are the features of interest for all other nodes.
+глобальные функции / поле глобальных функций (global features +globalfeatures+ field)::
+    Глобальные функции узла Lightning — это функции, представляющие интерес для всех остальных узлов.
+    Чаще всего они связаны с поддерживаемыми форматами маршрутизации.
+    Они объявляются в сообщении `init` peer-протокола, а также в сообщениях `channel_announcement` и `node_announcement` протокола молвы.
+    (((Global features of a Lightning node are the features of interest for all other nodes.
     Most commonly they are related to supported routing formats.
-    They are announced in the `init` message of the peer protocol as well as the `channel_announcement` and `node_announcement` messages of the gossip protocol.
+    They are announced in the `init` message of the peer protocol as well as the `channel_announcement` and `node_announcement` messages of the gossip protocol.)))
 
-gossip protocol::
-    LN nodes send and receive information about the topology of the Lightning Network through gossip messages which are exchanged with their peers.
+протокол молвы (gossip protocol)::
+    Узлы LN отправляют и получают информацию о топологии сети Lightning через молву (сообщения), которыми обмениваются со своими узлами.
+    Протокол молвы в основном определен в BOLT #7 и определяет формат сообщений `node_announcement`, `channel_announcement` и `channel_update`.
+    Чтобы предотвратить спам, сообщения объявления узла будут пересылаться только в том случае, если у узла уже есть канал, а сообщения объявлением канала будут пересылаться только в том случае, если транзакция внесения канала была подтверждена сетью Биткойн.
+    Обычно узлы Lightning подключаются к своим партнерам по каналу, но можно подключаться к любому другому узлу Lightning для обработки сообщений молвы.
+    (((LN nodes send and receive information about the topology of the Lightning Network through gossip messages which are exchanged with their peers.
     The gossip protocol is mainly defined in BOLT #7 and defines the format of the `node_announcement`, `channel_announcement`, and `channel_update` messages.
     To prevent spam, node announcement messages will only be forwarded if the node already has a channel, and channel announcement messages will only be forwarded if the funding transaction of the channel has been confirmed by the Bitcoin network.
-    Usually, Lightning nodes connect with their channel partners, but it is fine to connect with any other Lightning node to process gossip messages.
+    Usually, Lightning nodes connect with their channel partners, but it is fine to connect with any other Lightning node to process gossip messages.)))
 
 hardware wallet::
     A hardware wallet is a special type of Bitcoin wallet which stores the user's private keys in a secure hardware device.
