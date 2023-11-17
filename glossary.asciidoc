@@ -286,8 +286,9 @@ cервер Electrum(Electrum server)::
     (((A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash) and is designed to be a one-way function, that is, a function that is infeasible to invert.
     The only way to recreate the input data from an ideal cryptographic hash function's output is to attempt a brute-force search of possible inputs to see if they produce a match.)))
 
-hashlock::
-    A hashlock is a Bitcoin Script spending condition that restricts the spending of an output until a specified piece of data is revealed. Hashlocks have the useful property that once any hashlock is revealed through spending, any other hashlocks secured using the same key can also be spent. This makes it possible to create multiple outputs that are all encumbered by the same hashlock and which all become spendable at the same time.
+хеш-замок (hashlock)::
+    Хэш-замок — это условие траты Bitcoin-Скрипта, которое ограничивает трату вывода до тех пор, пока не будет обнаружен определенный фрагмент данных. Хэшлоки обладают полезным свойством: как только какой-либо хэш-замок раскрывается в результате траты, любые другие хэш-замки, защищенные с помощью того же ключа, также могут быть потрачены. Это позволяет создавать несколько выводов, которые обременены одним и тем же хэш-замком и становятся пригодными для траты одновременно (все из них).
+    (((A hashlock is a Bitcoin Script spending condition that restricts the spending of an output until a specified piece of data is revealed. Hashlocks have the useful property that once any hashlock is revealed through spending, any other hashlocks secured using the same key can also be spent. This makes it possible to create multiple outputs that are all encumbered by the same hashlock and which all become spendable at the same time.)))
 
 hash time-locked contract (HTLC)::
     A hash time-locked contract (HTLC) is a Bitcoin Script that consists of hashlocks and timelocks to require that the recipient of a payment either spends the payment prior to a deadline by presenting the hash preimage or the sender can claim a refund after the timelock expires.
