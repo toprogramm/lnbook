@@ -290,14 +290,20 @@ cервер Electrum(Electrum server)::
     Хэш-замок — это условие траты Bitcoin-Скрипта, которое ограничивает трату вывода до тех пор, пока не будет обнаружен определенный фрагмент данных. Хэшлоки обладают полезным свойством: как только какой-либо хэш-замок раскрывается в результате траты, любые другие хэш-замки, защищенные с помощью того же ключа, также могут быть потрачены. Это позволяет создавать несколько выводов, которые обременены одним и тем же хэш-замком и становятся пригодными для траты одновременно (все из них).
     (((A hashlock is a Bitcoin Script spending condition that restricts the spending of an output until a specified piece of data is revealed. Hashlocks have the useful property that once any hashlock is revealed through spending, any other hashlocks secured using the same key can also be spent. This makes it possible to create multiple outputs that are all encumbered by the same hashlock and which all become spendable at the same time.)))
 
-hash time-locked contract (HTLC)::
-    A hash time-locked contract (HTLC) is a Bitcoin Script that consists of hashlocks and timelocks to require that the recipient of a payment either spends the payment prior to a deadline by presenting the hash preimage or the sender can claim a refund after the timelock expires.
-    On the Lightning Network, HTLCs are outputs in the commitment transaction of a payment channel and are used to enable the trustless routing of payments.
+хэш-контракт с временной блокировкой (hash time-locked contract - HTLC)::
+    Контракт с временной блокировкой хэша (HTLC) — это Bitcoin-Скрипт, который состоит из хэш-замков и временных блокировок, требующих, чтобы получатель платежа либо потратил платеж до истечения крайнего срока, представив предобраз хэша, либо отправитель мог потребовать возврата после истечения временной блокировки.
+    В сети Lightning, HTLC являются выводами транзакции обязательства платежного канала и используются для обеспечения не требующей доверия маршрутизации платежей.
+    (((A hash time-locked contract (HTLC) is a Bitcoin Script that consists of hashlocks and timelocks to require that the recipient of a payment either spends the payment prior to a deadline by presenting the hash preimage or the sender can claim a refund after the timelock expires.
+    On the Lightning Network, HTLCs are outputs in the commitment transaction of a payment channel and are used to enable the trustless routing of payments.)))
 
-invoice::
-    The payment process on the Lightning Network is initiated by the recipient (payee) who issues an invoice, also known as a _payment request_.
+инвойс (invoice)::
+    Процесс оплаты в сети Lightning инициируется получателем (payee), который выставляет инвойс, также известный как _запрос на оплату_.
+    Инвойсы включают в себя хеш платежа, сумму, описание и срок действия. Lightning-инвойсы описаны в BOLT #11.
+    Инвойсы также могут включать в себя резервный Bitcoin-адрес, на который можно произвести платеж в случае, если маршрут не найден, а также подсказки по маршрутизации платежа через частный канал.
+    * Инвойс переводится как "счет" или "счет фактура", далее буду переводить как инвойс. 
+    (((The payment process on the Lightning Network is initiated by the recipient (payee) who issues an invoice, also known as a _payment request_.
     Invoices include the payment hash, the amount, a description, and the expiry time. Lightning invoices are defined in BOLT #11.
-    Invoices can also include a fallback Bitcoin address to which the payment can be made in case no route can be found, as well as hints for routing a payment through a private channel.
+    Invoices can also include a fallback Bitcoin address to which the payment can be made in case no route can be found, as well as hints for routing a payment through a private channel.)))
 
 just-in-time (JIT) routing::
    Just-in-time (JIT) routing is an alternative to source-based routing that was first pass:[<span class="keep-together">proposed</span>] by coauthor René Pickhardt.
