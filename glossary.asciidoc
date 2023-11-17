@@ -263,9 +263,12 @@ cервер Electrum(Electrum server)::
     To prevent spam, node announcement messages will only be forwarded if the node already has a channel, and channel announcement messages will only be forwarded if the funding transaction of the channel has been confirmed by the Bitcoin network.
     Usually, Lightning nodes connect with their channel partners, but it is fine to connect with any other Lightning node to process gossip messages.)))
 
-hardware wallet::
-    A hardware wallet is a special type of Bitcoin wallet which stores the user's private keys in a secure hardware device.
-    As of writing the book, hardware wallets are not available for LN nodes because the keys used by Lightning need to be online to participate in the protocol.
+ аппаратный кошелек (hardware wallet)::
+    Аппаратный кошелек — это особый тип Bitcoin кошелька, в котором хранятся личные ключи пользователя на защищенном аппаратном устройстве.
+    На момент написания книги аппаратные кошельки недоступны для узлов LN, поскольку ключи используемые в LN должны быть онлайн, чтобы участвовать в протоколе.
+    (((A hardware wallet is a special type of Bitcoin wallet which stores the user's private keys in a secure hardware device.
+    As of writing the book, hardware wallets are not available for LN nodes because the keys used by Lightning need to be online to participate in the protocol.)))
+    * Аппаратный кошелек это независимое устройство. Для сети Bitcoin он может быть использован offline. А как выше было указано для сети Lightning пока не существует таких устройств. 
 
 hash::
     A fixed-size digital fingerprint of some arbitrary-length binary input. Also known as a _digest_.
