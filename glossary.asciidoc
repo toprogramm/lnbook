@@ -280,9 +280,11 @@ cервер Electrum(Electrum server)::
     (((HMAC is an algorithm for verifying the integrity and authenticity of a message based on a hash function and a cryptographic key.
     It is used in onion routing to ensure the integrity of a packet at each hop, as well as within the Noise Protocol variant used for message encryption.)))
 
-hash function::
-    A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash) and is designed to be a one-way function, that is, a function that is infeasible to invert.
-    The only way to recreate the input data from an ideal cryptographic hash function's output is to attempt a brute-force search of possible inputs to see if they produce a match.
+хэш функция(hash function)::
+    Криптографическая хеш-функция — это математический алгоритм, который преобразует данные произвольного размера в битовую строку фиксированного размера (хэш) и спроектирован чтобы быть однонаправленной функцей, то есть функцией, которую невозможно инвертировать (провести действия обратно чтобы получить исходный ввод). 
+    Единственный способ воссоздать вводные данные из вывода идеальной криптографической хэш-функции — это попытаться перебрать все возможные варианты вводов (brute-force search), чтобы проверить, дают ли они совпадение.
+    (((A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash) and is designed to be a one-way function, that is, a function that is infeasible to invert.
+    The only way to recreate the input data from an ideal cryptographic hash function's output is to attempt a brute-force search of possible inputs to see if they produce a match.)))
 
 hashlock::
     A hashlock is a Bitcoin Script spending condition that restricts the spending of an output until a specified piece of data is revealed. Hashlocks have the useful property that once any hashlock is revealed through spending, any other hashlocks secured using the same key can also be spent. This makes it possible to create multiple outputs that are all encumbered by the same hashlock and which all become spendable at the same time.
