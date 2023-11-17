@@ -270,12 +270,15 @@ cервер Electrum(Electrum server)::
     As of writing the book, hardware wallets are not available for LN nodes because the keys used by Lightning need to be online to participate in the protocol.)))
     * Аппаратный кошелек это независимое устройство. Для сети Bitcoin он может быть использован offline. А как выше было указано для сети Lightning пока не существует таких устройств. 
 
-hash::
-    A fixed-size digital fingerprint of some arbitrary-length binary input. Also known as a _digest_.
+хэш (hash)::
+    Цифровой отпечаток фиксированного размера некоторого двоичного входа произвольной длины. Также известен как _digest_.
+    (((A fixed-size digital fingerprint of some arbitrary-length binary input. Also known as a _digest_.)))
 
-hash-based message authentication code (HMAC)::
-    HMAC is an algorithm for verifying the integrity and authenticity of a message based on a hash function and a cryptographic key.
-    It is used in onion routing to ensure the integrity of a packet at each hop, as well as within the Noise Protocol variant used for message encryption.
+код аутентификации сообщения на основе хэша (hash-based message authentication code - HMAC)::
+    HMAC — это алгоритм проверки целостности и подлинности сообщения на основе хеш-функции и криптографического ключа.
+    Он используется в onion-маршрутизации для обеспечения целостности пакета на каждом прыжке, а также как вариант внутри Noise Protocol, используемом для шифрования сообщений.
+    (((HMAC is an algorithm for verifying the integrity and authenticity of a message based on a hash function and a cryptographic key.
+    It is used in onion routing to ensure the integrity of a packet at each hop, as well as within the Noise Protocol variant used for message encryption.)))
 
 hash function::
     A cryptographic hash function is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash) and is designed to be a one-way function, that is, a function that is infeasible to invert.
