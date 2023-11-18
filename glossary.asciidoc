@@ -334,7 +334,7 @@ cервер Electrum(Electrum server)::
     (((The Lightning Network protocol suite consists of five layers that are responsible for various parts of the protocol.
     From bottom (the first layer) to the top (the fifth layer), these layers are called the network communication layer, the messaging layer, the peer-to-peer layer, the routing layer, and the payment layer.
     Various BOLTs define parts of one or several layers.)))
-    
+
 узел сети Lightning, узел Lightning (Lightning Network node, Lightning node)::
     Компьютер, участвующий в сети Lightning через peer-to-peer протокол Lightning.
     Узлы Lightning имеют возможность открывать каналы с другими узлами, отправлять и получать платежи, а также маршрутизировать платежи от других пользователей.
@@ -344,8 +344,10 @@ cервер Electrum(Electrum server)::
     Typically, a Lightning node user will also run a Bitcoin node.)))
 
 lnd::
-    Implementation of the LN Protocol by the San Francisco-based company https://lightning.engineering[Lightning Labs].
-    It is written in Go. Source code is at https://github.com/lightningnetwork/lnd[GitHub].
+    Реализация LN протокола компанией из Сан-Франциско https://lightning.engineering[Lightning Labs].
+    Он написан на Go. Исходный код находится на https://github.com/lightningnetwork/lnd[GitHub].
+    (((Implementation of the LN Protocol by the San Francisco-based company https://lightning.engineering[Lightning Labs].
+    It is written in Go. Source code is at https://github.com/lightningnetwork/lnd[GitHub].)))
 
 local features (field: +localfeatures+)::
     Local features of an LN node are the configurable features of direct interest to its peers.
