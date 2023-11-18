@@ -327,7 +327,7 @@ cервер Electrum(Electrum server)::
     It creates a network of payment channels which enables the trustless forwarding of payments through the network with the help of HTLCs and onion routing.
     Other components of the Lightning Network are the gossip protocol, the transport layer, and payment requests.)))
 
-Набор протоколов сети Lightning (Lightning Network protocol suite)::
+набор протоколов сети Lightning (Lightning Network protocol suite)::
     Набор протоколов сети Lightning состоит из пяти слоев, которые отвечают за различные части протокола.
     От низа (первый слой) до верха (пятый слой) эти слои называются: слой сетевых коммуникаций, слой обмена сообщениями, слой peer-to-peer, слой маршрутизации и слой оплаты.
     Различные BOLT описывают части одного или нескольких слоев.
@@ -349,19 +349,25 @@ lnd::
     (((Implementation of the LN Protocol by the San Francisco-based company https://lightning.engineering[Lightning Labs].
     It is written in Go. Source code is at https://github.com/lightningnetwork/lnd[GitHub].)))
 
-local features (field: +localfeatures+)::
-    Local features of an LN node are the configurable features of direct interest to its peers.
-    They are announced in the `init` message of the peer protocol as well as in the `channel_announcement` and `node_announcement` messages of the gossip protocol.
+локальные функции(local features (field: +localfeatures+))::
+    Локальные функции узла LN — это настраиваемые функции, представляющие прямой интерес для его пиров.
+    Они объявляются в сообщении `init` peer-протокола, а также в сообщениях `channel_announcement` и `node_announcement` протокола сплетен.
+    (((Local features of an LN node are the configurable features of direct interest to its peers.
+    They are announced in the `init` message of the peer protocol as well as in the `channel_announcement` and `node_announcement` messages of the gossip protocol.)))
 
-locktime::
-    Locktime, or more technically nLockTime, is the part of a Bitcoin transaction that indicates the earliest time or earliest block when that transaction may be added to the blockchain.
+время блокировки (locktime)::
+    Locktime или, более технически, nLockTime — это часть Bitcoin транзакции, которая указывает самое раннее время или самый ранний блок, когда эта транзакция может быть добавлена в блокчейн. 
+    (((Locktime, or more technically nLockTime, is the part of a Bitcoin transaction that indicates the earliest time or earliest block when that transaction may be added to the blockchain.)))
 
-messaging layer::
-    The messaging layer builds on top of the network connection layer of the Lightning Network protocol suite.
+слой обмена сообщениями (messaging layer)::
+    Слой обмена сообщениями построен поверх слоя сетевых подключений в наборе протоколов сети Lightning.
+    Он отвечает за обеспечение зашифрованной и безопасной связи и обмена информацией через выбранный протокол слоя сетевого подключения.
+    Уровень обмена сообщениями определяет структуру и формат сообщений Lightning, как указано в BOLT #1.
+    Биты функций, указанные в BOLT #9, также являются частью этого уровня.
+    (((The messaging layer builds on top of the network connection layer of the Lightning Network protocol suite.
     It is responsible for ensuring an encrypted and secure communication and exchange of information via the chosen network connection layer protocol.
     The messaging layer defines the framing and format of Lightning Messages as defined in BOLT #1.
-    The feature bits defined in BOLT #9 are also part of this layer.
-
+    The feature bits defined in BOLT #9 are also part of this layer.)))
 
 millisatoshi::
     The smallest unit of account on the Lightning Network. A millisatoshi is one hundred billionth of a single bitcoin. A millisatoshi is one thousandth of one satoshi. Millisatoshis do not exist on, nor can they be settled on, the Bitcoin network.
