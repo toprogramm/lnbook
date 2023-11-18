@@ -305,10 +305,13 @@ cервер Electrum(Electrum server)::
     Invoices include the payment hash, the amount, a description, and the expiry time. Lightning invoices are defined in BOLT #11.
     Invoices can also include a fallback Bitcoin address to which the payment can be made in case no route can be found, as well as hints for routing a payment through a private channel.)))
 
-just-in-time (JIT) routing::
-   Just-in-time (JIT) routing is an alternative to source-based routing that was first pass:[<span class="keep-together">proposed</span>] by coauthor René Pickhardt.
+маршрутизация точно-в-срок (just-in-time (JIT) routing)::
+    Маршрутизация точно-в-срок (JIT) — это альтернатива маршрутизации на основе источника, которая была впервые pass:[<span class="keep-together">предложена</span>] соавтором Рене Пикхардт.
+    Благодаря JIT-маршрутизации промежуточные узлы на пути могут приостановить текущий платеж, чтобы сбалансировать свои каналы, прежде чем продолжить платеж.
+    Это могло бы позволить им успешно пересылать платежи, которые в противном случае могли бы не состояться из-за отсутствия исходящей емкости.
+   (((Just-in-time (JIT) routing is an alternative to source-based routing that was first pass:[<span class="keep-together">proposed</span>] by coauthor René Pickhardt.
    With JIT routing, intermediary nodes along a path can pause an in-flight payment to rebalance their channels before proceeding with the payment.
-   This might allow them to successfully forward payments that might otherwise have failed due to a lack of outgoing capacity.
+   This might allow them to successfully forward payments that might otherwise have failed due to a lack of outgoing capacity.)))
 
 Lightning message::
    A Lightning message is an encrypted data string that can be sent between two peers on the Lightning Network. Similar to other communication protocols, Lightning messages consist of a header and a body. The header and the body have their own HMAC. Lightning messages are the main building block of the messaging layer.
