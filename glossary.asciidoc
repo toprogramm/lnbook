@@ -319,10 +319,13 @@ cервер Electrum(Electrum server)::
     * **peer** может переводиться как "равный" или "пользователь", 
     буду переводить как "пир", смотрите по контексту что это может означать.
     
-Lightning Network, Lightning Network Protocol, pass:[<span class="keep-together">Lightning Protocol</span>]::
-   The Lightning Network is a protocol on top of Bitcoin (or other cryptocurrencies).
-   It creates a network of payment channels which enables the trustless forwarding of payments through the network with the help of HTLCs and onion routing.
-   Other components of the Lightning Network are the gossip protocol, the transport layer, and payment requests.
+Сеть Lightning, Сетевой Протокол Lightning, pass:[<span class="keep-together">Протокол Lightning</span>] (Lightning Network, Lightning Network Protocol, pass:[<span class="keep-together">Lightning Protocol</span>])::
+    Lightning Network — это протокол поверх Биткойна (или других криптовалют).
+    Он создает сеть платежных каналов, которая обеспечивает не требующую доверия пересылку платежей через сеть с помощью HTLC и onion-маршрутизации.
+    Другими компонентами сети Lightning являются протокол молвы, транспортный слой и запросы платежей.
+    (((The Lightning Network is a protocol on top of Bitcoin (or other cryptocurrencies).
+    It creates a network of payment channels which enables the trustless forwarding of payments through the network with the help of HTLCs and onion routing.
+    Other components of the Lightning Network are the gossip protocol, the transport layer, and payment requests.)))
 
 Lightning Network protocol suite::
    The Lightning Network protocol suite consists of five layers that are responsible for various parts of the protocol.
