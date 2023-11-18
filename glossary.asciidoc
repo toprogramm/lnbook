@@ -320,22 +320,28 @@ cервер Electrum(Electrum server)::
     буду переводить как "пир", смотрите по контексту что это может означать.
     
 Сеть Lightning, Сетевой Протокол Lightning, pass:[<span class="keep-together">Протокол Lightning</span>] (Lightning Network, Lightning Network Protocol, pass:[<span class="keep-together">Lightning Protocol</span>])::
-    Lightning Network — это протокол поверх Биткойна (или других криптовалют).
+    Lightning Network — это протокол поверх Bitcoin (или других криптовалют).
     Он создает сеть платежных каналов, которая обеспечивает не требующую доверия пересылку платежей через сеть с помощью HTLC и onion-маршрутизации.
     Другими компонентами сети Lightning являются протокол молвы, транспортный слой и запросы платежей.
     (((The Lightning Network is a protocol on top of Bitcoin (or other cryptocurrencies).
     It creates a network of payment channels which enables the trustless forwarding of payments through the network with the help of HTLCs and onion routing.
     Other components of the Lightning Network are the gossip protocol, the transport layer, and payment requests.)))
 
-Lightning Network protocol suite::
-   The Lightning Network protocol suite consists of five layers that are responsible for various parts of the protocol.
-   From bottom (the first layer) to the top (the fifth layer), these layers are called the network communication layer, the messaging layer, the peer-to-peer layer, the routing layer, and the payment layer.
-   Various BOLTs define parts of one or several layers.
-
-Lightning Network node, Lightning node::
-    A computer participating in the Lightning Network, via the Lightning peer-to-peer protocol.
+Набор протоколов сети Lightning (Lightning Network protocol suite)::
+    Набор протоколов сети Lightning состоит из пяти слоев, которые отвечают за различные части протокола.
+    От низа (первый слой) до верха (пятый слой) эти слои называются: слой сетевых коммуникаций, слой обмена сообщениями, слой peer-to-peer, слой маршрутизации и слой оплаты.
+    Различные BOLT описывают части одного или нескольких слоев.
+    (((The Lightning Network protocol suite consists of five layers that are responsible for various parts of the protocol.
+    From bottom (the first layer) to the top (the fifth layer), these layers are called the network communication layer, the messaging layer, the peer-to-peer layer, the routing layer, and the payment layer.
+    Various BOLTs define parts of one or several layers.)))
+    
+узел сети Lightning, узел Lightning (Lightning Network node, Lightning node)::
+    Компьютер, участвующий в сети Lightning через peer-to-peer протокол Lightning.
+    Узлы Lightning имеют возможность открывать каналы с другими узлами, отправлять и получать платежи, а также маршрутизировать платежи от других пользователей.
+    Обычно пользователь узла Lightning также запускает узел Bitcoin.
+    (((A computer participating in the Lightning Network, via the Lightning peer-to-peer protocol.
     Lightning nodes have the ability to open channels with other nodes, send and receive payments, and route payments from other users.
-    Typically, a Lightning node user will also run a Bitcoin node.
+    Typically, a Lightning node user will also run a Bitcoin node.)))
 
 lnd::
     Implementation of the LN Protocol by the San Francisco-based company https://lightning.engineering[Lightning Labs].
