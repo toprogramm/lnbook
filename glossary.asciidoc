@@ -313,9 +313,12 @@ cервер Electrum(Electrum server)::
    With JIT routing, intermediary nodes along a path can pause an in-flight payment to rebalance their channels before proceeding with the payment.
    This might allow them to successfully forward payments that might otherwise have failed due to a lack of outgoing capacity.)))
 
-Lightning message::
-   A Lightning message is an encrypted data string that can be sent between two peers on the Lightning Network. Similar to other communication protocols, Lightning messages consist of a header and a body. The header and the body have their own HMAC. Lightning messages are the main building block of the messaging layer.
-
+сообщение Lightning (Lightning message)::
+    Сообщение Lightning — это зашифрованная строка данных, которую можно отправлять между двумя пирами в сети Lightning. Подобно другим протоколам связи, сообщения Lightning состоят из заголовка и тела. Заголовок и тело имеют собственный HMAC. Сообщения Lightning являются основным строительным блоком уровня обмена сообщениями.
+    (((A Lightning message is an encrypted data string that can be sent between two peers on the Lightning Network. Similar to other communication protocols, Lightning messages consist of a header and a body. The header and the body have their own HMAC. Lightning messages are the main building block of the messaging layer.)))
+    * **peer** может переводиться как "равный" или "пользователь", 
+    буду переводить как "пир", смотрите по контексту что это может означать.
+    
 Lightning Network, Lightning Network Protocol, pass:[<span class="keep-together">Lightning Protocol</span>]::
    The Lightning Network is a protocol on top of Bitcoin (or other cryptocurrencies).
    It creates a network of payment channels which enables the trustless forwarding of payments through the network with the help of HTLCs and onion routing.
