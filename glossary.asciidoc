@@ -369,7 +369,7 @@ lnd::
     The messaging layer defines the framing and format of Lightning Messages as defined in BOLT #1.
     The feature bits defined in BOLT #9 are also part of this layer.)))
 
-millisatoshi::
+миллисатоши (millisatoshi)::
     The smallest unit of account on the Lightning Network. A millisatoshi is one hundred billionth of a single bitcoin. A millisatoshi is one thousandth of one satoshi. Millisatoshis do not exist on, nor can they be settled on, the Bitcoin network.
 
 multipart payments (MPP)::
