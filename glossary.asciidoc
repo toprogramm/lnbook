@@ -370,15 +370,20 @@ lnd::
     The feature bits defined in BOLT #9 are also part of this layer.)))
 
 миллисатоши (millisatoshi)::
-    The smallest unit of account on the Lightning Network. A millisatoshi is one hundred billionth of a single bitcoin. A millisatoshi is one thousandth of one satoshi. Millisatoshis do not exist on, nor can they be settled on, the Bitcoin network.
+    Наименьшая расчетная единица в сети Lightning. Миллисатоши — это одна стомиллиардная часть одного биткойна. Миллисатоши — это тысячная часть одного сатоши. Миллисатоши не существуют (в сети Bitcoin) и не могут быть переведены в сети Bitcoin.
+    (((The smallest unit of account on the Lightning Network. A millisatoshi is one hundred billionth of a single bitcoin. A millisatoshi is one thousandth of one satoshi. Millisatoshis do not exist on, nor can they be settled on, the Bitcoin network.)))
 
-multipart payments (MPP)::
- 	Multipart payments (MPP), often also referred to as multipath payments, are a method for splitting the payment amount into multiple smaller parts and delivering them along one or more paths. Since MPP can send many or all parts over a single path, the term multipart payment is more accurate than multipath payment. In computer science, multipart payments are modeled as network flows.
+составные платежи (multipart payments - MPP)::
+    Составные  платежи (MPP), часто также называемые многопутевыми (multipath) платежами, представляют собой метод для разделения суммы платежа на несколько более мелких частей и их доставки по одному или нескольким путям. Поскольку MPP может отправлять большинство или все части по одному пути, термин _составной платеж_ является более точным, чем многопутевый платеж. В информатике составные платежи смоделированы как сетевые потоки.
+ 	(((Multipart payments (MPP), often also referred to as multipath payments, are a method for splitting the payment amount into multiple smaller parts and delivering them along one or more paths. Since MPP can send many or all parts over a single path, the term multipart payment is more accurate than multipath payment. In computer science, multipart payments are modeled as network flows.)))
 
-multisignature::
-    Multisignature (multisig) refers to a script that requires more than one signature to authorize spending.
+мультиподпись (multisignature)::
+    Мультиподпись (multisig) относится к скрипту, который требует более одной подписи для авторизации траты.
+    Платежные каналы всегда кодируются как мультиподписаные адреса, требующие одной подписи от каждого партнера платежного канала.
+    В стандартном случае двустороннего платежного канала используется адрес с мультиподписью 2 из 2.
+    (((Multisignature (multisig) refers to a script that requires more than one signature to authorize spending.
     Payment channels are always encoded as multisig addresses requiring one signature from each partner of the payment channel.
-    In the standard case of a two-party payment channel, a 2-of-2 multisig address is used.
+    In the standard case of a two-party payment channel, a 2-of-2 multisig address is used.)))
 
 node::
     See _Lightning Network node_.
