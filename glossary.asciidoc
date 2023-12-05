@@ -401,9 +401,11 @@ lnd::
 - **limit of value?**
     (((Note that since only public channel capacity can be observed, the true network capacity is unknown. Also, since a channel's capacity can enable an unlimited number of payments back and forth, network capacity does not imply a limit of value transferred on the Lightning Network.)))
 
-network connection layer::
-    The lowest layer of the Lightning Network protocol suite.
-    Its responsibility is to support internet protocols like IPv4, IPv6, TOR2, and TOR3, and use them to establish a secure cryptographic communication channel as defined in BOLT #8, or to speak DNS for the bootstrapping of the network as defined in BOLT #10.
+слой сетевых соединений (network connection layer)::
+    Самый нижний слой набора протоколов Lightning Network.
+    Он отвечает за поддержку таких интернет-протоколов, как IPv4, IPv6, TOR2 и TOR3, и использует их для создания безопасного шифрованного канала связи, как определено в BOLT #8, или для передачи DNS при старте загрузки сети, как определено в BOLT #10.
+    (((The lowest layer of the Lightning Network protocol suite.
+    Its responsibility is to support internet protocols like IPv4, IPv6, TOR2, and TOR3, and use them to establish a secure cryptographic communication channel as defined in BOLT #8, or to speak DNS for the bootstrapping of the network as defined in BOLT #10.)))
 
 Noise_XK::
     The template of the Noise Protocol Framework to establish an authenticated and encrypted communication channel between two peers of the Lightning Network.
