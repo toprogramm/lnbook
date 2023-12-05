@@ -18,6 +18,7 @@ Due to inaccurate translation and the absence of words in Russian grammar or cry
 [система стимулирования / сдерживания]
 * Enforcement - **принуждение**, возможно иногда могу переводить обеспечение но это не точно. 
 * second layer - **второй слой**
+* script - **сценарий**
 * layer - **слой**
 * machine-to-machine - **машина-машина**
 * **!peer-to-peer** - равный - равному (пользователь - пользователю)
