@@ -408,9 +408,12 @@ lnd::
     Its responsibility is to support internet protocols like IPv4, IPv6, TOR2, and TOR3, and use them to establish a secure cryptographic communication channel as defined in BOLT #8, or to speak DNS for the bootstrapping of the network as defined in BOLT #10.)))
 
 Noise_XK::
-    The template of the Noise Protocol Framework to establish an authenticated and encrypted communication channel between two peers of the Lightning Network.
+    Шаблон протокола Noise Protocol Framework для создания аутентифицированного и зашифрованного канала связи между двумя пирами сети Lightning Network.
+    X - означает, что инициатору соединения не нужно знать открытый ключ.
+    K - означает, что необходимо знать открытый ключ получателя.
+    (((The template of the Noise Protocol Framework to establish an authenticated and encrypted communication channel between two peers of the Lightning Network.
     X means that no public key needs to be known from the initiator of the connection.
-    K means that the public key of the receiver needs to be known.
+    K means that the public key of the receiver needs to be known.)))
 
 onion routing::
     Onion routing is a technique for anonymous communication over a computer network.
