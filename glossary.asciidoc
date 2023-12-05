@@ -385,15 +385,21 @@ lnd::
     Payment channels are always encoded as multisig addresses requiring one signature from each partner of the payment channel.
     In the standard case of a two-party payment channel, a 2-of-2 multisig address is used.)))
 
-node::
-    See _Lightning Network node_.
+узел (node)::
+    Смотреть _Lightning Network node_.
 
-network capacity::
-    LN capacity is the total amount of bitcoin locked and circulated inside the Lightning Network.
+емкость сети (network capacity)::
+    Емкость LN — это общий объем биткойнов, заблокированных и циркулирующих внутри сети Lightning.
+    Это сумма емкостей каждого публичного канала.
+    В некоторой степени это отражает использование сети Lightning, поскольку мы ожидаем, что люди помещают биткойны в каналы Lightning, чтобы тратить их или пересылать платежи других пользователей.
+    (((LN capacity is the total amount of bitcoin locked and circulated inside the Lightning Network.
     It is the sum of capacities of each public channel.
-    It reflects the usage of the Lightning Network to some extent because we expect that people put bitcoin into Lightning channels to spend it or forward other users' payments.
-    Hence the higher the amount of bitcoin in Lightning channels, the higher the expected usage of the Lightning Network.
-    Note that since only public channel capacity can be observed, the true network capacity is unknown. Also, since a channel's capacity can enable an unlimited number of payments back and forth, network capacity does not imply a limit of value transferred on the Lightning Network.
+    It reflects the usage of the Lightning Network to some extent because we expect that people put bitcoin into Lightning channels to spend it or forward other users' payments.)))
+    Следовательно, чем больше количество биткойнов в каналах Lightning, тем выше ожидаемое использование сети Lightning.
+    (((Hence the higher the amount of bitcoin in Lightning channels, the higher the expected usage of the Lightning Network.)))
+    Обратите внимание: поскольку можно наблюдать только емкость публичного канала, истинная емкость сети неизвестна. Кроме того, поскольку емкость канала может обеспечивать неограниченное количество платежей туда и обратно, емкость сети не означает ограничения стоимости, передаваемой по сети Lightning.
+- **limit of value?**
+    (((Note that since only public channel capacity can be observed, the true network capacity is unknown. Also, since a channel's capacity can enable an unlimited number of payments back and forth, network capacity does not imply a limit of value transferred on the Lightning Network.)))
 
 network connection layer::
     The lowest layer of the Lightning Network protocol suite.

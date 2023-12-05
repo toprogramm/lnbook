@@ -25,3 +25,4 @@ Due to inaccurate translation and the absence of words in Russian grammar or cry
 * multipart payment - **составной платеж**
 * multipath payment - **многопутевой платеж**
 * multisignature / multisig  - **мультиподпись**
+* network capacity - **емкость сети** 
