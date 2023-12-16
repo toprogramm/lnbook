@@ -456,8 +456,9 @@ onion маршрутизация (onion routing)::
     P2WPKH - это SegWit-эквивалент P2PKH, использующий отдельного свидетеля. Подпись для траты вывода P2WPKH помещается в дерево свидетелей вместо поля ScriptSig. Смотреть _SegWit_
 	(((P2WPKH is the SegWit equivalent of P2PKH, using a segregated witness. The signature to spend a P2WPKH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.)))
 
-P2WPKH address::
-	The "native SegWit v0" address format, P2WPKH addresses are bech32-encoded and start with "bc1q".
+адрес P2WPKH (P2WPKH address)::
+	"Родной SegWit v0" формат адресов , адреса P2WPKH имеют bech32-кодировку и начинаются с "bc1q".
+    (((The "native SegWit v0" address format, P2WPKH addresses are bech32-encoded and start with "bc1q".)))
 
 Pay-to-Witness-Script-Hash (P2WSH)::
     P2WSH is the SegWit equivalent of P2SH, using a segregated witness. The signature and script to spend a P2WSH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.
