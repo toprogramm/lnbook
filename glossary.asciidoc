@@ -480,7 +480,6 @@ onion маршрутизация (onion routing)::
     Платеж Lightning происходит, когда биткоин передается в сети Lightning Network. Платежи обычно не отображаются в блокчейне Bitcoin.
     (((A Lightning payment occurs when bitcoin is transferred within the Lightning Network. Payments are generally not seen on the Bitcoin blockchain.)))
 
-
 payment channel::
     A payment channel is a financial relationship between two nodes on the Lightning Network, created using a bitcoin transaction paying a multisignature address.
     The channel partners can use the channel to send bitcoin back and forth between each other without committing all of the transactions to the Bitcoin blockchain.
