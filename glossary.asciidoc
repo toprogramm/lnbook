@@ -468,8 +468,9 @@ onion маршрутизация (onion routing)::
     "Родной SegWit v0" формат адресов сценариев, адреса P2WSH имеют bech32-кодировку и начинаются с "bc1q".
 	(((The "native Segwi v0" script address format, P2WSH addresses are bech32-encoded and start with "bc1q".)))
 
-Pay-to-Taproot (P2TR)::
-	Activating in November 2021, Taproot is a new output type that locks bitcoin to a tree of spending conditions, or a single root condition.
+Оплата с помощью Taproot (Pay-to-Taproot - P2TR)::
+    Taproot, активированный в ноябре 2021 года, - это новый тип вывода, который привязывает биткоин к дереву условий траты вывода или к одному корневому условию.
+	(((Activating in November 2021, Taproot is a new output type that locks bitcoin to a tree of spending conditions, or a single root condition.)))
 
 P2TR address::
 	The Taproot address format, representing SegWit v1, is a bech32m-encoded address and starts with "bc1p".
