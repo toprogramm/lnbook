@@ -448,8 +448,9 @@ onion маршрутизация (onion routing)::
     P2SH - это универсальный тип вывода, который позволяет использовать сложные Биткоин-Сценарии. В P2SH сложный сценарий, в деталях описывающий условия траты вывода (сценарий погашения - redeem script), не указывается в сценарии блокировки. Вместо этого сумма привязывается к хэшу сценария, который должен быть предоставлен и выполнен для траты вывода.
     (((P2SH is a versatile type of output that  allows the use of complex Bitcoin Scripts. With P2SH, the complex script that details the conditions for spending the output (redeem script) is not presented in the locking script. Instead, value is locked to the hash of a script, which must be presented and fulfilled to spend the output.)))
 
-P2SH address::
-    P2SH addresses are Base58Check encodings of the 20-byte hash of a script. P2SH addresses start with a "3." P2SH addresses hide all of the complexity, so that the sender of a payment does not see the script.
+адрес P2SH (P2SH address)::
+    Адреса P2SH - это Base58Check-кодировки 20-байтового хэша сценария. Адреса P2SH начинаются с "3". P2SH-адреса скрывают всю сложность, так что отправитель платежа не видит сценарий.
+    (((P2SH addresses are Base58Check encodings of the 20-byte hash of a script. P2SH addresses start with a "3." P2SH addresses hide all of the complexity, so that the sender of a payment does not see the script.)))
 
 Pay-to-Witness-Public-Key-Hash (P2WPKH)::
 	P2WPKH is the SegWit equivalent of P2PKH, using a segregated witness. The signature to spend a P2WPKH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.
