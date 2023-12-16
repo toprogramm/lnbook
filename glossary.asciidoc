@@ -452,8 +452,9 @@ onion маршрутизация (onion routing)::
     Адреса P2SH - это Base58Check-кодировки 20-байтового хэша сценария. Адреса P2SH начинаются с "3". P2SH-адреса скрывают всю сложность, так что отправитель платежа не видит сценарий.
     (((P2SH addresses are Base58Check encodings of the 20-byte hash of a script. P2SH addresses start with a "3." P2SH addresses hide all of the complexity, so that the sender of a payment does not see the script.)))
 
-Pay-to-Witness-Public-Key-Hash (P2WPKH)::
-	P2WPKH is the SegWit equivalent of P2PKH, using a segregated witness. The signature to spend a P2WPKH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.
+Оплата с Помощью Хэш-Ключа Свидетеля (Pay-to-Witness-Public-Key-Hash - P2WPKH)::
+    P2WPKH - это SegWit-эквивалент P2PKH, использующий отдельного свидетеля. Подпись для траты вывода P2WPKH помещается в дерево свидетелей вместо поля ScriptSig. Смотреть _SegWit_
+	(((P2WPKH is the SegWit equivalent of P2PKH, using a segregated witness. The signature to spend a P2WPKH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.)))
 
 P2WPKH address::
 	The "native SegWit v0" address format, P2WPKH addresses are bech32-encoded and start with "bc1q".
