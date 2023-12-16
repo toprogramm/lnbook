@@ -460,8 +460,9 @@ onion маршрутизация (onion routing)::
 	"Родной SegWit v0" формат адресов , адреса P2WPKH имеют bech32-кодировку и начинаются с "bc1q".
     (((The "native SegWit v0" address format, P2WPKH addresses are bech32-encoded and start with "bc1q".)))
 
-Pay-to-Witness-Script-Hash (P2WSH)::
-    P2WSH is the SegWit equivalent of P2SH, using a segregated witness. The signature and script to spend a P2WSH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.
+Оплата с Помощью Хэш-Сценария Свидетеля(Pay-to-Witness-Script-Hash - P2WSH)::
+    P2WSH - это SegWit-эквивалент P2SH, использующий отдельного свидетеля. Подпись и сценарий для траты вывода P2WSH помещаются в дерево свидетелей вместо поля ScriptSig. Смотреть _SegWit_.
+    (((P2WSH is the SegWit equivalent of P2SH, using a segregated witness. The signature and script to spend a P2WSH output is put in the witness tree instead of the ScriptSig field. See _SegWit_.)))
 
 P2WSH address::
 	The "native Segwi v0" script address format, P2WSH addresses are bech32-encoded and start with "bc1q".
