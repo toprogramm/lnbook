@@ -440,8 +440,9 @@ onion маршрутизация (onion routing)::
     A typical bitcoin output will require a signature to be spent, but outputs can require the fulfillment of more complex scripts.
     For example, a multisignature script requires two or more key holders sign before the output can be spent, which is a fundamental building block of the Lightning Network.)))
 
-Pay-to-Public-Key-Hash (P2PKH)::
-    P2PKH is a type of output that locks bitcoin to the hash of a public key. An output locked by a P2PKH script can be unlocked (spent) by presenting the public key matching the hash and a digital signature created by the corresponding private key.
+Оплата по публичному хэш-ключу ( Pay-to-Public-Key-Hash - P2PKH)::
+    P2PKH - это тип вывода, который привязывает биткоин к хэшу открытого ключа. Вывод, заблокированный сценарием P2PKH, можно разблокировать (потратить), предъявив публичный ключ, соответствующий хэшу, и цифровую подпись, созданную соответствующим приватным ключом.
+    (((P2PKH is a type of output that locks bitcoin to the hash of a public key. An output locked by a P2PKH script can be unlocked (spent) by presenting the public key matching the hash and a digital signature created by the corresponding private key.)))
 
 Pay-to-Script-Hash (P2SH)::
     P2SH is a versatile type of output that  allows the use of complex Bitcoin Scripts. With P2SH, the complex script that details the conditions for spending the output (redeem script) is not presented in the locking script. Instead, value is locked to the hash of a script, which must be presented and fulfilled to spend the output.
