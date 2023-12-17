@@ -530,10 +530,13 @@ onion маршрутизация (onion routing)::
     В контексте криптографии и, в частности, в сети Lightning, пре-образ относится к входу хэш-функции, которая выдает специальный хэш. Вычислить пре-образ из хэша не представляется возможным (хэш-функции работают только в одну сторону). Выбрав в качестве пре-образа секретное случайное значение и вычислив его хэш, мы можем заявить о своем пре-образе и позже раскрыть его. Любой может подтвердить, что раскрытый пре-образ правильно выдает хэш.
 	(((In the context of cryptography and specifically in the Lightning Network, the preimage refers to the input of a hash function that produces a specific hash. It is not feasible to compute the preimage from the hash (hash functions only go one way). By selecting a secret random value as a preimage and calculating its hash, we can commit to that preimage and later reveal it. Anyone can confirm that the revealed preimage correctly produces the hash.)))
 
-Proof of Work (PoW)::
-    Data that requires significant computation to find, and can be easily verified by anyone to prove the amount of work that was required to produce it.
+Доказательство Работы(Proof of Work - PoW)::
+    Данные, для нахождения которых требуются значительные затраты на вычисления, и которые могут быть легко проверены любым желающим, чтобы доказать объем работы, который потребовался для их получения.
+    В биткоине майнеры должны найти числовое решение алгоритма SHA-256, которое соответствует общей для сети цели, называемой целью сложности.
+    Дополнительную информацию см. в разделе _Bitcoin mining_.
+    (((Data that requires significant computation to find, and can be easily verified by anyone to prove the amount of work that was required to produce it.
     In Bitcoin, miners must find a numeric solution to the SHA-256 algorithm that meets a network-wide target, called the difficulty target.
-    See _Bitcoin mining_ for more information.
+    See _Bitcoin mining_ for more information.)))
 
 Point Time-Locked Contract (PTLC)::
     A Point Time-Locked Contract (PTLC) is a Bitcoin script that allows a conditional spend either on the presentation of a secret or after a certain blockheight has passed, similar to an HTLC. Unlike HTLCs, PTLCs do not depend on a preimage of a hash function but rather on the private key from an elliptic curve point. The security assumption is thus based on the discrete logarithm. PTLCs are not yet implemented on the Lightning Network.
