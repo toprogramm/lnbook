@@ -512,13 +512,19 @@ onion маршрутизация (onion routing)::
     It is responsible for defining the syntax and semantics of information exchanged between peers via Lightning messages.
     This consists of control messages as defined in BOLT #9; channel establishment, operation, and closing messages as defined in BOLT #2; as well as gossip and routing messages as defined in BOLT #7.)))
 
-private channel::
-    A channel not announced to the rest of the network.
+приватный канал (private channel)::
+    Канал, о котором не сообщается остальной части сети.
+    Технически " приватный" - это неправильное название, потому что эти каналы все равно могут быть идентифицированы с через подсказки маршрутизации и транзакции обязательств.
+    Их лучше называть "необъявленными" (unannounced) каналами.
+	При использовании необъявленного канала партнеры по каналу могут отправлять и получать платежи между собой в обычном режиме.
+    Однако остальная часть сети не знает об этом канале и, как правило, не может использовать его для маршрутизации платежей.
+    Поскольку количество и емкость необъявленных каналов неизвестны, общее количество и емкость публичных каналов составляют лишь часть всей сети Lightning Network.
+    (((A channel not announced to the rest of the network.
     Technically, "private" is a misnomer because these channels can still be identified through routing hints and commitment transactions.
     They are better described as "unannounced" channels.
 	With an unannounced channel, the channel partners can send and receive payments between each other as normal.
     However, the rest of the network will not be aware of the channel and so cannot typically use it to route payments.
-    Because the number and capacity of unannounced channels is unknown, the total public channel count and capacity only accounts for a portion of the total Lightning Network.
+    Because the number and capacity of unannounced channels is unknown, the total public channel count and capacity only accounts for a portion of the total Lightning Network.)))
 
 preimage::
 	In the context of cryptography and specifically in the Lightning Network, the preimage refers to the input of a hash function that produces a specific hash. It is not feasible to compute the preimage from the hash (hash functions only go one way). By selecting a secret random value as a preimage and calculating its hash, we can commit to that preimage and later reveal it. Anyone can confirm that the revealed preimage correctly produces the hash.
