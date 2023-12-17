@@ -351,7 +351,7 @@ lnd::
 
 локальные функции(local features (field: +localfeatures+))::
     Локальные функции узла LN — это настраиваемые функции, представляющие прямой интерес для его пиров.
-    Они объявляются в сообщении `init` peer-протокола, а также в сообщениях `channel_announcement` и `node_announcement` протокола сплетен.
+    Они объявляются в сообщении `init` peer-протокола, а также в сообщениях `channel_announcement` и `node_announcement` протокола молвы.
     (((Local features of an LN node are the configurable features of direct interest to its peers.
     They are announced in the `init` message of the peer protocol as well as in the `channel_announcement` and `node_announcement` messages of the gossip protocol.)))
 
@@ -490,11 +490,15 @@ onion маршрутизация (onion routing)::
     In a typical payment channel only two transactions, the funding transaction and the commitment transaction, are added to the blockchain.
     Payments sent across the channel are not recorded in the blockchain and are said to occur "off-chain.")))
 
-payment layer::
-    The top and fifth layer of the Lightning Network protocol suite operates on top of the routing layer.
+платёжный слой (payment layer)::
+    Верхний, пятый уровень набора протоколов сети Lightning работает поверх слоя маршрутизации.
+    В его обязанности входит обеспечение процесса оплаты через счета BOLT #11.
+    Хотя он в значительной степени использует граф канала из протокола слухов, как определено в BOLT #7, фактические стратегии доставки платежа не входят в спецификацию протокола и остаются на усмотрение разработчиков.
+    Поскольку эта тема очень важна для обеспечения надежности процесса доставки платежей, мы включили ее в эту книгу.
+    (((The top and fifth layer of the Lightning Network protocol suite operates on top of the routing layer.
     Its responsibility is to enable the payment process via BOLT #11 invoices.
     While it heavily uses the channel graph from the gossip protocol as defined in BOLT #7, the actual strategies to deliver a payment are not part of the specification of the protocol and are left to the implementations.
-    As this topic is very important to ensure reliability of the payment delivery process, we included it in this book.
+    As this topic is very important to ensure reliability of the payment delivery process, we included it in this book.)))
 
 peer::
     The participants in a peer-to-peer network. In the Lightning Network, peers connect to each other via encrypted, authenticated communication through a TCP socket, over IP or Tor.
