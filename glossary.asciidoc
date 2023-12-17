@@ -538,8 +538,9 @@ onion маршрутизация (onion routing)::
     In Bitcoin, miners must find a numeric solution to the SHA-256 algorithm that meets a network-wide target, called the difficulty target.
     See _Bitcoin mining_ for more information.)))
 
-Point Time-Locked Contract (PTLC)::
-    A Point Time-Locked Contract (PTLC) is a Bitcoin script that allows a conditional spend either on the presentation of a secret or after a certain blockheight has passed, similar to an HTLC. Unlike HTLCs, PTLCs do not depend on a preimage of a hash function but rather on the private key from an elliptic curve point. The security assumption is thus based on the discrete logarithm. PTLCs are not yet implemented on the Lightning Network.
+Контракт с Точечной Блокировкой по Времени (Point Time-Locked Contract - PTLC)::
+    Контракт с точечной блокировкой по времени (PTLC) - это сценарий Биткойна, который позволяет условно потратить средства либо при предъявлении секрета, либо по истечении определенной высоты блока, подобно HTLC. В отличие от HTLC, PTLC зависят не от пре-образа хэш-функции, а от закрытого ключа эллиптической кривой. Таким образом, предположение о безопасности основано на дискретном логарифме. PTLC еще не внедрены в сети Lightning.
+    (((A Point Time-Locked Contract (PTLC) is a Bitcoin script that allows a conditional spend either on the presentation of a secret or after a certain blockheight has passed, similar to an HTLC. Unlike HTLCs, PTLCs do not depend on a preimage of a hash function but rather on the private key from an elliptic curve point. The security assumption is thus based on the discrete logarithm. PTLCs are not yet implemented on the Lightning Network.)))
 
 relative timelock::
     A relative timelock is a type of timelock that allows an input to specify the earliest time the input can be added to a block. The time is relative and is based on when the output referenced by that input was recorded in a block. Relative timelocks are set by the +nSequence+ transaction field and +CHECKSEQUENCEVERIFY+ (CSV) Bitcoin Script opcode, which was introduced by BIP-68/112/113.
