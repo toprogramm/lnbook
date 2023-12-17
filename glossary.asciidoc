@@ -504,10 +504,13 @@ onion маршрутизация (onion routing)::
     Участники peer-to-peer сети. В сети Lightning пиры соединяются друг с другом посредством зашифрованной, аутентифицированной связи через TCP-сокет, по IP или Tor.
     (((The participants in a peer-to-peer network. In the Lightning Network, peers connect to each other via encrypted, authenticated communication through a TCP socket, over IP or Tor.)))
 
-peer-to-peer layer::
-    The peer-to-peer layer is the third layer of the Lightning Network protocol suite and works on top of the messaging layer.
+слой peer-to-peer(peer-to-peer layer)::
+    Слой peer-to-peer - это третий слой набора протоколов Lightning Network, который работает поверх слоя обмена сообщениями.
+    Он отвечает за определение синтаксиса и семантики информации, которой обмениваются пиры с помощью сообщений Lightning.
+    Сюда входят управляющие сообщения, определенные в BOLT #9; сообщения о создании, действии и закрытии канала, определенные в BOLT #2; а также сообщения слухов и маршрутизации, определенные в BOLT #7.
+    (((The peer-to-peer layer is the third layer of the Lightning Network protocol suite and works on top of the messaging layer.
     It is responsible for defining the syntax and semantics of information exchanged between peers via Lightning messages.
-    This consists of control messages as defined in BOLT #9; channel establishment, operation, and closing messages as defined in BOLT #2; as well as gossip and routing messages as defined in BOLT #7.
+    This consists of control messages as defined in BOLT #9; channel establishment, operation, and closing messages as defined in BOLT #2; as well as gossip and routing messages as defined in BOLT #7.)))
 
 private channel::
     A channel not announced to the rest of the network.
