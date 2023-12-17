@@ -557,7 +557,8 @@ revocation key (revocation key)::
     (((Every RSMC contains two revocation keys. Each channel partner knows one revocation key. Knowing both revocation keys, the output of the RSMC can be spent within the predefined timelock.  While negotiating a new channel state, the old revocation keys are shared, thereby "revoking" the old state.  Revocation keys are used to discourage channel partners from broadcasting an old channel state.)))
 
 RIPEMD-160::
-    RIPEMD-160 is a cryptographic hash function that produces a 160-bit (20-byte) hash.
+    RIPEMD-160 - это криптографическая хэш-функция, которая создает 160-битный (20-байтовый) хэш.
+    (((RIPEMD-160 is a cryptographic hash function that produces a 160-bit (20-byte) hash.)))
 
 routing layer::
     The fourth layer of the Lightning Network protocol suite operates on top of the peer-to-peer layer.
