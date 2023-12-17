@@ -560,10 +560,13 @@ RIPEMD-160::
     RIPEMD-160 - это криптографическая хэш-функция, которая создает 160-битный (20-байтовый) хэш.
     (((RIPEMD-160 is a cryptographic hash function that produces a 160-bit (20-byte) hash.)))
 
-routing layer::
-    The fourth layer of the Lightning Network protocol suite operates on top of the peer-to-peer layer.
+слой маршрутизации (routing layer)::
+    Четвертый слой набора протоколов сети Lightning работает поверх peer-to-peer слоя.
+    В его обязанности входит определение криптографических примитивов и необходимого протокола связи для безопасной и атомарной транспортировки биткоина от узла-отправителя к узлу-получателю.
+    В то время как BOLT #4 определяет onion формат, который используется для передачи транспортной информации удаленным пирам, с которыми нет прямого соединения, фактическая onion-транспортировка и криптографические примитивы определены в BOLT #2.
+    (((The fourth layer of the Lightning Network protocol suite operates on top of the peer-to-peer layer.
     Its responsibility is to define the cryptographic primitives and necessary communication protocol to allow the secure and atomic transport of bitcoin from a sending node to a recipient node.
-    While BOLT #4 defines the onion format that is used to communicate transport information to remote peers with whom no direct connections exist, the actual transport of the onions and cryptographic primitives are defined in BOLT #2.
+    While BOLT #4 defines the onion format that is used to communicate transport information to remote peers with whom no direct connections exist, the actual transport of the onions and cryptographic primitives are defined in BOLT #2.)))
 
 topology::
     The topology of the Lightning Network describes the shape of the Lightning Network as a mathematical graph. Nodes of the graph are the Lightning nodes (network participants/peers). The edges of the graph are the payment channels.
