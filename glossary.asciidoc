@@ -552,8 +552,9 @@ onion маршрутизация (onion routing)::
     (((This contract is used to construct a payment channel between two Bitcoin or LN users who do not need to trust each other.
     The name comes from a sequence of states that are encoded as commitment transactions and can be revoked if wrongfully published and mined by the Bitcoin network.)))
 
-revocation key::
-    Every RSMC contains two revocation keys. Each channel partner knows one revocation key. Knowing both revocation keys, the output of the RSMC can be spent within the predefined timelock.  While negotiating a new channel state, the old revocation keys are shared, thereby "revoking" the old state.  Revocation keys are used to discourage channel partners from broadcasting an old channel state.
+revocation key (revocation key)::
+    Каждый RSMC содержит два ключа отзыва. Каждый партнер по каналу знает один ключ отзыва. Зная оба ключа отзыва, выход RSMC может быть потрачен в течение заданного временного интервала.  Во время переговоров о новом состоянии канала происходит обмен старыми ключами отзыва, тем самым "отменяя" старое состояние.  Ключи отзыва используются для того, чтобы партнеры по каналу не передавали старое состояние канала.
+    (((Every RSMC contains two revocation keys. Each channel partner knows one revocation key. Knowing both revocation keys, the output of the RSMC can be spent within the predefined timelock.  While negotiating a new channel state, the old revocation keys are shared, thereby "revoking" the old state.  Revocation keys are used to discourage channel partners from broadcasting an old channel state.)))
 
 RIPEMD-160::
     RIPEMD-160 is a cryptographic hash function that produces a 160-bit (20-byte) hash.
