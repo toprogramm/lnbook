@@ -546,9 +546,11 @@ onion маршрутизация (onion routing)::
     Относительная временная блокировка - это тип временной блокировки, который позволяет входу указать самое раннее время, когда этот вход может быть добавлен в блок. Это время является относительным и основано на том, когда выход, на который ссылается этот вход, был записан в блок. Относительные временные блокировки устанавливаются полем транзакции +nSequence+ и +CHECKSEQUENCEVERIFY+ (CSV) операционным кодом Сценария Bitcoin, который был введен в BIP-68/112/113.
     (((A relative timelock is a type of timelock that allows an input to specify the earliest time the input can be added to a block. The time is relative and is based on when the output referenced by that input was recorded in a block. Relative timelocks are set by the +nSequence+ transaction field and +CHECKSEQUENCEVERIFY+ (CSV) Bitcoin Script opcode, which was introduced by BIP-68/112/113.)))
 
-Revocable Sequence Maturity Contract (RSMC)::
-    This contract is used to construct a payment channel between two Bitcoin or LN users who do not need to trust each other.
-    The name comes from a sequence of states that are encoded as commitment transactions and can be revoked if wrongfully published and mined by the Bitcoin network.
+Отзываемый Контракт с Последовательностью Погашения(Revocable Sequence Maturity Contract - RSMC)::
+    Этот контракт используется для создания платежного канала между двумя пользователями Bitcoin или LN, которым не нужно доверять друг другу.
+    Название происходит от последовательности состояний, которые кодируются как транзакции обязательств и могут быть отозваны в случае неправомерной публикации и обработаны в сети Биткойн.
+    (((This contract is used to construct a payment channel between two Bitcoin or LN users who do not need to trust each other.
+    The name comes from a sequence of states that are encoded as commitment transactions and can be revoked if wrongfully published and mined by the Bitcoin network.)))
 
 revocation key::
     Every RSMC contains two revocation keys. Each channel partner knows one revocation key. Knowing both revocation keys, the output of the RSMC can be spent within the predefined timelock.  While negotiating a new channel state, the old revocation keys are shared, thereby "revoking" the old state.  Revocation keys are used to discourage channel partners from broadcasting an old channel state.
