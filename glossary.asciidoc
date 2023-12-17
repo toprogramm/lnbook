@@ -97,8 +97,8 @@ BOLT::
     (((BOLT, or Basis of Lightning Technology, is the formal specification of the Lightning Network. Unlike Bitcoin, which has a reference implementation that also serves as the protocol's specification, the various LN implementations follow BOLT so they can work with one another to form the same network. It is available at https://github.com/lightningnetwork/lightning-rfc[GitHub]))).
 
 ёмкость (capacity)::
-    Емкость платежного канала - эквивалентна сумме биткойнов, предоставленная транзакцией внесения средств.
-    Поскольку транзакция внесения средств публично видна в блокчейне, а канал объявляется через протокол сообщающихся, ёмкость является общедоступной информацией.
+    Емкость платежного канала - эквивалентна сумме биткойнов, предоставленная транзакцией пополнения средств.
+    Поскольку транзакция пополнения средств публично видна в блокчейне, а канал объявляется через протокол сообщающихся, ёмкость является общедоступной информацией.
     Он не раскрывает никакой информации о том, каким количеством биткойнов каждый из партнеров канала владеет в канале, то есть о балансе.
     Большая ёмкость не гарантирует, что канал можно будет использовать для маршрутизации в обоих pass:[<span class="keep-together">направлениях</span>].
     (((The capacity of a payment channel is equivalent to the amount of bitcoin provided by the funding transaction.
@@ -237,9 +237,9 @@ cервер Electrum(Electrum server)::
     In the context of Bitcoin, the sender of a transaction pays a transaction fee to miners for including the transaction in a block.
     Bitcoin transaction fees do not include a base fee and depend linearly on the weight of the transaction, but not on the amount.)))
 
-транзакция внесения `средств` (funding transaction)::
-    Транзакция внесения используется для открытия платежного канала. Стоимость (в биткойнах) транзакции внесения в точности соответствует емкости платежного канала.
-    Выводом транзакции внесения является скрипт мультиподписи(multisig) 2-из-2, где каждый партнер по каналу контролирует один ключ. Из-за структуры мультиподписи их можно потратить только по взаимному согласию партнеров по каналу.
+транзакция пополнения `средств` (funding transaction)::
+    Транзакция пополнения используется для открытия платежного канала. Стоимость (в биткойнах) транзакции пополнения в точности соответствует емкости платежного канала.
+    Выводом транзакции пополнения является скрипт мультиподписи(multisig) 2-из-2, где каждый партнер по каналу контролирует один ключ. Из-за структуры мультиподписи их можно потратить только по взаимному согласию партнеров по каналу.
     В конечном итоге он будет потрачен одной из двух, транзакцией обязательства или закрывающей транзакцией.
     (((The funding transaction is used to open a payment channel. The value (in bitcoin) of the funding transaction is exactly the capacity of the payment channel.
     The output of the funding transaction is a 2-of-2 multisignature script (multisig) where each channel partner controls one key. Due to its multisig nature, it can only be spent by mutual agreement between the channel partners.
@@ -256,7 +256,7 @@ cервер Electrum(Electrum server)::
 протокол молвы (gossip protocol)::
     Узлы LN отправляют и получают информацию о топологии сети Lightning через молву (сообщения), которыми обмениваются со своими узлами.
     Протокол молвы в основном определен в BOLT #7 и определяет формат сообщений `node_announcement`, `channel_announcement` и `channel_update`.
-    Чтобы предотвратить спам, сообщения объявления узла будут пересылаться только в том случае, если у узла уже есть канал, а сообщения объявлением канала будут пересылаться только в том случае, если транзакция внесения канала была подтверждена сетью Биткойн.
+    Чтобы предотвратить спам, сообщения объявления узла будут пересылаться только в том случае, если у узла уже есть канал, а сообщения объявлением канала будут пересылаться только в том случае, если транзакция пополнения канала была подтверждена сетью Биткойн.
     Обычно узлы Lightning подключаются к своим партнерам по каналу, но можно подключаться к любому другому узлу Lightning для обработки сообщений молвы.
     (((LN nodes send and receive information about the topology of the Lightning Network through gossip messages which are exchanged with their peers.
     The gossip protocol is mainly defined in BOLT #7 and defines the format of the `node_announcement`, `channel_announcement`, and `channel_update` messages.
