@@ -568,14 +568,19 @@ RIPEMD-160::
     Its responsibility is to define the cryptographic primitives and necessary communication protocol to allow the secure and atomic transport of bitcoin from a sending node to a recipient node.
     While BOLT #4 defines the onion format that is used to communicate transport information to remote peers with whom no direct connections exist, the actual transport of the onions and cryptographic primitives are defined in BOLT #2.)))
 
-topology::
-    The topology of the Lightning Network describes the shape of the Lightning Network as a mathematical graph. Nodes of the graph are the Lightning nodes (network participants/peers). The edges of the graph are the payment channels.
+топология (topology)::
+    Топология сети Lightning описывает форму сети Lightning в виде математического графа. Узлы графа - это узлы сети Lightning (участники/пиры сети). Ребра графа - это платежные каналы.
+    Топология сети Lightning публично транслируется с помощью протокола слухов, за исключением необъявленных каналов.
+    Это означает, что сеть Lightning может быть значительно больше, чем объявленное количество каналов и узлов.
+    Знание топологии представляет особый интерес для процесса маршрутизации платежей на основе источника, в котором отправитель сам обнаруживает маршрут.
+    (((The topology of the Lightning Network describes the shape of the Lightning Network as a mathematical graph. Nodes of the graph are the Lightning nodes (network participants/peers). The edges of the graph are the payment channels.
     The topology of the Lightning Network is publicly broadcast with the help of the gossip protocol, with the exception of unannounced channels.
     This means that the Lightning Network may be significantly larger than the announced number of channels and nodes.
-    Knowing the topology is of particular interest in the source-based routing process of payments in which the sender discovers a route.
+    Knowing the topology is of particular interest in the source-based routing process of payments in which the sender discovers a route.)))
 
-satoshi::
-    A satoshi is the smallest unit (denomination) of bitcoin that can be recorded on the blockchain. One satoshi is 1/100 millionth (0.00000001) of a bitcoin and is named after the creator of Bitcoin, Satoshi Nakamoto.
+cатоши (satoshi)::
+    Сатоши - это наименьшая единица (" деноминации") биткоина, которая может быть записана в блокчейн. Один сатоши равен 1/100 миллионной части (0,00000001) биткоина и назван в честь создателя биткоина, Сатоши Накамото.
+    (((A satoshi is the smallest unit (denomination) of bitcoin that can be recorded on the blockchain. One satoshi is 1/100 millionth (0.00000001) of a bitcoin and is named after the creator of Bitcoin, Satoshi Nakamoto.)))
 
 Satoshi Nakamoto::
     Satoshi Nakamoto is the name used by the person or group of people who designed Bitcoin and created its original reference implementation. As part of the implementation, they also devised the first blockchain database. In the process, they were the first to solve the double-spending problem for digital currency. Their real identity remains unknown.
