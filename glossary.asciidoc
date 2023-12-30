@@ -606,8 +606,9 @@ ScriptSig (известный как signature script)::
     Секретное число, которое разблокирует отправляемый на соответствующий адрес биткоин. pass:[<span class="keep-together">Секретный</span>] ключ выглядит следующим образом: +5J76sF8L5j&#x200b;TtzE96r66Sf8cka9y44wdpJjMwCxR3tzLh3i&#x200b;bVPxh+.
     (((The secret number that unlocks bitcoin sent to the corresponding address. pass:[<span class="keep-together">A secret</span>] key looks like this: +5J76sF8L5j&#x200b;TtzE96r66Sf8cka9y44wdpJjMwCxR3tzLh3i&#x200b;bVPxh+.)))
 
-Segregated Witness (SegWit)::
-    Segregated Witness (SegWit) is an upgrade to the Bitcoin protocol introduced in 2017 that adds a new witness for signatures and other transaction authorization proofs. This new witness field is exempt from the calculation of the transaction ID, which solves most classes of third-party transaction malleability. Segregated Witness was deployed as a soft fork and is a change that technically makes Bitcoin’s protocol rules more restrictive.
+Сторонний Свидетель (Segregated Witness - SegWit)::
+    Segregated Witness (SegWit) - это обновление протокола биткойна, представленное в 2017 году, которое добавляет нового свидетеля для подписей и других доказательств авторизации транзакций. Это новое поле свидетеля освобождено от вычисления ID транзакции (transaction ID), что решает большинство проблем с нестабильностью транзакций третьих лиц. Segregated Witness был развернут как софтфорк и представляет собой изменение, которое технически делает правила протокола Bitcoin более строгими.
+    (((Segregated Witness (SegWit) is an upgrade to the Bitcoin protocol introduced in 2017 that adds a new witness for signatures and other transaction authorization proofs. This new witness field is exempt from the calculation of the transaction ID, which solves most classes of third-party transaction malleability. Segregated Witness was deployed as a soft fork and is a change that technically makes Bitcoin’s protocol rules more restrictive.)))
 
 Secure Hash Algorithm (SHA)::
     The Secure Hash Algorithm or SHA is a family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST). The Bitcoin protocol currently uses SHA-256, which produces a 256-bit hash.
