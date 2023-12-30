@@ -680,12 +680,15 @@ submarine-обмен (submarine swap)::
     A commitment transaction needs the hash of a funding transaction, and if the hash of the funding transaction changes, transactions depending on it will become invalid. This will make users unable to claim the refunds if there are any.
     The Segregated Witness soft fork addresses this issue and was therefore an important upgrade to support the Lightning Network.)))
 
-transport layer::
-    In computer networking, the transport layer is a conceptual division of the methods used by computers (and ultimately applications) to talk to each other.
-    The transport layer provides communication services between computers, such as flow control, verification, and multiplexing (to allow multiple applications to work on a computer at the same time).
+транспортный слой (transport layer)::
+    В компьютерных сетях транспортный слой - это концептуальное разделение методов, используемых компьютерами (и, в конечном счете, приложениями) для общения друг с другом.
+    Транспортный слой предоставляет услуги связи между компьютерами, такие как управление потоком, верификация и мультиплексирование (чтобы позволить нескольким приложениям работать на компьютере одновременно).
+    (((In computer networking, the transport layer is a conceptual division of the methods used by computers (and ultimately applications) to talk to each other.
+    The transport layer provides communication services between computers, such as flow control, verification, and multiplexing (to allow multiple applications to work on a computer at the same time).)))
 
-unspent transaction output (UTXO)::
-    See _output_.
+вывод непотраченных средств (unspent transaction output - UTXO)::
+    См. _output_.
+    (((See _output_.)))
 
 wallet::
     A wallet is a piece of software that holds Bitcoin private keys. It is used to create and sign Bitcoin transactions. In the context of the Lightning Network, it also holds revocation secrets of old channel state and the latest presigned commitment transactions.
