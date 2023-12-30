@@ -647,12 +647,16 @@ ScriptSig (известный как signature script)::
     (((Soft fork, or soft-forking change, is a protocol upgrade that's forward and backward compatible, so it allows both old nodes and new nodes to continue using the same chain.)))
 
 SPHINX Mix Format::
-    A particular technique for onion routing used in the Lightning Network and invented by https://cypherpunks.ca/~iang/pubs/Sphinx_Oakland09.pdf[George Danezis and Ian Goldberg in 2009].
+    Особая техника onion-маршрутизации, используемая в сети Lightning и изобретенная https://cypherpunks.ca/~iang/pubs/Sphinx_Oakland09.pdf[George Danezis and Ian Goldberg in 2009].
+    В формате SPHINX Mix Format каждое сообщение onion-пакета дополняется некоторыми случайными данными, так что ни один хоп не может определить, как далеко по маршруту оно прошло.
+    Хотя конфиденциальность отправителя и получателя платежа защищена, каждый узел все равно может вернуть сообщение об ошибке на пути к отправителю сообщения.
+    (((A particular technique for onion routing used in the Lightning Network and invented by https://cypherpunks.ca/~iang/pubs/Sphinx_Oakland09.pdf[George Danezis and Ian Goldberg in 2009].
     With the SPHINX Mix Format, each message of the onion package is padded with some random data so that no single hop can estimate how far along the route it has traveled.
-    While the privacy of the sender and receiver of the payment is protected, each node is still able to return an error message along the path to the originator of the message.
+    While the privacy of the sender and receiver of the payment is protected, each node is still able to return an error message along the path to the originator of the message.)))
 
-submarine swap::
-    A submarine swap is a trustless atomic swap between on-chain Bitcoin addresses and off-chain Lightning Network payments. Just as LN payments use HTLCs that make the final claim on funds conditional on the recipient revealing a secret (hash preimage), submarine swaps use the same mechanism to transfer funds across the on-chain/off-chain barrier with minimal trust. Reverse submarine swaps allow swaps in the opposite direction, from an off-chain LN payment to an on-chain Bitcoin address.
+submarine-обмен (submarine swap)::
+    Submarine-обмен - это не требующий доверия атомарный обмен между on-chain Bitcoin-адресами и off-chain платежами сети Lightning. Подобно тому как в LN-платежах используются HTLC, которые обусловливают окончательное требование на получение средств раскрытием получателем секрета (пре-образ хэша), submarine-обмены используют тот же механизм для перевода средств через барьер on-chain/off-chain с минимальным доверием. Обратные submarine-обмены позволяют осуществлять обмен в обратном направлении - с off-chain LN-платежа на on-chain Bitcoin-адрес.
+    (((A submarine swap is a trustless atomic swap between on-chain Bitcoin addresses and off-chain Lightning Network payments. Just as LN payments use HTLCs that make the final claim on funds conditional on the recipient revealing a secret (hash preimage), submarine swaps use the same mechanism to transfer funds across the on-chain/off-chain barrier with minimal trust. Reverse submarine swaps allow swaps in the opposite direction, from an off-chain LN payment to an on-chain Bitcoin address.)))
 
 timelock::
     A timelock is a type of encumbrance that restricts the spending of some bitcoin until a specified future time or block height. Timelocks feature prominently in many Bitcoin contracts, including payment channels and HTLCs.
