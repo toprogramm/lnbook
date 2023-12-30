@@ -614,13 +614,19 @@ ScriptSig (известный как signature script)::
     Secure Hash Algorithm или SHA - это семейство криптографических хэш-функций, опубликованных Национальным Институтом Стандартов и Технологий (NIST). В настоящее время протокол биткойна использует SHA-256, который создает 256-битный хэш.
     (((The Secure Hash Algorithm or SHA is a family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST). The Bitcoin protocol currently uses SHA-256, which produces a 256-bit hash.)))
 
-short channel ID (scid)::
-    Once a channel is established, the index of the funding transaction on the blockchain is used as the short channel ID to uniquely identify the channel.
+короткий ID канала(short channel ID - scid)::
+    После установления канала индекс транзакции внесения в блокчейне используется в качестве короткого идентификатора канала для его уникальной идентификации.
+    Короткий идентификатор канала состоит из восьми байтов, содержащих три числа.
+    В сериализованной форме эти три числа представлены в виде десятичных значений, разделенных буквой "x" (например, +600123x01x00+).
+    Первое число (4 байта) - это высота блока.
+    Второе число (2 байта) - это индекс транзакции внесения с блоками.
+    Последнее число (2 байта) - вывод транзакции.
+    (((Once a channel is established, the index of the funding transaction on the blockchain is used as the short channel ID to uniquely identify the channel.
     The short channel ID consists of eight bytes referring to three numbers.
     In its serialized form, it depicts these three numbers as decimal values separated by the letter "x" (e.g., +600123x01x00+)
     The first number (4 bytes) is the block height.
     The second number (2 bytes) is the index of the funding transaction with the blocks.
-    The last number (2 bytes) is the transaction output.
+    The last number (2 bytes) is the transaction output.)))
 
 simplified payment verification (SPV)::
     SPV or simplified payment verification is a method for verifying that particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin and Lightning wallets.
