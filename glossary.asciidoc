@@ -658,13 +658,17 @@ submarine-обмен (submarine swap)::
     Submarine-обмен - это не требующий доверия атомарный обмен между on-chain Bitcoin-адресами и off-chain платежами сети Lightning. Подобно тому как в LN-платежах используются HTLC, которые обусловливают окончательное требование на получение средств раскрытием получателем секрета (пре-образ хэша), submarine-обмены используют тот же механизм для перевода средств через барьер on-chain/off-chain с минимальным доверием. Обратные submarine-обмены позволяют осуществлять обмен в обратном направлении - с off-chain LN-платежа на on-chain Bitcoin-адрес.
     (((A submarine swap is a trustless atomic swap between on-chain Bitcoin addresses and off-chain Lightning Network payments. Just as LN payments use HTLCs that make the final claim on funds conditional on the recipient revealing a secret (hash preimage), submarine swaps use the same mechanism to transfer funds across the on-chain/off-chain barrier with minimal trust. Reverse submarine swaps allow swaps in the opposite direction, from an off-chain LN payment to an on-chain Bitcoin address.)))
 
-timelock::
-    A timelock is a type of encumbrance that restricts the spending of some bitcoin until a specified future time or block height. Timelocks feature prominently in many Bitcoin contracts, including payment channels and HTLCs.
+таймлок (timelock)::
+    Таймлок - это тип обременения, который ограничивает трату некоторого количества биткоинов до определенного будущего времени или высоты блока. Таймлоки занимают важное место во многих контрактах Биткойна, включая платежные каналы и HTLC.
+    (((A timelock is a type of encumbrance that restricts the spending of some bitcoin until a specified future time or block height. Timelocks feature prominently in many Bitcoin contracts, including payment channels and HTLCs.)))
 
-transaction::
-    Transactions are data structures used by Bitcoin to transfer bitcoin from one address to another.
+транзакция (transaction)::
+    Транзакции - это структуры данных, используемые в Bitcoin для перевода биткоинов с одного адреса на другой.
+    Несколько тысяч транзакций объединяются в блок, который затем записывается (майнится) на блокчейне.
+    Первая транзакция в каждом блоке, называемая транзакцией coinbase, генерирует новый биткойн.
+    (((Transactions are data structures used by Bitcoin to transfer bitcoin from one address to another.
     Several thousand transactions are aggregated in a block, which is then recorded (mined) on the blockchain.
-    The first transaction in each block, called the coinbase transaction, generates new bitcoin.
+    The first transaction in each block, called the coinbase transaction, generates new bitcoin.)))
 
 transaction malleability::
     Transaction malleability is a property that the hash of a transaction can change without changing the semantics of the transaction.
