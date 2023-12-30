@@ -665,7 +665,7 @@ submarine-обмен (submarine swap)::
 транзакция (transaction)::
     Транзакции - это структуры данных, используемые в Bitcoin для перевода биткоинов с одного адреса на другой.
     Несколько тысяч транзакций объединяются в блок, который затем записывается (майнится) на блокчейне.
-    Первая транзакция в каждом блоке, называемая транзакцией coinbase, генерирует новый биткойн.
+    Первая транзакция в каждом блоке, называемая coinbase-транзакцией, генерирует новый биткойн.
     (((Transactions are data structures used by Bitcoin to transfer bitcoin from one address to another.
     Several thousand transactions are aggregated in a block, which is then recorded (mined) on the blockchain.
     The first transaction in each block, called the coinbase transaction, generates new bitcoin.)))
