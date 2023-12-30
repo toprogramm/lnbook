@@ -690,13 +690,18 @@ submarine-обмен (submarine swap)::
     См. _output_.
     (((See _output_.)))
 
-wallet::
-    A wallet is a piece of software that holds Bitcoin private keys. It is used to create and sign Bitcoin transactions. In the context of the Lightning Network, it also holds revocation secrets of old channel state and the latest presigned commitment transactions.
+кошелек (wallet)::
+    Кошелек - это часть программного обеспечения, в котором хранятся приватные ключи Bitcoin. Он используется для создания и подписи транзакций Bitcoin. В контексте сети Lightning в нем также хранятся секреты отмены старого состояния канала и последних предварительно подписанных транзакций обязательств.
+    (((A wallet is a piece of software that holds Bitcoin private keys. It is used to create and sign Bitcoin transactions. In the context of the Lightning Network, it also holds revocation secrets of old channel state and the latest presigned commitment transactions.)))
 
-watchtower::
-    Watchtowers are a security service on the Lightning Network that monitor payment channels for potential protocol breaches.
-    If one of the channel partners goes offline or loses their backup, a watchtower keeps backups and can restore their channel information.
+наблюдатель (watchtower)::
+    Стражи - это служба безопасности в сети Lightning, которая отслеживает платежные каналы на предмет потенциальных нарушений протокола.
+    Если один из партнеров канала выходит из сети или теряет резервную копию, страж сохраняет резервные копии и может восстановить информацию о канале.
+    (((Watchtowers are a security service on the Lightning Network that monitor payment channels for potential protocol breaches.
+    If one of the channel partners goes offline or loses their backup, a watchtower keeps backups and can restore their channel information.)))
 +
-Watchtowers also monitor the Bitcoin blockchain and can submit a penalty transaction if one of the partners tries to "cheat" by broadcasting an outdated state. Watchtowers can be run by the channel partners themselves, or as a paid service offered by a third party. Watchtowers have no control over the funds in the channels themselves.
+Стражи также следят за блокчейном Bitcoin и могут отправить штрафную транзакцию, если один из партнеров попытается "обмануть", передав устаревшее состояние. Стражи могут запускаться как самими партнерами по каналам, так и в качестве платной услуги, предлагаемой третьей стороной. Стражи не имеют контроля над средствами в самих каналах.
+(((Watchtowers also monitor the Bitcoin blockchain and can submit a penalty transaction if one of the partners tries to "cheat" by broadcasting an outdated state. Watchtowers can be run by the channel partners themselves, or as a paid service offered by a third party. Watchtowers have no control over the funds in the channels themselves.)))
 
-Some contributed definitions have been sourced under a CC-BY license from the https://en.bitcoin.it/wiki/Main_Page[Bitcoin Wiki], https://en.wikipedia.org[Wikipedia], https://github.com/bitcoinbook/bitcoinbook[_Mastering Bitcoin_], or from other open source publications.
+Некоторые определения были взяты под лицензией CC-BY с сайтов https://en.bitcoin.it/wiki/Main_Page[Bitcoin Wiki], https://en.wikipedia.org[Wikipedia], https://github.com/bitcoinbook/bitcoinbook[_Mastering Bitcoin_] или из других публикаций с открытым исходным кодом.
+(((Some contributed definitions have been sourced under a CC-BY license from the https://en.bitcoin.it/wiki/Main_Page[Bitcoin Wiki], https://en.wikipedia.org[Wikipedia], https://github.com/bitcoinbook/bitcoinbook[_Mastering Bitcoin_], or from other open source publications.)))
