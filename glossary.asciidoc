@@ -642,8 +642,9 @@ ScriptSig (известный как signature script)::
     Due to the SPHINX Mix Format used by onion routing, all routing nodes do not know the originator of a payment or the final recipient.
     Source-based routing is fundamentally different from how routing works on the Internet Protocol.)))
 
-soft fork::
-    Soft fork, or soft-forking change, is a protocol upgrade that's forward and backward compatible, so it allows both old nodes and new nodes to continue using the same chain.
+Софтфорк (soft fork)::
+    Софтфорк, или софтфорк-изменение - это обновление протокола с прямой и обратной совместимостью, позволяющее как старым, так и новым узлам продолжать использовать одну и ту же цепочку.
+    (((Soft fork, or soft-forking change, is a protocol upgrade that's forward and backward compatible, so it allows both old nodes and new nodes to continue using the same chain.)))
 
 SPHINX Mix Format::
     A particular technique for onion routing used in the Lightning Network and invented by https://cypherpunks.ca/~iang/pubs/Sphinx_Oakland09.pdf[George Danezis and Ian Goldberg in 2009].
