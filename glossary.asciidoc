@@ -628,14 +628,19 @@ ScriptSig (известный как signature script)::
     The second number (2 bytes) is the index of the funding transaction with the blocks.
     The last number (2 bytes) is the transaction output.)))
 
-simplified payment verification (SPV)::
-    SPV or simplified payment verification is a method for verifying that particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin and Lightning wallets.
+упрощенная верификация платежей (simplified payment verification - SPV)::
+    SPV или упрощенная верификация платежей - это метод подтверждения того, что определенные транзакции были включены в блок, без загрузки всего блока. Этот метод используется некоторыми облегченными Bitcoin и Lightning кошельками.
+    (((SPV or simplified payment verification is a method for verifying that particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin and Lightning wallets.)))
 
-source-based routing::
-    On the Lightning Network, the sender of a payment decides the route of the payment.
+маршрутизация на основе источника (source-based routing)::
+    В сети Lightning отправитель платежа сам определяет его маршрут.
+    Хотя это снижает процент успеха процесса маршрутизации, это повышает конфиденциальность платежей.
+    Благодаря формату SPHINX Mix Format, используемому в onion-маршрутизации, все узлы маршрутизации не знают ни отправителя платежа, ни конечного получателя.
+    Маршрутизация на основе источника принципиально не похожа на то, как работает маршрутизация по интернет-протоколу.
+    (((On the Lightning Network, the sender of a payment decides the route of the payment.
     While this decreases the success rate of the routing process, it increases the privacy of payments.
     Due to the SPHINX Mix Format used by onion routing, all routing nodes do not know the originator of a payment or the final recipient.
-    Source-based routing is fundamentally different from how routing works on the Internet Protocol.
+    Source-based routing is fundamentally different from how routing works on the Internet Protocol.)))
 
 soft fork::
     Soft fork, or soft-forking change, is a protocol upgrade that's forward and backward compatible, so it allows both old nodes and new nodes to continue using the same chain.
