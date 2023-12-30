@@ -670,11 +670,15 @@ submarine-обмен (submarine swap)::
     Several thousand transactions are aggregated in a block, which is then recorded (mined) on the blockchain.
     The first transaction in each block, called the coinbase transaction, generates new bitcoin.)))
 
-transaction malleability::
-    Transaction malleability is a property that the hash of a transaction can change without changing the semantics of the transaction.
+гибкость транзакции (transaction malleability)::
+    Гибкость транзакции - это свойство, согласно которому хэш транзакции может изменяться без изменения семантики транзакции.
+    Например, изменение подписи может изменить хэш транзакции.
+    Транзакция обязательства нуждается в хэше  транзакции пополнения, и если хэш транзакции пополнения изменится, транзакции, зависящие от нее, станут недействительными. Это приведет к тому, что пользователи не смогут потребовать возврата средств, если таковые имеются.
+    Софтфорк Segregated Witness решает эту проблему и поэтому стал важным обновлением для поддержки сети Lightning.
+    (((Transaction malleability is a property that the hash of a transaction can change without changing the semantics of the transaction.
     For example, altering the signature can change the hash of a transaction.
     A commitment transaction needs the hash of a funding transaction, and if the hash of the funding transaction changes, transactions depending on it will become invalid. This will make users unable to claim the refunds if there are any.
-    The Segregated Witness soft fork addresses this issue and was therefore an important upgrade to support the Lightning Network.
+    The Segregated Witness soft fork addresses this issue and was therefore an important upgrade to support the Lightning Network.)))
 
 transport layer::
     In computer networking, the transport layer is a conceptual division of the methods used by computers (and ultimately applications) to talk to each other.
