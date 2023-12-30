@@ -615,11 +615,11 @@ ScriptSig (известный как signature script)::
     (((The Secure Hash Algorithm or SHA is a family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST). The Bitcoin protocol currently uses SHA-256, which produces a 256-bit hash.)))
 
 короткий ID канала(short channel ID - scid)::
-    После установления канала индекс транзакции внесения в блокчейне используется в качестве короткого идентификатора канала для его уникальной идентификации.
+    После установления канала индекс транзакции пополнения в блокчейне используется в качестве короткого идентификатора канала для его уникальной идентификации.
     Короткий идентификатор канала состоит из восьми байтов, содержащих три числа.
     В сериализованной форме эти три числа представлены в виде десятичных значений, разделенных буквой "x" (например, +600123x01x00+).
     Первое число (4 байта) - это высота блока.
-    Второе число (2 байта) - это индекс транзакции внесения с блоками.
+    Второе число (2 байта) - это индекс транзакции пополнения с блоками.
     Последнее число (2 байта) - вывод транзакции.
     (((Once a channel is established, the index of the funding transaction on the blockchain is used as the short channel ID to uniquely identify the channel.
     The short channel ID consists of eight bytes referring to three numbers.
